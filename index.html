@@ -8,18 +8,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 
+    <style type="text/css">
+      html, body { scroll-behavior:smooth; }
+    </style>
 
+    <!-- Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/791291c78f.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Site Information -->
     <title> Rui (Peter) Pan | 潘瑞 </title>
+
+    <script type="text/javascript">
+      var a = document.querySelector(".navbar-toggler");
+        $(".navbar-nav li a").on("click",function () {
+            a.click();
+        });
+    </script>
   </head>
   <body>
     
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <a class="navbar-brand" href="#">Rui Pan</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,28 +40,28 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">About🧐</a>
+            <a class="nav-link" href="#about">About🧐</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Interests😍</a>
+            <a class="nav-link" href="#interests">Interests😍</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Education🎓</a>
+            <a class="nav-link" href="#education">Education🎓</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Experience👔</a>
+            <a class="nav-link" href="#experience">Experience👔</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projects👨‍💻</a>
+            <a class="nav-link" href="#projects">Projects👨‍💻</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog✍️</a>
+            <a class="nav-link" href="">Blog✍️</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="courses.html">Course Guide📚</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacts🤙</a>
+            <a class="nav-link" href="#contacts">Contacts🤙</a>
           </li>
         </ul>
       </div>
@@ -61,7 +73,7 @@
           <h1 class="jumbotron-heading">Rui (Peter) Pan | 潘瑞</h1>
           <!-- <img src="images/lightsaber.jpg" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;"> -->
           <p class="lead text-muted">CS + Math @ UW-Madison.</p>
-          <button type="button" class="btn btn-outline-primary">Portfolio</button>
+          <a href="#about"><button type="button" class="btn btn-outline-primary">Portfolio</button></a>
           <a href="courses.html"><button type="button" class="btn btn-outline-primary">Course Guide</button></a>
           <button type="button" class="btn btn-outline-primary" disabled>Blog</button>
           <!-- <p class="lead text-muted"> -->
@@ -72,6 +84,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
+          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <a id="about" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Who is Rui (Peter) Pan?</h1>
           <p>
             The boy who wouldn't grow up? That's a different Peter (we've got things in common, though). I am an undergraduate sophomore at the University of Wisconsin-Madison majoring in Computer Science and Math. If you need some quick information about me, here's my <a href="files/resume.pdf" target="_blank">résumé</a>... but keep scrolling down if you want to know more about me! 
@@ -84,6 +98,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
+          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <a id="interests" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Interests</h1>
           <p>Behold, a list of my (technical) skills:</p>
           <ul>
@@ -106,11 +122,13 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
+          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <a id="education" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Education</h1>
           <ul class="list-unstyled">
             <!-- UW-Madison -->
             <li class="media">
-              <img src="images/uwmadison.png" class="mr-3" alt="...">
+              <img src="images/uwmadison.png" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">University of Wisconsin-Madison🦡</h5>
                 <p class="badge badge-info">Sep 2018 - May 2021 (Estimated)</p>
@@ -123,7 +141,7 @@
             </li> 
             <!-- Coursera --> 
             <li class="media">
-              <img src="images/coursera.jpeg" class="mr-3" alt="...">
+              <img src="images/coursera.jpeg" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">Coursera</h5>
                 <p class="badge badge-info">Jun 2018 - Present</p>
@@ -132,7 +150,7 @@
             </li>
             <!-- HSASJTU -->
             <li class="media">
-              <img src="images/hsasjtu.jpg" class="mr-3" alt="...">
+              <img src="images/hsasjtu.jpg" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">High School Affiliated to Shanghai Jiao Tong University</h5>
                 <p class="badge badge-info">Sep 2015 - Jun 2018</p>
@@ -142,7 +160,7 @@
             </li>
             <!-- Cal -->
             <li class="media">
-              <img src="images/ucb.png" class="mr-3" alt="...">
+              <img src="images/ucb.png" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">University of California, Berkeley🐻</h5>
                 <p class="badge badge-info">Jun 2019 - Aug 2019</p>
@@ -150,9 +168,50 @@
                 <p>I took CS 61C during a summer term at Berkeley. I also audited in CS 61A and a little bit of CS 188 and CS 189. Go <span style="text-decoration: line-through;">Badgers</span> Bears! If you go to school in Madison and you are thinking about some new flavors for your summer, check out the <a href="https://www.admissions.wisc.edu/ces/portal/index.php" target="_blank">Course Equivalency Service</a> at our school and do not hesitate to e-mail your advisor about any questions!</p>
               </div>
             </li>
+            <!-- CMU -->
+            <li class="media">
+              <img src="images/cmu.png" class="mr-3" alt="..." width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Entertainment Technology Center @ CMU</h5>
+                <p class="badge badge-info">Jun 2017 - Aug 2017</p>
+                <p>I attended a 6-week summer program, the <a href="">National High School Game Academy</a>, at Carnegie Mellon University where I learned game development, Unity, and C#. I was under the guidance and instruction of professor <a href="">G.C. Klug</a>.</p>
+              </div>
+            </li>  
           </ul>  
         </div>
       </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <a id="experience" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h1>Experience</h1>
+        </div>
+      </div>
+    </div>
+
+
+    <!--  -->
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Contacts🤙</h1>
+          <a href="mailto:rpan33@wisc.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a>
+          <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+          <a href="https://www.facebook.com/rui.pan.1044" class="smlinks" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a href="https://www.instagram.com/ruipeterpan/" class="smlinks" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="https://www.snapchat.com/add/peterpan0726" class="smlinks" target="_blank"><i class="fab fa-snapchat-square fa-2x"></i></a>
+          <!-- TODO: 调用微信内置浏览器打开这个链接 -->
+          <a href="https://u.wechat.com/EEVm_3AGp_hr3O22zRLFQO8" class="smlinks" target="_blank"><i class="fab fa-weixin fa-2x"></i></a>
+          <a href="sms:+16089600303" class="smlinks" target="_blank"><i class="fas fa-comment fa-2x"></i></a>
+        </div>
+      </div>
+      <p>Designed and built from scratch by Rui Pan.</p>
+      <p>Currently v1.0.0. Code licensed MIT.</p>
     </div>
 
     <!-- Optional JavaScript -->
