@@ -32,6 +32,23 @@
       /* Conflicts with "collapse nav bar on click" */
     </style>
 
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     
   </head>
   <body>
@@ -240,6 +257,7 @@
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="projects" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Projects👨‍💻</h1>
+          <!-- https://getbootstrap.com/docs/4.4/components/card/#grid-cards -->
           <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
               <div class="card h-100">
@@ -261,7 +279,7 @@
                   <h5 class="card-title">Rocky Rabbit</h5>
                   <p class="card-text">2-D top-down rhythm game developed during my time at NHSGA@CMU. Skills used: C#, Unity3D, Git</p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <a href="" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Download & Play!</button></a>
+                    <a href="files/RockyRabbit.app" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Download & Play!</button></a>
                     <small class="text-muted">Jul 2017</small>
                   </div>
                 </div>
@@ -284,8 +302,8 @@
               <div class="card h-100">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">CS61C-1</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-title">Flight Simulator</h5>
+                  <p class="card-text">CS 61C project 1. Built a flight system that keeps track of the flights between a series of airports. Skills used: C, cgdb, valgrind.</p>
                 </div>
               </div>
             </div>
@@ -293,8 +311,8 @@
               <div class="card h-100">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">CS61C-2</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-title">61Ccc Code Generation</h5>
+                  <p class="card-text">CS 61C project 2. Implemented automated assembly generation from C code. Skills used: C, RISC-V, Vim.</p>
                 </div>
               </div>
             </div>
@@ -302,8 +320,8 @@
               <div class="card h-100">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">CS61C-3</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-title">CPU - ALU, Regfile, Datapath and Controls</h5>
+                  <p class="card-text">CS 61C project 3. Implemented a 32-bit two-cycle processor based on RISC-V using Logisim. I built a computer from scratch using logic gates!!!</p>
                 </div>
               </div>
             </div>
@@ -311,8 +329,8 @@
               <div class="card h-100">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">CS61C-4</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <h5 class="card-title">Performance Programming</h5>
+                  <p class="card-text">CS 61C project 4. Used various optimization techniques to speed up image recognition by 16.2 times. Skills used: CNN, profiling, unrolling, SIMD, OpenMP.</p>
                 </div>
               </div>
             </div>
