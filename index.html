@@ -8,9 +8,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 
-    <style type="text/css">
-      html, body { scroll-behavior:smooth; }
-    </style>
 
     <!-- Font Awesome for social media icons -->
     <script src="https://kit.fontawesome.com/791291c78f.js" crossorigin="anonymous"></script>
@@ -29,14 +26,11 @@
       .smlinks:hover {
           color: rgb(7, 107, 255);
       }
+      /*html, body { scroll-behavior:smooth; }*/
+      /* Conflicts with "collapse nav bar on click" */
     </style>
 
-    <script type="text/javascript">
-      var a = document.querySelector(".navbar-toggler");
-        $(".navbar-nav li a").on("click",function () {
-            a.click();
-        });
-    </script>
+    
   </head>
   <body>
     
@@ -49,28 +43,28 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#about">About🧐</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#interests">Interests😍</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#education">Education🎓</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#experience">Experience👔</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#projects">Projects👨‍💻</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="">Blog✍️</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="courses.html">Course Guide📚</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#contacts">Contacts🤙</a>
           </li>
         </ul>
@@ -162,7 +156,7 @@
             <li class="media">
               <img src="images/hsasjtu.jpg" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
-                <h5 class="mt-0 mb-1">High School Affiliated to Shanghai Jiao Tong University</h5>
+                <h5 class="mt-0 mb-1">High School Affiliated to Shanghai Jiao Tong University 上海市交通大学附属中学</h5>
                 <p class="badge badge-info">Sep 2015 - Jun 2018</p>
                 <p class="badge badge-info">GPA: 有点烂</p>
                 <p>Activities: Defensive Midfielder in Varsity Extramural Soccer Team, Programmer Leader in FTC Team/Robotics Club, Member of Electrical Engineering Club, Student Lecturer at Research & Development Center, School Volunteer</p>
@@ -207,7 +201,31 @@
                 <p class="badge badge-info">Sep 2019 - Present</p>
                 <p>Offered drop-in and by-appointment tutoring sessions for introductory programming courses <a href="courseGuide.html">(CS 200/300/400)</a> to individual or small groups of engineering students to improve academic performance.</p>
               </div>
-            </li>  
+            </li>
+            <li class="media">
+              <img src="images/ulc.png" class="mr-3" alt="..." width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Subtitle Translator @ Coursera</h5>
+                <p class="badge badge-info">May 2019 - Present</p>
+                <p>As a member of the Coursera Global Translator Community (GTC), I help translate English subtitles to Simplified Chinese subtitles in multiple courses (An Introduction to Programming, Building Web Applications in PHP, Neural Networks and Deep Learning).</p>
+              </div>
+            </li>
+            <li class="media">
+              <img src="images/ulc.png" class="mr-3" alt="..." width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Student Supervisor @ <a href="https://www.housing.wisc.edu/dining/locations/liz/" target="_blank">Liz's Market</a></h5>
+                <p class="badge badge-info">Sep 2018 - May 2019</p>
+                <p>I started as a team member and got promoted two months later. Supported other student employees and provided training and supervision to ensure that they can excel in their tasks. Demonstrated leadership and acted as a role model while working with a diverse population of student employees. I'm proud to be the only international student in the student supervisor team!</p>
+              </div>
+            </li>
+            <li class="media">
+              <img src="images/ulc.png" class="mr-3" alt="..." width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Student Lecturer @ <a href="https://www.jdfz.sh.cn" target="_blank">High School Affiliated to Shanghai Jiao Tong University</a></h5>
+                <p class="badge badge-info">Sep 2017 - May 2018</p>
+                <p>Designed introductory computer science course and prepared teaching materials with another student lecturer (<a href="">Yongming Ge</a>). Gave lectures on AP Computer Science A to 10+ students.</p>
+              </div>
+            </li> 
           </ul>  
         </div>
       </div>
@@ -245,6 +263,8 @@
       <p>Designed and built from scratch by Rui Pan.</p>
       <p>Currently v1.1. Code licensed MIT.</p>
     </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
