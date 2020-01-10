@@ -1,5 +1,7 @@
 <!--  -->
 <!-- <a href="" target="_blank"> -->
+<!-- TODO: Smooth scrolling when clicking an anchor link -->
+<!-- TODO: Build blog -->
 <!DOCTYPE html>
 
 <html lang="en-us">
@@ -88,7 +90,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="about" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Who is Rui (Peter) Pan?🧐</h1>
           <p>
@@ -102,7 +104,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="interests" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Interests😍</h1>
           <p>Behold, a list of my (technical) skills:</p>
@@ -126,7 +128,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="education" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Education🎓</h1>
           <ul class="list-unstyled">
@@ -190,7 +192,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="experience" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Experience👔</h1>
           <ul class="list-unstyled">
@@ -203,7 +205,7 @@
               </div>
             </li>
             <li class="media">
-              <img src="images/ulc.png" class="mr-3" alt="..." width="64" height="64">
+              <img src="images/coursera.jpeg" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">Subtitle Translator @ Coursera</h5>
                 <p class="badge badge-info">May 2019 - Present</p>
@@ -211,7 +213,7 @@
               </div>
             </li>
             <li class="media">
-              <img src="images/ulc.png" class="mr-3" alt="..." width="64" height="64">
+              <img src="images/liz.png" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">Student Supervisor @ <a href="https://www.housing.wisc.edu/dining/locations/liz/" target="_blank">Liz's Market</a></h5>
                 <p class="badge badge-info">Sep 2018 - May 2019</p>
@@ -219,7 +221,7 @@
               </div>
             </li>
             <li class="media">
-              <img src="images/ulc.png" class="mr-3" alt="..." width="64" height="64">
+              <img src="images/rdc.png" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">Student Lecturer @ <a href="https://www.jdfz.sh.cn" target="_blank">High School Affiliated to Shanghai Jiao Tong University</a></h5>
                 <p class="badge badge-info">Sep 2017 - May 2018</p>
@@ -235,9 +237,112 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <!-- Fake 锚点, otherwise the fixed navbar on the top would cover the title -->
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="projects" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Projects👨‍💻</h1>
+          <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Personal Website</h5>
+                  <p class="card-text">Built from scratch using HTML/CSS, JavaScript, and Bootstrap.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="https://github.com/ruipeterpan/ruipeterpan.github.io" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">View Source Code</button></a>
+                    <small class="text-muted">May 2019</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Rocky Rabbit</h5>
+                  <p class="card-text">2-D top-down rhythm game developed during my time at NHSGA@CMU. Skills used: C#, Unity3D, Git</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Download & Play!</button></a>
+                    <small class="text-muted">Jul 2017</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Quiz Generator</h5>
+                  <p class="card-text">CS400 final project. Skills used: Java, JSON, JavaFX, Git.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="https://github.com/OscarTHZhang/cs400-quiz-generator" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">View Source Code</button></a>
+                    <small class="text-muted">Apr 2019</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">CS61C-1</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">CS61C-2</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">CS61C-3</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">CS61C-4</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">HiMCM Project: Delivery Problem</h5>
+                  <p class="card-text">Mathematical modeling/data analysis project for the 19th HiMCM, topic A. Skills used: R, Excel, Matlab, SPSS, Data Analysis, Mathematical Modeling, Academic Writing.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">View Paper</button></a>
+                    <small class="text-muted">Feb 2017</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">数说共享单车</h5>
+                  <p class="card-text">Web scraping/data analysis project for 创赛. Skills used: Python, Data Mining, Data Analysis.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">View Paper</button></a>
+                    <small class="text-muted">Mar 2017</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>    
     </div>  
@@ -246,6 +351,8 @@
     <div class="jumbotron text-center" style="margin-bottom:0">
       <div class="row">
         <div class="col-sm-12">
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+          <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Contacts🤙</h1>
           <p><a href="mailto:rpan33@wisc.edu" target="_blank">rpan33@wisc.edu</a></p>
           <p><a href="sms:+16089600303">(+1) 608-960-0303</a> (US) <a href="sms:+8613564799996">(+86) 135-647-99996</a> (CN)</p>
