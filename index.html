@@ -40,6 +40,9 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="YguyxAOXZakXrwT46p_SOS-zOnrWxmoydLQ8moo4nn0" />
+
   </head>
   <body>
     
@@ -77,6 +80,16 @@
             <a class="nav-link" href="#contacts">Contacts🤙</a>
           </li>
         </ul>
+        <script>
+          //GOOGLE SEARCH
+          //Enter domain of site to search.
+          var domainroot="ruipeterpan.github.io"
+          function Gsitesearch(curobj){ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value } 
+        </script>
+        <form class="form-inline my-2 my-lg-0" action="http://www.google.com/search" method="get" role="search" onSubmit="Gsitesearch(this)">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
     </nav>
 
@@ -225,7 +238,7 @@
               <div class="media-body">
                 <h5 class="mt-0 mb-1">Computer Sciences Tutor @ <a href="https://www.engr.wisc.edu/academics/student-services/ulc/" target="_blank">Undergratuate Learning Center</a></h5>
                 <p class="badge badge-info">Sep 2019 - May 2020</p>
-                <p>Offered drop-in and by-appointment tutoring sessions for introductory programming courses <a href="courseGuide.html">(CS 200/300/400)</a> to individual or small groups of engineering students to improve academic performance.</p>
+                <p>Offered drop-in and by-appointment tutoring sessions for introductory programming courses <a href="courses.html">(CS 200/300/400)</a> to individual or small groups of engineering students to improve academic performance.</p>
               </div>
             </li>
             <li class="media">
