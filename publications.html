@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Site Information -->
-    <title> Publications - Rui Pan </title>
+    <title> Rui Pan | 潘瑞 </title>
 
     <style type="text/css">
       .smlinks {
@@ -59,13 +59,13 @@
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a class="nav-link" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#education">Education</a>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" href="#interests">Interests</a>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#projects">Projects</a>
@@ -98,18 +98,19 @@
     <section class="jumbotron text-center">
       <div class="container">
           <h1 class="jumbotron-heading">Rui Pan | 潘瑞</h1>
-          <!-- <img src="images/lightsaber.jpg" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;"> -->
-          <p class="lead text-muted">CS + Math @ UW-Madison</p>
-          <a href="files/resume.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
+          <img src="images/lightsaber.jpg" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="25%" height="25%">
+          <p class="lead text-muted">CS + Math Senior @ UW-Madison</p>
+          <a href="files/cv.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
           <a href="courses.html"><button type="button" class="btn btn-outline-primary">Course Guide</button></a>
-          <a href="/blog"><button type="button" class="btn btn-outline-primary">Blog</button></a>
+          <!-- <a href="/blog"><button type="button" class="btn btn-outline-primary">Blog</button></a> -->
+          <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank"><button type="button" class="btn btn-outline-primary">Blog / Paper Reading Notes</button></a>
           <!-- <button type="button" class="btn btn-outline-primary" disabled>CS 577 peer mentoring(?)</button> -->
 <!--           <button type="button" class="btn btn-outline-primary" disabled>Lab</button>
  -->          <!-- <p class="lead text-muted"> -->
       </div>
     </section>
 
-    <!-- About -->
+    <!-- Publications -->
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -118,12 +119,21 @@
           <h1>Academic Works</h1>
 
           <h2>Publications</h2>
-          <h1>🤷‍♂️</h1>
+          <p id="shockwave">
+            [1] <span class="badge badge-secondary">Conference</span> Pengfei Zheng, <b>Rui Pan</b>, Shivaram Venkataraman, Aditya Akella. (2021). <b>Shockwave: Efficient and Fair Resource Allocation for Dynamic Adaption</b>. <i>In submission</i>.
+            <a href="javascript:void(0);"><button type="button" class="btn btn-outline-primary btn-sm">Paper PDF</button></a>
+            <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
+            <div class="collapse" id="shockwave-abstract">
+              <div class="card card-body">
+                The abstract goes here
+              </div>
+            </div>
+          </p>
+          <!-- <h1>🤷‍♂️</h1> -->
           
           <h2>Presentations</h2>
-
           <p id="agdh">
-            [1] <span class="badge badge-secondary">Poster</span> <b>Rui Pan</b>, Shu Liu, Steven R. Wangen, Michael C. Ferris. (2020). <b>AgDH: A Distributed System for Gathering and Disseminating Dairy Data</b>. Presented at the <i>3<sup>rd</sup> Annual WID Symposium</i>.
+            [1] <span class="badge badge-secondary">Poster</span> <b>Rui Pan</b>, Steven R. Wangen, Michael C. Ferris. (2020). <b>AgDH: A Distributed System for Gathering and Disseminating Dairy Data</b>. Presented at the <i>3<sup>rd</sup> Annual WID Symposium</i>.
             <a href="files/wid-poster.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Poster PDF</button></a>
             <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#wid-poster-abstract" role="button" aria-expanded="false" aria-controls="wid-poster-abstract">Abstract</a>
             <div class="collapse" id="wid-poster-abstract">
@@ -138,6 +148,16 @@
       </div>
     </div>
 
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Visitor Map</h1>
+        </div>
+      </div>
+      <div class="row">
+        <p></p>
+      </div>
+    </div> -->
 
     <!-- Contacts -->
     <div class="jumbotron text-center" style="margin-bottom:0">
@@ -146,6 +166,7 @@
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Contacts🤙</h1>
+          
           <p><a href="mailto:rpan33@wisc.edu" target="_blank">rpan33@wisc.edu</a></p>
           <p><a href="sms:+16089600303">(+1) 608-960-0303</a> (US) <a href="sms:+8613564799996">(+86) 135-647-99996</a> (CN)</p>
           <a href="mailto:rpan33@wisc.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a>
@@ -153,11 +174,16 @@
           <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
           <a href="https://www.facebook.com/rui.pan.1044" class="smlinks" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
           <a href="https://twitter.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
-          <a href="https://www.instagram.com/ruipeterpan/" class="smlinks" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="https://www.instagram.com/ruipeterpan/" class="smlinks" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></i></a>
           <a href="https://www.snapchat.com/add/peterpan0726" class="smlinks" target="_blank"><i class="fab fa-snapchat-square fa-2x"></i></a>
-          <!-- TODO: 调用微信内置浏览器打开这个链接 -->
-          <a href="https://u.wechat.com/EEVm_3AGp_hr3O22zRLFQO8" class="smlinks" target="_blank"><i class="fab fa-weixin fa-2x"></i></a>
+          <!-- <a href="https://u.wechat.com/EEVm_3AGp_hr3O22zRLFQO8" class="smlinks" target="_blank"><i class="fab fa-weixin fa-2x"></i></a> -->
+          <a href="calendar.html" class="smlinks" target="_blank"><i class="fas fa-calendar fa-2x"></i></i></i></a>
           <a href="sms:+16089600303" class="smlinks" target="_blank"><i class="fas fa-comment fa-2x"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=f5f5f5&w=300&t=tt&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=4194cf&ct=ffffff&cmo=ff0000&cmn=3dde3d'></script>
         </div>
       </div>
       <div class="row">
