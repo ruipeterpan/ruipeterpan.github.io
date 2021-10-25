@@ -281,7 +281,7 @@
           <ul>
             <li>Watching movies & making pop culture references.</li>
             <li>Collecting postcards. I love postcards. Send me one!</li>
-            <li>Going to new places. Cities I had lived in for more than a few months are: {Shanghai, China; Madison, WI; Berkeley, CA; Pittsburgh, PA}.</li>
+            <li>Going to new places. Cities I had lived in for more than a few months include: {Shanghai, China; Madison, WI; Berkeley, CA; Pittsburgh, PA}.</li>
             <li>
               Sports. I play soccer for fun every weekend at <a href="https://goo.gl/maps/VMhncrK3ZjsEQmBr5" target="_blank">Near West Field</a>,
               and I am a fan of FC Barcelona. I also 🏊‍♂️ , ⛸️ , 🎱 , and wear my Heelys whenever possible.
@@ -304,12 +304,21 @@
           <ul>
             <li>
               <p id="shockwave">
-                <span class="badge badge-secondary">Conference Paper</span> Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella. 2021. <b>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b>. <i>In submission</i>.
+                <span class="badge badge-secondary">Conference Paper</span> Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella. 2021. <b>Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b>. <i>In submission</i>.
                 <a href="javascript:void(0);"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
                 <div class="collapse" id="shockwave-abstract">
                   <div class="card card-body">
-                    The work is very abstract. The abstract? Hopefully less so. TODO: replace me!
+                    Dynamic adaptation has become an essential technique in accelerating distributed machine learning (ML) training: 
+                    Recent studies have shown that dynamically adjusting model structure (e.g., lottery ticket hypothesis) or 
+                    hyperparameters (e.g., batch size) can significantly accelerate training without sacrificing accuracy. 
+                    However, existing ML cluster schedulers are not designed to handle dynamic adaptation. 
+                    We show that existing schemes fail to provide fairness and degrade system efficiency when the training throughput 
+                    changes over time under dynamic adaptation. We design [Redacted], a scheduler with future planning that builds on 
+                    two key ideas. First, [Redacted] extends classic market theory from static settings to dynamic settings to 
+                    co-optimize efficiency and fairness. Second, [Redacted] utilizes stochastic dynamic programming to handle uncertain, 
+                    dynamic throughput. We build a system for [Redacted] and validate its performance with both trace-driven simulation 
+                    and cluster experiments. Results show that [Redacted].
                   </div>
                 </div>
               </p>
@@ -378,6 +387,19 @@
             </div>
             <div class="col mb-4">
               <div class="card h-100">
+                <img src="images/projects/db_tuning.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Comparing Black-Box Optimization Methods for Online DBMS Tuning</h5>
+                  <p class="card-text">CS 744 course project -- work in progress</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <!-- <a href="..." target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Source Code</button></a> -->
+                    <small class="text-muted">Dec 2021</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col mb-4">
+              <div class="card h-100">
                 <img src="images/projects/wid-poster.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Agricultural Data Hub</h5>
@@ -388,7 +410,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col mb-4">
               <div class="card h-100">
                 <img src="images/projects/cs639.png" class="card-img-top" alt="...">
