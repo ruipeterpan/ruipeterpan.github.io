@@ -1,7 +1,6 @@
 <!--  -->
 <!-- <a href="" target="_blank"> -->
-<!-- TODO: Smooth scrolling when clicking an anchor link -->
-<!-- TODO: Build lab -->
+<!-- TODO: update the navbar on other pages (courses) -->
 <!DOCTYPE html>
 
 <html lang="en-us">
@@ -21,13 +20,11 @@
 
     <style type="text/css">
       .smlinks {
-            color: black;
-        }
-      .smlinks:hover {
-          color: rgb(7, 107, 255);
+        color: black;
       }
-      /*html, body { scroll-behavior:smooth; }*/
-      /* Conflicts with "collapse nav bar on click" */
+      .smlinks:hover {
+        color: rgb(7, 107, 255);
+      }
     </style>
 
     <!-- Favicon -->
@@ -47,8 +44,11 @@
   <body>
     
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand" href="index.html">Rui Pan</a>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #f58025">  <!-- f58025 or ff8f00 -->
+        <a class="navbar-brand" href="index.html">
+          <img src="apple-touch-icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          Rui Pan
+        </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -71,45 +71,61 @@
             <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a class="nav-link" href="https://ruipeterpan.gitbook.io/paper-reading-notes/">Blog</a>
-          </li>
-          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a class="nav-link" href="courses.html">Course Guide</a>
+            <a class="nav-link" href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank">Blog</a>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#contacts">Contacts</a>
           </li>
         </ul>
         <script>
-          //GOOGLE SEARCH
-          //Enter domain of site to search.
+          //GOOGLE SEARCH: Enter domain of site to search.
           var domainroot="ruipeterpan.github.io"
           function Gsitesearch(curobj){ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value } 
         </script>
         <form class="form-inline my-2 my-lg-0" action="http://www.google.com/search" method="get" role="search" onSubmit="Gsitesearch(this)">
           <input name="q" type="hidden" />
           <input class="form-control mr-sm-2" name="qfront" type="search" placeholder="Search on this site" aria-label="Search">
-          <!--<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button> -->
         </form>
       </div>
     </nav>
 
     <!-- Jumbotron -->
-    <section class="jumbotron text-center">
+    <!-- <img src="images/lightsaber.jpg" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="25%" height="25%"> -->
+
+    <!-- <section class="jumbotron text-center">
       <div class="container">
-          <h1 class="jumbotron-heading">Rui Pan | 潘瑞</h1>
-          <!-- <img src="images/lightsaber.jpg" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="25%" height="25%"> -->
-          <img src='images/lightsaber.jpg' onmouseover="this.src='images/roulette.gif';" onmouseout="this.src='images/lightsaber.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="25%" height="25%">
-          <p class="lead text-muted">Research Intern @ MPI-INF</p>
-          <a href="files/cv.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
-          <a href="courses.html"><button type="button" class="btn btn-outline-primary">Course Guide</button></a>
-          <!-- <a href="/blog"><button type="button" class="btn btn-outline-primary">Blog</button></a> -->
-          <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank"><button type="button" class="btn btn-outline-primary">Blog / Paper Reading Notes</button></a>
-          <!-- <button type="button" class="btn btn-outline-primary" disabled>CS 577 peer mentoring(?)</button> -->
-<!--           <button type="button" class="btn btn-outline-primary" disabled>Lab</button>
- -->          <!-- <p class="lead text-muted"> -->
+        <h1 class="jumbotron-heading">Rui Pan | 潘瑞</h1>
+        <img src='images/lightsaber.jpg' onmouseover="this.src='images/roulette.gif';" onmouseout="this.src='images/lightsaber.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="25%" height="25%">
+        <p class="lead text-muted">Research Intern @ MPI-INF</p>
+        <a href="files/cv.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
+        <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank"><button type="button" class="btn btn-outline-primary">Blog/Paper Reading Notes</button></a>
       </div>
-    </section>
+    </section> -->
+
+    <div class="jumbotron jumbotron-fluid text-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-6">
+            <img src='images/lightsaber.jpg' onmouseover="this.src='images/roulette.gif';" onmouseout="this.src='images/lightsaber.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
+          </div>
+          <div class="col-sm-4">
+            <div>
+              <h2 class="jumbotron-heading">Rui Pan | 潘瑞</h2>
+              <p class="lead text-muted">Research Intern @ MPI-INF</p>
+              <!-- <address>
+                  First-year Ph.D. student<br>
+                  Princeton University, Department of Computer Science<br>
+                  Office xxx, Computer Science Building<br>
+                  xxx, Princeton, NJ xxx<br>
+                  rp2773 at princeton dot edu
+              </address> -->
+              <a href="files/cv.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
+              <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank"><button type="button" class="btn btn-outline-primary">Blog</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- About -->
     <div class="container">
@@ -119,15 +135,16 @@
           <a id="about" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Who is Rui Pan?🧐</h1>
           <p>
-            I am a research intern at <a href="https://www.mpi-inf.mpg.de/home" target="_blank">Max Plank Institute for Informatics</a>, working with <a href="https://sites.google.com/view/yitingxia/home" target="_blank">Prof. Yiting Xia</a> on Machine Learning Systems.
-            Previously, I got my B.S. in computer science and mathematics from the University of Wisconsin-Madison, where I was fortunate to be advised by the amazing <a href="https://shivaram.org" target="_blank">Prof. Shivaram Venkataraman</a> on Systems for ML.
+            I am a research intern at <a href="https://www.mpi-inf.mpg.de/home" target="_blank">Max Plank Institute for Informatics</a>, working with <a href="https://sites.google.com/view/yitingxia/home" target="_blank">Prof. Yiting Xia</a> on networked systems for ML.
+            Previously, I got my B.S. in computer science and mathematics from the University of Wisconsin-Madison, where I was fortunate to be advised by the amazing <a href="https://shivaram.org" target="_blank">Prof. Shivaram Venkataraman</a> on systems (scheduling & cluster resource management) for ML.
             I am broadly interested in the systems aspects of big data (Machine Learning Systems, Cloud Computing, Datacenter Systems, Distributed Systems, Networks).
           </p>
+          <!-- <p> I am an incoming CS Ph.D. student at Princeton University. Prior to joining Princeton, I spent 6 months working with Prof. Yiting Xia at xxx on xxx. I graduated with a B.S. in xxx from xxx in xxx, where xxx </p> -->
           <h2>News</h2>
           <ul>
+            <li>[2022-03] I have committed to the CS Ph.D. program at Princeton! See you in the garden state!</li>
             <li>[2021-12] I graduated from UW-Madison with a B.S. in CS and Math! Time flies when you're having fun :)</li>
             <li>[2021-10] I'm excited to be joining MPI-INF in Saarbrücken, Germany for a research internship in Spring 2022, during which I will work with <a href="https://sites.google.com/view/yitingxia/home" target="_blank">Prof. Yiting Xia</a> on network-accelerated machine learning systems!</li>
-            <li>[2021-09] I am applying to Ph.D. programs that start in Fall 2022!</li>
             <li>[2021-08] I'm attending <a href="https://cmmrs.mpi-sws.org/" target="_blank">CMMRS</a>, a pre-doctoral school co-hosted by MPI-SWS, Maryland and Cornell!</li>
           </ul>
         </div>
@@ -144,47 +161,29 @@
           <a id="education" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Education🎓</h1>
           <ul class="list-unstyled">
+            <!-- Princeton -->
+            <li class="media">
+              <img src="images/princeton_square.jpeg" class="mr-3" alt="..." width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Princeton University🐅</h5>
+                <p class="badge badge-info">Sep 2022 - May 2027 (Expected)</p>
+                <p class="badge badge-info">Ph.D. in CS</p>
+                <a href="https://www.cs.princeton.edu/~ravian/" target="_blank" class="badge badge-info">Advisor: Prof. Ravi Netravali</a>
+                <p>Go Tigers!</p>
+              </div>
+            </li> 
             <!-- UW-Madison -->
             <li class="media">
               <img src="images/uwmadison.png" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">University of Wisconsin-Madison🦡</h5>
                 <p class="badge badge-info">Sep 2018 - Dec 2021</p>
-                <p class="badge badge-info">B.S. CS & Math</p>
+                <p class="badge badge-info">B.S. in CS & Math</p>
                 <p class="badge badge-info">GPA: 3.96</p>
+                <a href="https://shivaram.org/" target="_blank" class="badge badge-info">Advisor: Prof. Shivaram Venkataraman</a>
                 <p>Visit the <a href="courses.html">course guide</a> to see my two cents on a coursework plan. Go Badgers!</p>
               </div>
             </li> 
-            <!-- Coursera --> 
-            <li class="media">
-              <img src="images/coursera.jpeg" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Coursera</h5>
-                <p class="badge badge-info">Jun 2018 - Present</p>
-                <p class="badge badge-info">Online Courses</p>
-                <p>I have been taking multiple online courses since summer 2018. Also check out the <a href="courses.html">course guide</a> to see the courses I took. I also contribute to translating English subtitles to Chinese. <a href="" target="_blank">The Global Translator Community (GTC)</a> needs you!</p>
-              </div>
-            </li>
-            <!-- Cal -->
-            <!-- <li class="media">
-              <img src="images/ucb.png" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">University of California, Berkeley🐻</h5>
-                <p class="badge badge-info">Jun 2019 - Aug 2019</p>
-                <p class="badge badge-info">Summer Session</p>
-                <p class="badge badge-info">GPA: 4.0</p>
-                <p>I took CS 61C during a summer term at Berkeley. I also audited in CS 61A and a little bit of CS 188 and CS 189. Go <span style="text-decoration: line-through;">Badgers</span> Bears! If you go to school in Madison and you are thinking about some new flavors for your summer, check out <a href="/blog/posts/how-to-transfer-your-credit-back-to-uw%5C-madison/" target="_blank">my blog about transferring credits</a>.</p>
-              </div>
-            </li> -->
-            <!-- HSASJTU -->
-            <!-- <li class="media">
-              <img src="images/hsasjtu.jpg" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1"><a href="https://en.wikipedia.org/wiki/High_School_Affiliated_to_Shanghai_Jiao_Tong_University" target="_blank">High School Affiliated to Shanghai Jiao Tong University</a> 上海市交通大学附属中学🐸</h5>
-                <p class="badge badge-info">Sep 2015 - Jun 2018</p>
-                <p>Played soccer all day, programmed some robots, and gave AP Computer Science lectures.</p>
-              </div>
-            </li> -->
           </ul>  
         </div>
       </div>
@@ -202,8 +201,8 @@
               <img src="images/mpi.jpg" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">Research Intern @ Max Planck Institute for Informatics (MPI-INF)</h5>
-                <p class="badge badge-info">Feb 2022 - May 2022 (Expected)</p>
-                <a href="https://sites.google.com/view/yitingxia/home" target="_blank"><p class="badge badge-info">Advisor: Prof. Yiting Xia</p></a>
+                <p class="badge badge-info">Feb 2022 - Jul 2022 (Expected)</p>
+                <a href="https://sites.google.com/view/yitingxia/home" target="_blank" class="badge badge-info">Advisor: Prof. Yiting Xia</a>
                 <p>Network-accelerated machine learning systems</p>
                 <p></p>
               </div>
@@ -213,8 +212,8 @@
               <div class="media-body">
                 <h5 class="mt-0 mb-1">Undergraduate Research Assistant @ UW-Madison Department of Computer Science</h5>
                 <p class="badge badge-info">Jun 2020 - Dec 2021</p>
-                <a href="https://shivaram.org/" target="_blank"><p class="badge badge-info">Advisor: Prof. Shivaram Venkataraman</p></a>
-                <p>I worked on Machine Learning Systems. Specifically, I work on optimizing DNN training in multi-tenant GPU clusters from different perspectives like neural network pruning, GPU multiplexing, fair & efficient scheduling.</p>
+                <a href="https://shivaram.org/" target="_blank" class="badge badge-info">Advisor: Prof. Shivaram Venkataraman</a>
+                <p>I worked on systems for ML. Specifically, I worked on optimizing DNN training in multi-tenant GPU clusters from different perspectives like neural network pruning, GPU multiplexing, and fair & efficient scheduling.</p>
               </div>
             </li>
             <li class="media">
@@ -222,8 +221,8 @@
               <div class="media-body">
                 <h5 class="mt-0 mb-1">Undergraduate Research Assistant @ <a href="https://wid.wisc.edu/" target="_blank">Wisconsin Institute for Discovery</a></h5>
                 <p class="badge badge-info">Jan 2020 - Mar 2021</p>
-                <a href="https://wid.wisc.edu/people/steve-wangen/" target="_blank"><p class="badge badge-info">Advisor: Dr. Steven Wangen</p></a>
-                <a href="http://pages.cs.wisc.edu/~ferris/" target="_blank"><p class="badge badge-info">Advisor: Prof. Michael Ferris</p></a>
+                <a href="https://wid.wisc.edu/people/steve-wangen/" target="_blank" class="badge badge-info">Advisor: Dr. Steven Wangen</a>
+                <a href="http://pages.cs.wisc.edu/~ferris/" target="_blank" class="badge badge-info">Advisor: Prof. Michael Ferris</a>
                 <p>I worked on the <a href="https://www.journalofdairyscience.org/article/S0022-0302(20)30145-4/pdf" target="_blank">Dairy Brain</a> project, an analytics platform for evaluating and predicting the performance of dairy cows by aggregating large quantities of dairy data.</p>
                 <p>I contributed to the development, deployment, and maintainence of the Agricultural Data Hub (AgDH), a warehouse-scale computing infrastructure for the collection, storage, homogenization, and distribution of dairy farm's dairy data in a series of PostgreSQL data marts.</p>
                 <p>I also hosted poster sessions at the 3rd WID Research Symposium and presented in outreach meetings for the local dairy industry.</p>
@@ -237,22 +236,6 @@
                 <p>Offered drop-in and by-appointment tutoring sessions for core undergraduate computer sciences and math courses to individual or small groups of engineering students to improve academic performance.</p>
               </div>
             </li>
-            <!-- <li class="media">
-              <img src="images/coursera.jpeg" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Subtitle Translator @ Coursera</h5>
-                <p class="badge badge-info">May 2019 - May 2020</p>
-                <p>As a member of the Coursera Global Translator Community (GTC), I helped translate English subtitles to Simplified Chinese subtitles in multiple courses (An Introduction to Programming, Building Web Applications in PHP, Neural Networks and Deep Learning).</p>
-              </div>
-            </li> -->
-            <!-- <li class="media">
-              <img src="images/liz.png" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Student Supervisor @ <a href="https://www.housing.wisc.edu/dining/locations/liz/" target="_blank">Liz's Market</a></h5>
-                <p class="badge badge-info">Sep 2018 - May 2019</p>
-                <p>I started as a team member and got promoted two months later. Through supporting other student employees and provided training and supervision to ensure that they can excel in their tasks, I demonstrated leadership and acted as a role model while working with a diverse population of student employees.</p>
-              </div>
-            </li> -->
             <li class="media">
               <img src="images/rdc.png" class="mr-3" alt="..." width="64" height="64">
               <div class="media-body">
@@ -281,13 +264,24 @@
           <h3>Non-technical Hobbies</h3>
           <ul>
             <li>Watching movies & making pop culture references.</li>
-            <li>Collecting postcards. I love postcards, send me one or let me know if you want one! My current mailing address is: Max-Planck-Institut für Informatik, Campus E1 4, Gästehaus Apt. 4, 66123 Saarbrücken.</li>
-            <li>Going to new places. Cities I have lived in for more than a few months include: Shanghai, Madison, Berkeley, Pittsburgh, and Saarbrücken.</li>
+            <li>Collecting postcards. I love postcards, send me one or let me know if you want one!</li>
+            <li>Going to new places. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, and Saarbrücken.</li>
             <li>
-              Sports. I play soccer for fun every weekend at <a href="https://goo.gl/maps/VMhncrK3ZjsEQmBr5" target="_blank">Near West Field</a>,
-              and I am a fan of FC Barcelona. I also 🏊‍♂️ , ⛸️ , 🎱 , and wear my Heelys whenever possible.
+              Sports. I play soccer for fun and I am a fan of FC Barcelona. I also 🏊‍♂️ , ⛸️ , 🎱 , and wear my Heelys whenever possible.
             </li>
-            <li>Music. I play accordion 🎹 and alto saxophone 🎷. Check out my <a href="https://open.spotify.com/user/31g3wuoucmudk6m3u5vhlnh2u2xa" target="_blank">Spotify playlists</a>!</li>
+            <li>Music. I used to play accordion 🎹 and alto saxophone 🎷 because of Chinese parenting. Check out my <a href="https://open.spotify.com/user/31g3wuoucmudk6m3u5vhlnh2u2xa" target="_blank">Spotify playlists</a>!</li>
+          </ul>
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+          <a id="writings" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h3>Writings</h3>
+          <p>
+            I also love to write stuff down, although I'm still working on my writing skills.
+            I have a <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank">personal blog</a> that hosts some paper reading notes and other random blog posts.
+            Some of my most-visited writings include:
+          </p>
+          <ul>
+            <li><a href="https://ruipeterpan.gitbook.io/paper-reading-notes/blog/towards-applying-to-cs-ph.d.-programs" target="_blank">Towards applying to CS Ph.D. programs</a></li>
+            <li><a href="courses.html" target="_blank">Course Guide @ UW-Madison</a></li>
           </ul>
         </div>
       </div>
@@ -303,6 +297,18 @@
 
           <h2>Publications</h2>
           <ul>
+            <!-- <li>
+              <p id="netml">
+                <span class="badge badge-secondary">Workshop Paper</span> ???. <i>hopefully???</i>.
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
+                <div class="collapse" id="shockwave-abstract">
+                  <div class="card card-body">
+                    [Redacted]
+                  </div>
+                </div>
+              </p>
+            </li> -->
             <li>
               <p id="shockwave">
                 <span class="badge badge-secondary">Conference Paper</span> Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella. 2021. <b>Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b>. <i>In submission</i>.
@@ -355,24 +361,6 @@
 
           <!-- https://getbootstrap.com/docs/4.4/components/card/#grid-cards -->
           <div class="row row-cols-1 row-cols-md-3">
-
-            <!-- Template -->
-<!--             <div class="col mb-4">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Title</h5>
-                  <p class="card-text">Description</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="..." target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Source Code</button></a>
-                    <small class="text-muted">May 2019</small>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-
-
             <div class="col mb-4">
               <div class="card h-100">
                 <img src="images/projects/cs759.png" class="card-img-top" alt="...">
@@ -399,19 +387,6 @@
                 </div>
               </div>
             </div> -->
-            <!-- <div class="col mb-4">
-              <div class="card h-100">
-                <img src="images/projects/wid-poster.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Agricultural Data Hub</h5>
-                  <p class="card-text">A centralized data hub for gathering and disseminating dairy data to service the analytics framework. Work done at Dairy Brain.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="files/wid-poster.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Poster</button></a>
-                    <small class="text-muted">Aug 2020</small>
-                  </div>
-                </div>
-              </div>
-            </div> -->
             <div class="col mb-4">
               <div class="card h-100">
                 <img src="images/projects/cs61c-3.jpg" class="card-img-top" alt="...">
@@ -426,7 +401,7 @@
                 </div>
               </div>
             </div>
-            <div class="col mb-4">
+            <!-- <div class="col mb-4">
               <div class="card h-100">
                 <img src="images/projects/cs639.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -438,20 +413,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card h-100">
-                <img src="images/projects/paper_notes.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Paper Reading Notes</h5>
-                  <p class="card-text">Quick, searchable review of the papers I have read. This is necessary when your brain is an LRU cache with a tiny size.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Link</button></a>
-                    <small class="text-muted">Dec 2020</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div> -->
             <div class="col mb-4">
               <div class="card h-100">
                 <img src="images/projects/slack_stalker.jpg" class="card-img-top" alt="...">
@@ -465,33 +427,7 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="col mb-4">
-              <div class="card h-100">
-                <img src="images/projects/website.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Personal Website</h5>
-                  <p class="card-text">Built from scratch using HTML/CSS, JavaScript, and Bootstrap.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="https://github.com/ruipeterpan/ruipeterpan.github.io" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Source Code</button></a>
-                    <small class="text-muted">May 2019</small>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="col mb-4">
-              <div class="card h-100">
-                <img src="images/projects/rocky-rabbit.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Rocky Rabbit</h5>
-                  <p class="card-text">2-D top-down rhythm game developed during my time at NHSGA @ CMU. Skills used: C#, Unity3D.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="files/RockyRabbit.zip" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Download & Play!</button></a>
-                    <small class="text-muted">Jul 2017</small>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
+            <!-- Template -->
             <!-- <div class="col mb-4">
               <div class="card h-100">
                 <img src="..." class="card-img-top" alt="...">
@@ -505,14 +441,12 @@
                 </div>
               </div>
             </div> -->
-
-
-
           </div>
         </div>
       </div>    
     </div>  
 
+    <!-- Template -->
     <!-- <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -532,19 +466,16 @@
           <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Contacts🤙</h1>
           
-          <p><a href="mailto:rpan33@wisc.edu" target="_blank">rpan33@wisc.edu</a></p>
-          <p><a href="sms:+16089600303">(+1) 608-960-0303</a></p>
+          <!-- <p><a href="mailto:rpan33@wisc.edu" target="_blank">rpan33@wisc.edu</a></p> -->
+          <!-- <p><a href="sms:+16089600303">(+1) 608-960-0303</a></p> -->
           <a href="mailto:rpan33@wisc.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a>
           <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
           <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
           <a href="https://www.facebook.com/rui.pan.1044" class="smlinks" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
-          <a href="https://www.instagram.com/ruipeterpan/" class="smlinks" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></i></a>
+          <!-- <a href="https://www.instagram.com/ruipeterpan/" class="smlinks" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></i></a> -->
           <a href="https://twitter.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
           <a href="https://www.youtube.com/channel/UC-EMOWY7Td2nX9Pi93n8prQ" class="smlinks" target="_blank"><i class="fab fa-youtube-square fa-2x"></i></a>
-          <!-- <a href="https://www.snapchat.com/add/peterpan0726" class="smlinks" target="_blank"><i class="fab fa-snapchat-square fa-2x"></i></a> -->
-          <!-- <a href="https://u.wechat.com/EEVm_3AGp_hr3O22zRLFQO8" class="smlinks" target="_blank"><i class="fab fa-weixin fa-2x"></i></a> -->
           <a href="calendar.html" class="smlinks" target="_blank"><i class="fas fa-calendar-alt fa-2x"></i></i></i></a>
-          <!-- <a href="sms:+16089600303" class="smlinks" target="_blank"><i class="fas fa-comment fa-2x"></i></a> -->
         </div>
       </div>
       <div class="row">
@@ -552,13 +483,8 @@
           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=f5f5f5&w=300&t=tt&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=4194cf&ct=ffffff&cmo=ff0000&cmn=3dde3d'></script>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=500&t=tt&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script> -->
-          <!-- <a href='https://clustrmaps.com/site/1b61h'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=500&t=tt&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=2d78ad&ct=ffffff'/></a> -->
-        </div>
-      </div>
-      <p>Designed and built by Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just add a link back to my website and remember to remove the analytics stuff.</p>
+      <p>Designed and built by Rui Pan. Powered by Bootstrap.</p>
+      <p>Feel free to fork this website's source code, just add a link back to my website and remember to remove the analytics stuff.</p>
     </div>
 
     <!-- Optional JavaScript -->

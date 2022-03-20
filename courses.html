@@ -41,8 +41,6 @@
       .smlinks:hover {
           color: rgb(7, 107, 255);
       }
-      /*html, body { scroll-behavior:smooth; }*/
-      /* Conflicts with "collapse nav bar on click" */
     </style>
 
 
@@ -50,59 +48,57 @@
   <body>
 
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand" href="index.html">Rui Pan</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #f58025">  <!-- f58025 or ff8f00 -->
+      <a class="navbar-brand" href="index.html">
+        <img src="apple-touch-icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Rui Pan
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#interests">Interests</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://ruipeterpan.gitbook.io/paper-reading-notes/">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="courses.html">Course Guide</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#contacts">Contacts</a>
-          </li>
-        </ul>
-        <script>
-          //GOOGLE SEARCH
-          //Enter domain of site to search.
-          var domainroot="ruipeterpan.github.io"
-          function Gsitesearch(curobj){ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value } 
-        </script>
-        <form class="form-inline my-2 my-lg-0" action="http://www.google.com/search" method="get" role="search" onSubmit="Gsitesearch(this)">
-          <input name="q" type="hidden" />
-          <input class="form-control mr-sm-2" name="qfront" type="search" placeholder="Search on this site" aria-label="Search">
-          <!--<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button> -->
-        </form>
-      </div>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="#interests">Interests</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank">Blog</a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="#contacts">Contacts</a>
+        </li>
+      </ul>
+      <script>
+        //GOOGLE SEARCH: Enter domain of site to search.
+        var domainroot="ruipeterpan.github.io"
+        function Gsitesearch(curobj){ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value } 
+      </script>
+      <form class="form-inline my-2 my-lg-0" action="http://www.google.com/search" method="get" role="search" onSubmit="Gsitesearch(this)">
+        <input name="q" type="hidden" />
+        <input class="form-control mr-sm-2" name="qfront" type="search" placeholder="Search on this site" aria-label="Search">
+      </form>
+    </div>
+  </nav>
 
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="jumbotron-heading display-4">Course Guide</h1>
         <p class="lead">This is a list of courses I have taken at UW-Madison (unless otherwise specified).</p>
-        <p class="lead">I am majoring in computer sciences and applied math (option II), so this might be helpful for students who want to pursue a similar program. I transferred 19 credits from AP courses, and one can graduate in three years with double major following this course plan. (Aug 2020 Update: There was a small change in the applied math major requirement -- It now requires one more "hardcore" math class. I would just take MATH 525/632.)</p>
+        <p class="lead">I am majoring in computer sciences and applied math (option II), so this might be helpful for students who want to pursue a similar program. I transferred 19 credits from AP courses, and one can graduate in three years with double major following this course plan. (Aug 2020 update: There was a small change in the applied math major requirement -- It now requires one more "hardcore" math class. I recommend taking MATH 525 (optimization) or 632 (stochastic processes). Good stuff.)</p>
         <p class="lead">Special thanks to <a href="https://shawnzhong.com" target="_blank">Shawn Zhong</a> and many other upperclassmen whose course plans helped me a lot.</p>
         <p class="lead"><b>Please note that the following information may be outdated, and the course descriptions may be specific to only one professor/semester's offering. Feel free to email me for questions and general inquires, although I might not have the most up-to-date information on the state of things.</b></p>
       </div>
@@ -874,19 +870,16 @@
           <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>Contacts🤙</h1>
           
-          <p><a href="mailto:rpan33@wisc.edu" target="_blank">rpan33@wisc.edu</a></p>
-          <p><a href="sms:+16089600303">(+1) 608-960-0303</a></p>
+          <!-- <p><a href="mailto:rpan33@wisc.edu" target="_blank">rpan33@wisc.edu</a></p> -->
+          <!-- <p><a href="sms:+16089600303">(+1) 608-960-0303</a></p> -->
           <a href="mailto:rpan33@wisc.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a>
           <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
           <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
           <a href="https://www.facebook.com/rui.pan.1044" class="smlinks" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
-          <a href="https://www.instagram.com/ruipeterpan/" class="smlinks" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></i></a>
+          <!-- <a href="https://www.instagram.com/ruipeterpan/" class="smlinks" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></i></a> -->
           <a href="https://twitter.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
           <a href="https://www.youtube.com/channel/UC-EMOWY7Td2nX9Pi93n8prQ" class="smlinks" target="_blank"><i class="fab fa-youtube-square fa-2x"></i></a>
-          <!-- <a href="https://www.snapchat.com/add/peterpan0726" class="smlinks" target="_blank"><i class="fab fa-snapchat-square fa-2x"></i></a> -->
-          <!-- <a href="https://u.wechat.com/EEVm_3AGp_hr3O22zRLFQO8" class="smlinks" target="_blank"><i class="fab fa-weixin fa-2x"></i></a> -->
           <a href="calendar.html" class="smlinks" target="_blank"><i class="fas fa-calendar-alt fa-2x"></i></i></i></a>
-          <!-- <a href="sms:+16089600303" class="smlinks" target="_blank"><i class="fas fa-comment fa-2x"></i></a> -->
         </div>
       </div>
       <div class="row">
@@ -894,13 +887,8 @@
           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=f5f5f5&w=300&t=tt&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=4194cf&ct=ffffff&cmo=ff0000&cmn=3dde3d'></script>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=500&t=tt&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script> -->
-          <!-- <a href='https://clustrmaps.com/site/1b61h'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=500&t=tt&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=2d78ad&ct=ffffff'/></a> -->
-        </div>
-      </div>
-      <p>Designed and built by Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just add a link back to my website and remember to remove the analytics stuff.</p>
+      <p>Designed and built by Rui Pan. Powered by Bootstrap.</p>
+      <p>Feel free to fork this website's source code, just add a link back to my website and remember to remove the analytics stuff.</p>
     </div>
 
 
