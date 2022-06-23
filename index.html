@@ -1,6 +1,3 @@
-<!--  -->
-<!-- <a href="" target="_blank"> -->
-<!-- TODO: update the navbar on other pages (courses) -->
 <!DOCTYPE html>
 
 <html lang="en-us">
@@ -16,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Site Information -->
-    <title> Rui Pan | 潘瑞 </title>
+    <title> Rui Pan 潘瑞 </title>
 
     <style type="text/css">
       .smlinks {
@@ -45,8 +42,8 @@
     
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #f58025">  <!-- f58025 or ff8f00 -->
-        <a class="navbar-brand" href="index.html">
-          <img src="apple-touch-icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <a class="navbar-brand" href="#about">
+          <img src="apple-touch-icon.png" width="30" height="30" class="d-inline-block align-top" alt="Rui's head">
           Rui Pan
         </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +53,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#publications">Publications</a>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#education">Education</a>
@@ -66,9 +63,6 @@
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank">Blog</a>
@@ -90,37 +84,20 @@
     </nav>
 
     <!-- Jumbotron -->
-    <!-- <img src="images/lightsaber.jpg" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="25%" height="25%"> -->
-
-    <!-- <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Rui Pan | 潘瑞</h1>
-        <img src='images/lightsaber.jpg' onmouseover="this.src='images/roulette.gif';" onmouseout="this.src='images/lightsaber.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="25%" height="25%">
-        <p class="lead text-muted">Research Intern @ MPI-INF</p>
-        <a href="files/cv.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
-        <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank"><button type="button" class="btn btn-outline-primary">Blog/Paper Reading Notes</button></a>
-      </div>
-    </section> -->
-
     <div class="jumbotron jumbotron-fluid text-center">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-sm-6">
-            <img src='images/lightsaber.jpg' onmouseover="this.src='images/roulette.gif';" onmouseout="this.src='images/lightsaber.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
+            <img src='images/barcelona.jpg' alt="Rui's (handsome) headshot" onmouseover="this.src='images/lightsaber.jpg';" onmouseout="this.src='images/barcelona.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
           </div>
           <div class="col-sm-4">
             <div>
-              <h2 class="jumbotron-heading">Rui Pan | 潘瑞</h2>
+              <h2 class="jumbotron-heading">Rui Pan 潘瑞</h2>
+              <!-- <p class="lead text-muted">1st-year Ph.D. student @ Princeton</p> -->
               <p class="lead text-muted">Research Intern @ MPI-INF</p>
-              <!-- <address>
-                  First-year Ph.D. student<br>
-                  Princeton University, Department of Computer Science<br>
-                  Office xxx, Computer Science Building<br>
-                  xxx, Princeton, NJ xxx<br>
-                  ruipan at princeton dot edu
-              </address> -->
               <a href="files/cv.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
               <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank"><button type="button" class="btn btn-outline-primary">Blog</button></a>
+              <!-- <a href="" target="_blank"><button type="button" class="btn btn-outline-primary">Google Scholar</button></a> -->
             </div>
           </div>
         </div>
@@ -133,158 +110,13 @@
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="about" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>🧐Who is Rui Pan?</h1>
-          <p>
-            I am a research intern at <a href="https://www.mpi-inf.mpg.de/home" target="_blank">Max Plank Institute for Informatics</a>, working with <a href="https://sites.google.com/view/yitingxia/home" target="_blank">Prof. Yiting Xia</a> on networked systems for ML.
-            Previously, I got my B.S. in computer science and mathematics from the University of Wisconsin-Madison, where I was fortunate to be advised by the amazing <a href="https://shivaram.org" target="_blank">Prof. Shivaram Venkataraman</a> on systems (scheduling & cluster resource management) for ML.
+          <h1>🧐About</h1>
+          <p>  <!--a 1st-year -->
+            I'm an incoming CS Ph.D. student at <a href="https://www.cs.princeton.edu/" target="_blank">Princeton University</a>, advised by <a href="https://www.cs.princeton.edu/~ravian/" target="_blank">Prof. Ravi Netravali</a>.
+            I got my B.S. in CS and Math from <a href="https://www.cs.wisc.edu/" target="_blank">University of Wisconsin-Madison</a>, where I was fortunate to be advised by <a href="https://shivaram.org/" target="_blank">Prof. Shivaram Venkataraman</a> on systems (cluster resource management & workload scheduling) for ML.
+            I had also worked with the amazing <a href="https://sites.google.com/view/yitingxia/home" target="_blank">Prof. Yiting Xia</a> at <a href="https://www.mpi-inf.mpg.de/home" target="_blank">Max Plank Institute for Informatics</a> on networked systems for ML. 
             I am broadly interested in the systems aspects of big data (Machine Learning Systems, Cloud Computing, Datacenter Systems, Distributed Systems, Networks).
           </p>
-          <!-- I'm a 1st-year CS Ph.D. student at Princeton University, advised by Prof. Ravi Netravali. -->
-          <!-- Prior to joining Princeton, I interned with the amazing Prof. Yiting Xia at Max Plank Institute for Informatics on networked systems for ML. Even before that, I got my B.S. in CS and Math from University of Wisconsin-Madison, where I was fortunate to be advised by Prof. Shivaram Venkataraman on systems (scheduling & cluster resource management) for ML. -->
-          <!-- I am broadly interested in the systems aspects of big data (Machine Learning Systems, Cloud Computing, Datacenter Systems, Distributed Systems, Networks). -->
-          <h2>News</h2>
-          <ul>
-            <li>[2022-03] I have committed to the CS Ph.D. program at Princeton! See you in the garden state!</li>
-            <li>[2021-12] I graduated from UW-Madison with a B.S. in CS and Math! Time flies when you're having fun :)</li>
-            <li>[2021-10] I'm excited to be joining MPI-INF in Saarbrücken, Germany for a research internship in Spring 2022, during which I will work with <a href="https://sites.google.com/view/yitingxia/home" target="_blank">Prof. Yiting Xia</a> on network-accelerated machine learning systems!</li>
-            <li>[2021-08] I'm attending <a href="https://cmmrs.mpi-sws.org/" target="_blank">CMMRS</a>, a pre-doctoral school co-hosted by MPI-SWS, Maryland and Cornell!</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- Education -->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
-          <a id="education" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>🎓Education</h1>
-          <ul class="list-unstyled">
-            <!-- Princeton -->
-            <li class="media">
-              <img src="images/princeton_square.jpeg" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Princeton University🐅</h5>
-                <p class="badge badge-info">Sep 2022 - May 2027 (Expected)</p>
-                <p class="badge badge-info">Ph.D. in CS</p>
-                <a href="https://www.cs.princeton.edu/~ravian/" target="_blank" class="badge badge-info">Advisor: Prof. Ravi Netravali</a>
-                <p>Go Tigers!</p>
-              </div>
-            </li> 
-            <!-- UW-Madison -->
-            <li class="media">
-              <img src="images/uwmadison.png" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">University of Wisconsin-Madison🦡</h5>
-                <p class="badge badge-info">Sep 2018 - Dec 2021</p>
-                <p class="badge badge-info">B.S. in CS & Math</p>
-                <p class="badge badge-info">GPA: 3.96</p>
-                <a href="https://shivaram.org/" target="_blank" class="badge badge-info">Advisor: Prof. Shivaram Venkataraman</a>
-                <p>Visit the <a href="courses.html">course guide</a> to see my two cents on a coursework plan. Go Badgers!</p>
-              </div>
-            </li> 
-          </ul>  
-        </div>
-      </div>
-    </div>
-
-    <!-- Experience -->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
-          <a id="experience" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>👔Experience</h1>
-          <ul class="list-unstyled">
-            <li class="media">
-              <img src="images/mpi.jpg" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Research Intern @ Max Planck Institute for Informatics (MPI-INF)</h5>
-                <p class="badge badge-info">Feb 2022 - Jul 2022 (Expected)</p>
-                <a href="https://sites.google.com/view/yitingxia/home" target="_blank" class="badge badge-info">Advisor: Prof. Yiting Xia</a>
-                <p>Network-accelerated machine learning systems</p>
-                <p></p>
-              </div>
-            </li>
-            <li class="media">
-              <img src="images/uwmadisoncs.jpg" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Undergraduate Research Assistant @ UW-Madison Department of Computer Science</h5>
-                <p class="badge badge-info">Jun 2020 - Dec 2021</p>
-                <a href="https://shivaram.org/" target="_blank" class="badge badge-info">Advisor: Prof. Shivaram Venkataraman</a>
-                <p>I worked on systems for ML. Specifically, I worked on optimizing DNN training in multi-tenant GPU clusters from different perspectives like neural network pruning, GPU multiplexing, and fair & efficient scheduling.</p>
-              </div>
-            </li>
-            <li class="media">
-              <img src="images/wid.png" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Undergraduate Research Assistant @ <a href="https://wid.wisc.edu/" target="_blank">Wisconsin Institute for Discovery</a></h5>
-                <p class="badge badge-info">Jan 2020 - Mar 2021</p>
-                <a href="https://wid.wisc.edu/people/steve-wangen/" target="_blank" class="badge badge-info">Advisor: Dr. Steven Wangen</a>
-                <a href="http://pages.cs.wisc.edu/~ferris/" target="_blank" class="badge badge-info">Advisor: Prof. Michael Ferris</a>
-                <p>I worked on the <a href="https://www.journalofdairyscience.org/article/S0022-0302(20)30145-4/pdf" target="_blank">Dairy Brain</a> project, an analytics platform for evaluating and predicting the performance of dairy cows by aggregating large quantities of dairy data.</p>
-                <p>I contributed to the development, deployment, and maintainence of the Agricultural Data Hub (AgDH), a warehouse-scale computing infrastructure for the collection, storage, homogenization, and distribution of dairy farm's dairy data in a series of PostgreSQL data marts.</p>
-                <p>I also hosted poster sessions at the 3rd WID Research Symposium and presented in outreach meetings for the local dairy industry.</p>
-              </div>
-            </li>
-            <li class="media">
-              <img src="images/ulc.png" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Computer Sciences Tutor @ <a href="https://www.engr.wisc.edu/academics/student-services/ulc/" target="_blank">Undergratuate Learning Center</a>, UW-Madison College of Engineering</h5>
-                <p class="badge badge-info">Sep 2019 - May 2020</p>
-                <p>Offered drop-in and by-appointment tutoring sessions for core undergraduate computer sciences and math courses to individual or small groups of engineering students to improve academic performance.</p>
-              </div>
-            </li>
-            <li class="media">
-              <img src="images/rdc.png" class="mr-3" alt="..." width="64" height="64">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">Student Lecturer @ <a href="https://www.jdfz.sh.cn" target="_blank">High School Affiliated to Shanghai Jiao Tong University</a></h5>
-                <p class="badge badge-info">Sep 2017 - May 2018</p>
-                <p>I designed an introductory computer sciences course and prepared teaching materials with another student lecturer (<a href="https://www.linkedin.com/in/yongming-ge-308484173/" target="_blank">Yongming Ge</a>, also my favorite person). I also gave lectures on AP Computer Sciences A to 10+ students.</p>
-              </div>
-            </li> 
-          </ul>  
-        </div>
-      </div>
-    </div>
-
-    <!-- Interests -->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
-          <a id="interests" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>😍Interests</h1>
-          <h3>Technical Skills</h3>
-          <ul>
-            <li>Languages: Python, Java/C#, C/C++, PostgreSQL, R, HTML/CSS, JavaScript</li>
-            <li>Frameworks/Tools: Git, UNIX, PyTorch, CUDA, OpenMP, MPI, Docker, Unity3D</li>
-          </ul>
-          <h3>Non-technical Hobbies</h3>
-          <ul>
-            <li>Watching movies & making pop culture references.</li>
-            <li>Collecting postcards. I love postcards, send me one or let me know if you want one!</li>
-            <li>Going to new places. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, and Saarbrücken.</li>
-            <li>
-              Sports. I play soccer for fun and I am a fan of FC Barcelona. I also 🏊‍♂️ , ⛸️ , 🎱 , and wear my Heelys whenever possible.
-            </li>
-            <li>Music. I used to play accordion 🎹 and alto saxophone 🎷 because of Chinese parenting. Check out my <a href="https://open.spotify.com/user/31g3wuoucmudk6m3u5vhlnh2u2xa" target="_blank">Spotify playlists</a>!</li>
-          </ul>
-          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
-          <a id="writings" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h3>Writings</h3>
-          <p>
-            I also love to write stuff down, although I'm still working on my writing skills.
-            I have a <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank">personal blog</a> that hosts some paper reading notes and other random blog posts.
-            Some of my most-visited writings include:
-          </p>
-          <ul>
-            <li><a href="https://ruipeterpan.gitbook.io/paper-reading-notes/blog/towards-applying-to-cs-ph.d.-programs" target="_blank">Towards applying to CS Ph.D. programs</a></li>
-            <li><a href="courses.html" target="_blank">Course Guide @ UW-Madison</a></li>
-          </ul>
         </div>
       </div>
     </div>
@@ -294,47 +126,53 @@
       <div class="row">
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
-          <a id="projects" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>👨‍💻Projects</h1>
-
-          <h2>Publications</h2>
+          <a id="publications" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h1>📄Publications</h1>
+          (* Equal contribution)
           <ul>
-            <!-- <li>
-              <p id="netml">
-                <span class="badge badge-secondary">Workshop Paper</span> ???. <i>hopefully???</i>.
-                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
-                <div class="collapse" id="shockwave-abstract">
+            <li>
+              <p id="hyperflow">
+                <h5><span class="badge badge-secondary">Workshop Paper</span> <b>[Redacted]: [Redacted] for Flow Scheduling in [Redacted]</b></h5>
+                <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia<br>
+                <i>Under Review</i>, 2022 <br>
+                <!--javascript:void(0);-->
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#hyperflow-abstract" role="button" aria-expanded="false" aria-controls="hyperflow-abstract">Abstract</a>
+                <div class="collapse" id="hyperflow-abstract">
                   <div class="card card-body">
                     [Redacted]
                   </div>
                 </div>
               </p>
-            </li> -->
+            </li>
             <li>
               <p id="shockwave">
-                <span class="badge badge-secondary">Conference Paper</span> Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella. 2021. <b>Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b>. <i>In submission</i>.
-                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <h5><span class="badge badge-secondary">Conference Paper</span> <b>[Redacted]: Proactive, Fair, and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b></h5>
+                Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
+                <i>Under Review</i>, 2022 <br>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
                 <div class="collapse" id="shockwave-abstract">
                   <div class="card card-body">
                     Dynamic adaptation has become an essential technique in accelerating distributed machine learning (ML) training: 
-                    Recent studies have shown that dynamically adjusting model structure (e.g., lottery ticket hypothesis) or 
-                    hyperparameters (e.g., batch size) can significantly accelerate training without sacrificing accuracy. 
-                    However, existing ML cluster schedulers are not designed to handle dynamic adaptation. 
-                    We show that existing schemes fail to provide fairness and degrade system efficiency when the training throughput 
-                    changes over time under dynamic adaptation. We design [Redacted], a scheduler with future planning that builds on 
-                    two key ideas. First, [Redacted] extends classic market theory from static settings to dynamic settings to 
-                    co-optimize efficiency and fairness. Second, [Redacted] utilizes stochastic dynamic programming to handle uncertain, 
-                    dynamic throughput. We build a system for [Redacted] and validate its performance with both trace-driven simulation 
-                    and cluster experiments. Results show that [Redacted].
+                    Recent studies have shown that dynamically adjusting model structure (e.g., lottery ticket hypothesis) or hyperparameters (e.g., batch size) 
+                    can significantly accelerate training without sacrificing accuracy. However, existing ML cluster schedulers are not designed to handle dynamic adaptation. 
+                    We show that existing schemes fail to provide fairness and degrade system efficiency when the training throughput changes over time under dynamic adaptation. 
+                    We design [Redacted], a scheduler with future planning that builds on two key ideas. 
+                    First, [Redacted] extends classic market theory from static settings to dynamic settings to co-optimize efficiency and fairness. 
+                    Second, [Redacted] utilizes stochastic dynamic programming to handle uncertain, dynamic throughput. 
+                    We build a system for [Redacted] and validate its performance with both trace-driven simulation and cluster experiments. 
+                    Results show that [Redacted].
                   </div>
                 </div>
               </p>
             </li>
             <li>
               <p id="agdh">
-                <span class="badge badge-secondary">Poster</span> <b>Rui Pan</b>, Steven R. Wangen, Michael C. Ferris. 2020. <b>AgDH: A System for Gathering and Disseminating Dairy Data</b>. Presented at the <i>3<sup>rd</sup> Annual WID Symposium</i>.
+                <h5><span class="badge badge-secondary">Poster</span> <b>AgDH: A System for Gathering and Disseminating Dairy Data</b></h5>
+                <b>Rui Pan</b>, Steven Wangen, Michael Ferris <br>
+                Presented at the <i>3<sup>rd</sup> Annual WID Symposium</i>, 2020 <br>
                 <a href="files/wid-poster.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#wid-poster-abstract" role="button" aria-expanded="false" aria-controls="wid-poster-abstract">Abstract</a>
                 <div class="collapse" id="wid-poster-abstract">
@@ -359,13 +197,13 @@
             </li>
           </ul>
 
-          <h2>Personal/Course Projects</h2>
+          <!-- <h2>Course Projects</h2> -->
 
           <!-- https://getbootstrap.com/docs/4.4/components/card/#grid-cards -->
-          <div class="row row-cols-1 row-cols-md-3">
+          <!-- <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
               <div class="card h-100">
-                <img src="images/projects/cs759.png" class="card-img-top" alt="...">
+                <img src="images/projects/cs759.png" class="card-img-top" alt="Figure from project report">
                 <div class="card-body">
                   <h5 class="card-title">Cautiously Aggressive GPU Space Sharing to Improve Resource Utilization and Job Efficiency</h5>
                   <p class="card-text">CS/ECE/ME/EP 759 course project. Used fractional resource partition and aggressive multi-job colocation to improve GPU utilization and job efficiency.</p>
@@ -376,9 +214,9 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="col mb-4">
+            <div class="col mb-4">
               <div class="card h-100">
-                <img src="images/projects/db_tuning.png" class="card-img-top" alt="...">
+                <img src="images/projects/db_tuning.png" class="card-img-top" alt="Figure that showcases DB tuning">
                 <div class="card-body">
                   <h5 class="card-title">Comparing Black-Box Optimization Methods for Online DBMS Tuning</h5>
                   <p class="card-text">CS 744 course project. Evaluated different tuning algorithms like Bayesian Optimization and Random EMbedding Bayesian Optimization (REMBO).</p>
@@ -388,13 +226,12 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
             <div class="col mb-4">
               <div class="card h-100">
-                <img src="images/projects/cs61c-3.jpg" class="card-img-top" alt="...">
+                <img src="images/projects/cs61c-3.jpg" class="card-img-top" alt="Screenshot of the CPU in Logisim">
                 <div class="card-body">
                   <h5 class="card-title">CPU - ALU, Regfile, Datapath and Controls</h5>
-                  <!-- This is and will forever be my favorite course project. -->
                   <p class="card-text">Building a computer from scratch using logic gates! CS 61C @ Berkeley project 3. Implemented a 32-bit two-cycle processor based on RISC-V using Logisim. </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <a href="https://inst.eecs.berkeley.edu/~cs61c/su19/projects/proj3-2/" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Project Spec</button></a>
@@ -402,7 +239,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- <div class="col mb-4">
               <div class="card h-100">
                 <img src="images/projects/cs639.png" class="card-img-top" alt="...">
@@ -415,7 +252,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
             <div class="col mb-4">
               <div class="card h-100">
                 <img src="images/projects/slack_stalker.jpg" class="card-img-top" alt="...">
@@ -428,7 +265,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- Template -->
             <!-- <div class="col mb-4">
               <div class="card h-100">
@@ -447,6 +284,90 @@
         </div>
       </div>    
     </div>  
+
+    <!-- Education -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+          <a id="education" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h1>🎓Education</h1>
+          <ul class="list-unstyled">
+            <!-- Princeton -->
+            <li class="media">
+              <img src="images/princeton_square.jpeg" class="mr-3" alt="Princeton University logo" width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">🐅Princeton University</h5>
+                <p class="badge badge-info">Sep 2022 - May 202?</p>
+                <p class="badge badge-info">Ph.D. in CS</p>
+                <a href="https://www.cs.princeton.edu/~ravian/" target="_blank" class="badge badge-info">Advisor: Prof. Ravi Netravali</a>
+                <p>Go Tigers!</p>
+              </div>
+            </li> 
+            <!-- UW-Madison -->
+            <li class="media">
+              <img src="images/uwmadison.png" class="mr-3" alt="UW Madison logo" width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">🦡University of Wisconsin-Madison</h5>
+                <p class="badge badge-info">Sep 2018 - Dec 2021</p>
+                <p class="badge badge-info">B.S. in CS & Math</p>
+                <p class="badge badge-info">GPA: 3.96</p>
+                <a href="https://shivaram.org/" target="_blank" class="badge badge-info">Advisor: Prof. Shivaram Venkataraman</a>
+                <p>Visit the <a href="courses.html">course guide</a> to see my two cents on a coursework plan. Go Badgers!</p>
+              </div>
+            </li> 
+          </ul>  
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+          <a id="experience" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h1>👔Experience</h1>
+          <ul class="list-unstyled">
+            <li class="media">
+              <img src="images/mpi.jpg" class="mr-3" alt="Max Planck Institute logo" width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Research Intern @ Max Planck Institute for Informatics (MPI-INF)</h5>
+                <p class="badge badge-info">Feb 2022 - Aug 2022</p>
+                <a href="https://sites.google.com/view/yitingxia/home" target="_blank" class="badge badge-info">Advisor: Prof. Yiting Xia</a>
+                <p>Network-accelerated systems for distributed deep learning training in multi-tenant GPU clusters</p>
+                <p></p>
+              </div>
+            </li>
+          </ul>  
+        </div>
+      </div>
+    </div>
+    
+    <!-- Interests -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+          <a id="interests" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h1>😍Interests</h1>
+          <ul>
+            <li>Watching movies & making pop culture references.</li>
+            <li>Collecting postcards. I love postcards, send me one or let me know if you want one!</li>
+            <li>Going to new places. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, and Princeton.</li>
+            <li>
+              Sports. I play soccer for fun and I am a fan of FC Barcelona. I also 🏓 , 🏊‍♂️ , 🎱 , ⛸️ , and wear my Heelys whenever possible.
+            </li>
+            <li>Music. I used to play accordion 🪗 and alto saxophone 🎷 because of Chinese parenting. Check out my <a href="https://open.spotify.com/user/31g3wuoucmudk6m3u5vhlnh2u2xa" target="_blank">Spotify playlists</a>!</li>
+            <li>Writing. I have a <a href="https://ruipeterpan.gitbook.io/paper-reading-notes/" target="_blank">personal blog</a> that hosts some paper reading notes and other random blog posts. Some of my most-visited writings include:</li>
+            <ul>
+              <li><a href="https://ruipeterpan.gitbook.io/paper-reading-notes/blog/towards-applying-to-cs-ph.d.-programs" target="_blank">Towards applying to CS Ph.D. programs</a></li>
+              <li><a href="courses.html" target="_blank">Course Guide @ UW-Madison</a></li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- Template -->
     <!-- <div class="container">
@@ -468,12 +389,10 @@
           <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>🤙Contacts</h1>
           
-          <p><a href="mailto:ruipan@princeton.edu" target="_blank">ruipan@princeton.edu</a> | <a href="sms:+16089600303">(+1) 608-960-0303</a></p>
+          <p>''.join([first_name, last_name]) at princeton dot edu </p>
           <!-- <a href="mailto:ruipan@princeton.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a> -->
           <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
           <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
-          <!-- <a href="https://www.facebook.com/rui.pan.1044" class="smlinks" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a> -->
-          <!-- <a href="https://www.instagram.com/ruipeterpan/" class="smlinks" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></i></a> -->
           <a href="https://twitter.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
           <a href="https://www.youtube.com/channel/UC-EMOWY7Td2nX9Pi93n8prQ" class="smlinks" target="_blank"><i class="fab fa-youtube-square fa-2x"></i></a>
           <a href="calendar.html" class="smlinks" target="_blank"><i class="fas fa-calendar-alt fa-2x"></i></i></i></a>
@@ -481,11 +400,10 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=f5f5f5&w=300&t=tt&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=4194cf&ct=ffffff&cmo=ff0000&cmn=3dde3d'></script>
+          <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=000000&w=300&t=n&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=e9ecef&cmo=f58025'></script>
         </div>
       </div>
-      <p>Designed and built by Rui Pan. Powered by Bootstrap.</p>
-      <p>Feel free to fork this website's source code, just add a link back to my website and remember to remove the analytics stuff.</p>
+      <p>@ 2022 Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just add a link back to my website and remember to remove the analytics stuff.</p>
     </div>
 
     <!-- Optional JavaScript -->
