@@ -128,31 +128,17 @@
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="publications" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>📄Publications</h1>
-          (* Equal contribution)
+          <!-- (* Equal contribution) -->
           <ul>
-            <!-- <li>
-              <p id="hyperflow">
-                <h5><span class="badge badge-secondary">Workshop Paper</span> <b>[Redacted]: [Redacted] for Flow Scheduling in [Redacted]</b></h5>
-                <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia<br>
-                <i>Under Review</i>, 2022 <br>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#hyperflow-abstract" role="button" aria-expanded="false" aria-controls="hyperflow-abstract">Abstract</a>
-                <div class="collapse" id="hyperflow-abstract">
-                  <div class="card card-body">
-                    [Redacted]
-                  </div>
-                </div>
-              </p>
-            </li> -->
             <li>
               <p id="shockwave">
                 <h5><span class="badge badge-secondary">Conference Paper</span> <b>Shockwave: Proactive, Fair, and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b></h5>
                 Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
-                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">NSDI 2023</a> (to appear)<br>
+                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a> (to appear, PDF & code coming soon)<br>
                 <!--javascript:void(0);-->
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a>
                 <div class="collapse" id="shockwave-abstract">
                   <div class="card card-body">
                     Dynamic adaptation has become an essential technique in accelerating distributed machine learning (ML) training: 
@@ -163,7 +149,20 @@
                     First, Shockwave extends classic market theory from static settings to dynamic settings to co-optimize efficiency and fairness. 
                     Second, Shockwave utilizes stochastic dynamic programming to handle uncertain, dynamic throughput. 
                     We build a system for Shockwave and validate its performance with both trace-driven simulation and cluster experiments. 
-                    Results show that Shockwave.
+                    Results show that for traces of ML jobs with dynamic adaptation, Shockwave improves makespan by 1.3× and fairness by 2× when compared with existing fair scheduling schemes.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
+              <p id="hyperflow">
+                <h5><span class="badge badge-secondary">Workshop Paper</span> <b>Flow Scheduling for Machine Learning</b></h5>
+                <i>In submission</i>, 2022 <br>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-secondary btn-sm" data-toggle="collapse" href="#hyperflow-abstract" role="button" aria-expanded="false" aria-controls="hyperflow-abstract">Abstract</a>
+                <div class="collapse" id="hyperflow-abstract">
+                  <div class="card card-body">
+                    [Redacted]
                   </div>
                 </div>
               </p>
