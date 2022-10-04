@@ -11,6 +11,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
     <!-- Site Information -->
     <title> Rui Pan 潘瑞 </title>
@@ -131,13 +132,14 @@
           <ul>
             <li>
               <p id="shockwave">
-                <h5><span class="badge badge-secondary">Conference Paper</span> <b>Shockwave: Proactive, Fair, and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b></h5>
+                <h5><span class="badge badge-secondary">Conference Paper</span> <b>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b></h5>
                 Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
-                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a> (to appear, PDF & code coming soon)<br>
+                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a> (to appear)<br>
                 <!--javascript:void(0);-->
-                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">PDF</button></a>
+                <a href="publications/shockwave_nsdi23.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
-                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a>
+                <a href="https://arxiv.org/abs/2210.00093" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">arXiv</button></a>
+                <a href="https://github.com/uw-mad-dash/shockwave" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
                 <div class="collapse" id="shockwave-abstract">
                   <div class="card card-body">
                     Dynamic adaptation has become an essential technique in accelerating distributed machine learning (ML) training: 
@@ -159,10 +161,17 @@
                 <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia <br>
                 <a href="https://conferences.sigcomm.org/hotnets/2022/" target="_blank">ACM HotNets 2022</a> (to appear, PDF coming soon)<br>
                 <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-secondary btn-sm" data-toggle="collapse" href="#hyperflow-abstract" role="button" aria-expanded="false" aria-controls="hyperflow-abstract">Abstract</a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#hyperflow-abstract" role="button" aria-expanded="false" aria-controls="hyperflow-abstract">Abstract</a>
                 <div class="collapse" id="hyperflow-abstract">
                   <div class="card card-body">
-                    [Redacted]
+                    This paper discusses why flow scheduling does not apply to distributed deep learning training and presents EchelonFlow, 
+                    the first network abstraction to bridge the gap. EchelonFlow deviates from the common belief that semantically 
+                    related flows should finish at the same time. We reached the key observation, after extensive workflow analysis 
+                    of diverse training paradigms, that distributed training jobs observe strict computation patterns, which may 
+                    consume data at different times. We devise a generic method to model the drastically different computation patterns 
+                    across training paradigms, and formulate EchelonFlow to regulate flow finish times accordingly. Case studies of 
+                    mainstream training paradigms under EchelonFlow demonstrate the expressiveness of the abstraction, and our system 
+                    sketch suggests the feasibility of an EchelonFlow scheduling system.
                   </div>
                 </div>
               </p>
@@ -194,6 +203,12 @@
                 </div>
               </p>
             </li> -->
+          </ul>
+          Some other non peer-reviewed write-ups include:
+          <ul>
+            <li>CS 759 Project Report: Cautiously Aggressive GPU Space Sharing for Improving Resource Utilization and Job Efficiency (<a href="publications/report_cs759.pdf" target="_blank">pdf</a>)</li>
+            <li>CS 744 Project Report: Comparing Black-Box Optimization Methods for Online DBMS Tuning (<a href="publications/report_cs744.pdf" target="_blank">pdf</a>)</li>
+            <li>AgDH: A System for Gathering and Disseminating Dairy Data (<a href="publications/wid-poster.pdf" target="_blank">pdf</a>)</li>
           </ul>
         </div>
       </div>    
@@ -301,12 +316,13 @@
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>🤙Contacts</h1>
-          <p>ruipan at princeton dot edu </p>
+          <p>ruipan at cs dot princeton dot edu </p>
           <!-- <a href="mailto:ruipan@princeton.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a> -->
           <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
           <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
           <a href="https://twitter.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
           <a href="https://www.youtube.com/channel/UC-EMOWY7Td2nX9Pi93n8prQ" class="smlinks" target="_blank"><i class="fab fa-youtube-square fa-2x"></i></a>
+          <a href="javascript:void(0);" class="smlinks" target="_blank"><i class="ai ai-google-scholar-square ai-2x"></i></a>
           <a href="calendar.html" class="smlinks" target="_blank"><i class="fas fa-calendar-alt fa-2x"></i></i></i></a>
         </div>
       </div>
