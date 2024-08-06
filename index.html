@@ -112,9 +112,9 @@
           <a id="about" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h1>About</h1>
           <p>
-            I'm a 2nd-year CS Ph.D. student at <a href="https://www.cs.princeton.edu/" target="_blank">Princeton University</a>, advised by <a href="https://www.cs.princeton.edu/~ravian/" target="_blank">Prof. Ravi Netravali</a>.
+            I'm a rising 3rd-year CS Ph.D. student at <a href="https://www.cs.princeton.edu/" target="_blank">Princeton University</a>, advised by <a href="https://www.cs.princeton.edu/~ravian/" target="_blank">Prof. Ravi Netravali</a>.
             I got my B.S. in CS and Math from <a href="https://www.cs.wisc.edu/" target="_blank">University of Wisconsin-Madison</a>, where I was fortunate to be advised by <a href="https://shivaram.org/" target="_blank">Prof. Shivaram Venkataraman</a> on systems (cluster scheduling & resource management) for ML.
-            I had also worked with <a href="https://sites.google.com/view/yitingxia/home" target="_blank">Prof. Yiting Xia</a> at <a href="https://www.mpi-inf.mpg.de/home" target="_blank">Max Planck Institute for Informatics</a> on networked systems for ML. 
+            I had also interned at <a href="https://www.amazon.science/author/yida-wang" target="_blank">AWS</a> on systems for LLMs and <a href="https://www.mpi-inf.mpg.de/home" target="_blank">Max Planck Institute for Informatics</a> on networked systems for ML. 
             I am broadly interested in the intersection between systems, networks, and machine learning.
             In particular, I enjoy working on systems and networks for machine learning and video applications.
           </p>
@@ -137,11 +137,10 @@
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
                 <h5><b>Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving</b></h5>
                 Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
-                arXiv 2023<br>
+                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a><br>
                 <!--javascript:void(0);-->
                 <a href="publications/apparate_arxiv23.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#apparate-abstract" role="button" aria-expanded="false" aria-controls="apparate-abstract">Abstract</a>
-                <!-- <a href="https://arxiv.org/abs/2210.00093" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">arXiv</button></a> -->
                 <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a>
                 <div class="collapse" id="apparate-abstract">
                   <div class="card card-body">
@@ -163,6 +162,33 @@
               </p>
             </li>
             <li>
+              <p id="griphook">
+                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
+                <h5><b>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</b></h5>
+                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a><br>
+                <!--javascript:void(0);-->
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#griphook-abstract" role="button" aria-expanded="false" aria-controls="apparate-abstract">Abstract</a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a>
+                <div class="collapse" id="griphook-abstract">
+                  <div class="card card-body">
+                    Machine learning inference platforms continue to face high request rates and strict latency constraints. 
+                    Existing solutions largely focus on compressing models to substantially lower compute costs (and time) with mild accuracy degradations. 
+                    This paper explores an alternate (but complementary) technique that trades off accuracy and resource costs on a per-input granularity: 
+                    early exit models, which selectively allow certain inputs to exit a model from an intermediate layer. 
+                    Though intuitive, early exits face fundamental deployment challenges, largely owing to the effects that exiting inputs have on batch size 
+                    (and resource utilization) throughout model execution. 
+                    We present Griphook, the first system that makes early exit models practical for realistic inference deployments. 
+                    Our key insight is to split and replicate blocks of layers in models in a manner that maintains a constant batch size throughout execution, 
+                    all the while accounting for resource requirements and communication overheads. 
+                    Evaluations with NLP and vision models show that Griphook can deliver up to 1.74X improvement in goodput (for a fixed cost) 
+                    or 1.78X reduction in cost (for a fixed goodput). 
+                    Additionally, Griphook's goodput wins generalize to autoregressive LLMs (2.8-3.8X) and compressed models (1.67X).
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
               <p id="shockwave">
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
                 <h5><b>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b></h5>
@@ -172,9 +198,9 @@
                 <a href="publications/shockwave_nsdi23.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
                 <!-- <a href="https://arxiv.org/abs/2210.00093" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">arXiv</button></a> -->
-                <a href="https://github.com/uw-mad-dash/shockwave" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
                 <a href="publications/shockwave_nsdi23_talk.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
                 <a href="https://www.youtube.com/watch?v=d0ZdS12y_Tw" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Talk</button></a>
+                <a href="https://github.com/uw-mad-dash/shockwave" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
                 <div class="collapse" id="shockwave-abstract">
                   <div class="card card-body">
                     Dynamic adaptation has become an essential technique in accelerating distributed machine learning (ML) training: 
