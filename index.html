@@ -113,7 +113,7 @@
           <h1>About</h1>
           <p>
             I'm a 3rd-year CS Ph.D. student at <a href="https://www.cs.princeton.edu/" target="_blank">Princeton University</a>, advised by <a href="https://www.cs.princeton.edu/~ravian/" target="_blank">Prof. Ravi Netravali</a>.
-            I am broadly interested in the intersection of systems, networks, and machine learning.
+            I am broadly interested in the intersection of systems, networks, and machine learning. My recent work has focused on systems for efficient ML/LLM inference.
             I got my B.S. in CS and Math from <a href="https://www.cs.wisc.edu/" target="_blank">University of Wisconsin-Madison</a>, where I was fortunate to be advised by <a href="https://shivaram.org/" target="_blank">Prof. Shivaram Venkataraman</a> on systems (cluster scheduling & resource allocation) for ML.
             I have also interned at <a href="https://www.amazon.science/author/yida-wang" target="_blank">AWS</a> on systems for efficient LLM inference and at <a href="https://www.mpi-inf.mpg.de/home" target="_blank">MPI-INF</a> on networked systems for ML training. 
             <!-- My recent work has focused on systems for ML/LLM inference. -->
@@ -158,6 +158,38 @@
                     about alternate behavior to minimize risk and using a richer model formulation to account for environmental noise). 
                     Across diverse networks (emulated and real-world), Tarzan outperforms the widely deployed GCC algorithm, 
                     increasing average video bitrates by 15-39% while reducing freeze rates by 60-100%.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
+              <p id="comet">
+                <h5><b>Optimizing Mixture-of-Experts Inference Latency Combining Model Deployment and Communication Scheduling</b></h5>
+                Jialong Li, Shreyansh Tripathi, Lakshay Rastogi, Yiming Lei, <b>Rui Pan</b>, Yiting Xia <br>
+                arXiv 2024<br>
+                <a href="" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#comet-abstract" role="button" aria-expanded="false" aria-controls="comet-abstract">Abstract</a>
+                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
+                <div class="collapse" id="comet-abstract">
+                  <div class="card card-body">
+                    As machine learning models scale in size and complexity, their computational requirements become a significant barrier. 
+                    Mixture-of-Experts (MoE) models alleviate this issue by selectively activating relevant experts. 
+                    Despite this, MoE models are hindered by high communication overhead from all-to-all operations, 
+                    low GPU utilization due to the synchronous communication constraint, and complications from heterogeneous GPU environments.
+
+                    This paper presents Comet, which optimizes both model deployment and all-to-all communication 
+                    scheduling to address these challenges in MoE inference. Comet achieves minimal communication times 
+                    by strategically ordering token transmissions in all-to-all communications. It improves GPU utilization 
+                    by colocating experts from different models on the same device, avoiding the limitations of synchronous 
+                    all-to-all communication. We analyze Comet's optimization strategies theoretically across four common 
+                    GPU cluster settings: exclusive vs. colocated models on GPUs, and homogeneous vs. heterogeneous GPUs. 
+                    Comet provides optimal solutions for three cases, and for the remaining NP-hard scenario, 
+                    it offers a polynomial-time sub-optimal solution with only a 1.07x degradation from the optimal.
+
+                    Comet is the first approach to minimize MoE inference time via optimal model deployment and communication 
+                    scheduling across various scenarios. Evaluations demonstrate that Comet significantly accelerates inference, 
+                    achieving speedups of up to 2.38x in homogeneous clusters and 3.54x in heterogeneous environments. 
+                    Moreover, Comet enhances GPU utilization by up to 1.5x compared to existing methods.
                   </div>
                 </div>
               </p>
@@ -359,7 +391,7 @@
                 <h5 class="mt-0 mb-1"><img src="images/bezos.png" height="25"/>Applied Scientist Intern @ Amazon, AWS AI Team</h5>
                 <p class="badge badge-info badge-dark">May 2024 - Aug 2024</p>
                 <p class="badge badge-info badge-dark">Santa Clara, CA</p>
-                <!-- <a href="https://sites.google.com/view/yitingxia/home" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Yiting Xia</a> -->
+                <a href="https://scholar.google.com/citations?user=kHEFQpIAAAAJ&hl=en" target="_blank" class="badge badge-info badge-dark">Manager: Dr. Zhen Jia</a>
                 <p></p>
               </div>
             </li>
