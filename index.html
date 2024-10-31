@@ -110,7 +110,7 @@
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="about" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>About</h1>
+          <h2>About</h2>
           <p>
             I'm a 3rd-year CS Ph.D. student at <a href="https://www.cs.princeton.edu/" target="_blank">Princeton University</a>, advised by <a href="https://www.cs.princeton.edu/~ravian/" target="_blank">Prof. Ravi Netravali</a>.
             I am broadly interested in the intersection of systems, networks, and machine learning. My recent work has focused on systems for efficient ML/LLM inference.
@@ -129,13 +129,30 @@
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="publications" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>Publications</h1>
-          (*Equal contributions)
+          <div style="display: flex; align-items: center;">
+            <h2 style="margin-right: 10px;">Publications</h2> (*Equal contributions)
+          </div>
           <!--use btn-outline-secondary for unclickable, grey buttons-->
+          <h5><b>Preprints🀄️🤞</b></h5>
           <ul>
             <li>
+              <p id="marconi">
+                <h5>Marconi: Prefix Caching for the Era of Hybrid LLMs</h5>
+                <b>Rui Pan</b>, Zhuang Wang, Zhen Jia, Can Karakus, Yida Wang, Luca Zancato, Tri Dao, Ravi Netravali <br>
+                In submission. Preprint coming soon :)<br>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-secondary btn-sm" data-toggle="collapse" href="#marconi-abstract" role="button" aria-expanded="false" aria-controls="marconi-abstract">Abstract</a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a>
+                <div class="collapse" id="marconi-abstract">
+                  <div class="card card-body">
+                    Currently under internal review
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
               <p id="tarzan">
-                <h5><b>Tarzan: Passively-Learned Real-Time Rate Control for Video Conferencing</b></h5>
+                <h5>Tarzan: Passively-Learned Real-Time Rate Control for Video Conferencing</h5>
                 Neil Agarwal, <b>Rui Pan</b>, Francis Y. Yan, Ravi Netravali <br>
                 arXiv 2024<br>
                 <a href="publications/arxiv24_tarzan.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
@@ -164,7 +181,7 @@
             </li>
             <li>
               <p id="aurora">
-                <h5><b>Optimizing Mixture-of-Experts Inference Latency Combining Model Deployment and Communication Scheduling</b></h5>
+                <h5>Optimizing Mixture-of-Experts Inference Latency Combining Model Deployment and Communication Scheduling</h5>
                 Jialong Li, Shreyansh Tripathi, Lakshay Rastogi, Yiming Lei, <b>Rui Pan</b>, Yiting Xia <br>
                 arXiv 2024<br>
                 <a href="publications/arxiv24_aurora.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
@@ -192,10 +209,13 @@
                 </div>
               </p>
             </li>
+            </ul>
+            <h5><b>Conferences🤓🎙️</b></h5>
+            <ul>
             <li>
               <p id="apparate">
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
-                <h5><b>Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving</b></h5>
+                <h5>Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving</h5>
                 Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
                 <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a><br>
                 <h5 class="mt-0 mb-1"><img src="images/acm_available_1.1.png" height="40"/><img src="images/acm_functional_1.1.png" height="40"/><img src="images/acm_reproduced_1.1.png" height="40"/></h5>
@@ -225,7 +245,7 @@
             <li>
               <p id="e3">
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
-                <h5><b>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</b></h5>
+                <h5>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</h5>
                 Anand Iyer, Mingyu Guan, Yinwei Dai, <b>Rui Pan</b>, Swapnil Gandhi, Ravi Netravali <br>
                 <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a><br>
                 <!--javascript:void(0);-->
@@ -251,7 +271,7 @@
             <li>
               <p id="shockwave">
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
-                <h5><b>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</b></h5>
+                <h5>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</h5>
                 Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
                 <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a><br>
                 <!--javascript:void(0);-->
@@ -276,10 +296,13 @@
                 </div>
               </p>
             </li>
+            </ul>
+            <h5><b>Workshops🤓👆</b></h5>
+            <ul>
             <li>
               <p id="echelonflow">
                 <!-- <span class="badge badge-secondary">Workshop Paper</span>  -->
-                <h5><b>Efficient Flow Scheduling in Distributed Deep Learning Training with Echelon Formation</b></h5>
+                <h5>Efficient Flow Scheduling in Distributed Deep Learning Training with Echelon Formation</h5>
                 <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia <br>
                 <a href="https://conferences.sigcomm.org/hotnets/2022/" target="_blank">ACM HotNets 2022</a><br>
                 <a href="publications/hotnets22_echelonflow.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
@@ -345,14 +368,14 @@
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="education" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>Education</h1>
+          <h2>Education</h2>
           <ul class="list-unstyled">
             <!-- Princeton -->
             <li class="media">
               <img src="images/princeton_square.jpeg" class="mr-3" alt="Princeton University logo" width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">🐅Princeton University</h5>
-                <p class="badge badge-info badge-dark">Sep 2022 - May 2027?</p>
+                <p class="badge badge-info badge-dark">Sep 2022 - May 2027</p>
                 <p class="badge badge-info badge-dark">Ph.D. in CS</p>
                 <a href="https://www.cs.princeton.edu/~ravian/" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Ravi Netravali</a>
                 <p></p>
@@ -381,7 +404,7 @@
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="experience" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>Experience</h1>
+          <h2>Experience</h2>
           <ul class="list-unstyled">
             <li class="media">
               <img src="images/aws.jpeg" class="mr-3" alt="AWS logo" width="64">
@@ -412,7 +435,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h1>Professional Activities</h1>
+          <h2>Professional Activities</h2>
         </div>
       </div>
       <ul>
@@ -432,7 +455,7 @@
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="interests" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>Interests</h1>
+          <h2>Interests</h2>
           <ul>
             <li>Checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Mountain View. I play a little bit of <a href="https://www.geoguessr.com/" target="_blank">GeoGuessr</a>!</li>
             <!-- <li>Checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Santa Clara.</li> -->
@@ -441,7 +464,7 @@
               Sports. I play soccer and table tennis for fun and I am a fan of FC Barcelona.
               <!-- I also 🚴 , 🥾 , 🏊‍♂️ , 🎱 , ⛸️ , and wear my Heelys whenever possible. -->
             </li>
-            <li>Watching movies & making pop culture references.</li>
+            <li>Watching movies & making pop culture references. One of my favorite Youtube channels is <a href="https://www.youtube.com/@CinemaTherapyShow">Cinema Therapy</a>.</li>
             <li>Music. I used to play accordion and alto saxophone because of Chinese parenting.</li>
             <!-- Check out my <a href="https://open.spotify.com/user/31g3wuoucmudk6m3u5vhlnh2u2xa" target="_blank">Spotify playlists</a>! -->
             <li>Writing. I have a <a href="https://blog.ruipan.xyz/" target="_blank">personal blog</a> that hosts some paper reading notes and other random blog posts. Some of my most-visited writings include:</li>
@@ -472,7 +495,7 @@
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>Contacts</h1>
+          <h2>Contacts</h2>
           <p>ruipan at cs dot princeton dot edu </p>
           <!-- <a href="mailto:ruipan@princeton.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a> -->
           <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
