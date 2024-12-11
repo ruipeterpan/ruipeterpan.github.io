@@ -163,35 +163,6 @@
               </p>
             </li>
             <li>
-              <p id="tarzan">
-                <h5>Tarzan: Passively-Learned Real-Time Rate Control for Video Conferencing</h5>
-                Neil Agarwal, <b>Rui Pan</b>, Francis Y. Yan, Ravi Netravali <br>
-                arXiv 2024<br>
-                <a href="publications/arxiv24_tarzan.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#tarzan-abstract" role="button" aria-expanded="false" aria-controls="tarzan-abstract">Abstract</a>
-                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
-                <div class="collapse" id="tarzan-abstract">
-                  <div class="card card-body">
-                    Rate control algorithms are at the heart of video conferencing platforms, 
-                    determining target bitrates that match dynamic network characteristics for high quality. 
-                    Recent data-driven strategies have shown promise for this challenging task, 
-                    but the performance degradation they introduce during training has been a nonstarter 
-                    for many production services, precluding adoption. 
-                    This paper aims to bolster the practicality of data-driven rate control by presenting 
-                    an alternative avenue for experiential learning: 
-                    leveraging purely existing telemetry logs produced by the incumbent algorithm in production. 
-                    We observe that these logs often contain effective decisions, although often at the wrong times or in the wrong order. 
-                    To realize this approach despite the inherent uncertainty that log-based learning brings 
-                    (i.e., lack of feedback for new decisions), our system, Tarzan, 
-                    combines a variety of robust learning techniques (i.e., conservatively reasoning 
-                    about alternate behavior to minimize risk and using a richer model formulation to account for environmental noise). 
-                    Across diverse networks (emulated and real-world), Tarzan outperforms the widely deployed GCC algorithm, 
-                    increasing average video bitrates by 15-39% while reducing freeze rates by 60-100%.
-                  </div>
-                </div>
-              </p>
-            </li>
-            <li>
               <p id="aurora">
                 <h5>Optimizing Mixture-of-Experts Inference Latency Combining Model Deployment and Communication Scheduling</h5>
                 Jialong Li, Shreyansh Tripathi, Lakshay Rastogi, Yiming Lei, <b>Rui Pan</b>, Yiting Xia <br>
@@ -224,6 +195,35 @@
             </ul>
             <h5><b>Conferences🤓🎙️</b></h5>
             <ul>
+            <li>
+              <p id="tarzan">
+                <h5>Tarzan: Passively-Learned Real-Time Rate Control for Video Conferencing</h5>
+                Neil Agarwal, <b>Rui Pan</b>, Francis Y. Yan, Ravi Netravali <br>
+                <a href="https://www.usenix.org/conference/nsdi25" target="_blank">USENIX NSDI 2025</a><br>
+                <a href="publications/arxiv24_tarzan.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#tarzan-abstract" role="button" aria-expanded="false" aria-controls="tarzan-abstract">Abstract</a>
+                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
+                <div class="collapse" id="tarzan-abstract">
+                  <div class="card card-body">
+                    Rate control algorithms are at the heart of video conferencing platforms, 
+                    determining target bitrates that match dynamic network characteristics for high quality. 
+                    Recent data-driven strategies have shown promise for this challenging task, 
+                    but the performance degradation they introduce during training has been a nonstarter 
+                    for many production services, precluding adoption. 
+                    This paper aims to bolster the practicality of data-driven rate control by presenting 
+                    an alternative avenue for experiential learning: 
+                    leveraging purely existing telemetry logs produced by the incumbent algorithm in production. 
+                    We observe that these logs often contain effective decisions, although often at the wrong times or in the wrong order. 
+                    To realize this approach despite the inherent uncertainty that log-based learning brings 
+                    (i.e., lack of feedback for new decisions), our system, Tarzan, 
+                    combines a variety of robust learning techniques (i.e., conservatively reasoning 
+                    about alternate behavior to minimize risk and using a richer model formulation to account for environmental noise). 
+                    Across diverse networks (emulated and real-world), Tarzan outperforms the widely deployed GCC algorithm, 
+                    increasing average video bitrates by 15-39% while reducing freeze rates by 60-100%.
+                  </div>
+                </div>
+              </p>
+            </li>
             <li>
               <p id="apparate">
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
