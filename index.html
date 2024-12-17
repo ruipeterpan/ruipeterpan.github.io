@@ -163,6 +163,33 @@
               </p>
             </li>
             <li>
+              <p id="ragserve">
+                <h5>RAGServe: Fast Quality-Aware RAG Systems with Configuration Adaptation</h5>
+                Siddhant Ray, <b>Rui Pan</b>, Zhuohan Gu, Kuntai Du, Ganesh Ananthanarayanan, Ravi Netravali, Junchen Jiang <br>
+                arXiv 2024<br>
+                <a href="publications/arxiv24_ragserve.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#ragserve-abstract" role="button" aria-expanded="false" aria-controls="ragserve-abstract">Abstract</a>
+                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
+                <div class="collapse" id="ragserve-abstract">
+                  <div class="card card-body">
+                    RAG (Retrieval Augmented Generation) allows LLMs (large language models) to 
+                    generate better responses with external knowledge, but using more external 
+                    knowledge often improves generation quality at the expense of response delay. 
+                    Prior work either reduces the response delay (through better scheduling of RAG 
+                    queries) or strives to maximize quality (which involves tuning the RAG workflow), 
+                    but they fall short in optimizing the \emph {tradeoff} between the delay 
+                    and quality of RAG responses. This paper presents RAGServe, the first RAG system 
+                    that jointly schedules queries and adapts the key RAG configurations of each 
+                    job, such as the number of retrieved text chunks and synthesis methods, 
+                    in order to balance quality optimization and response delay reduction. 
+                    Using 4 popular RAG-QA datasets, we show that compared with the state-of-the-art 
+                    RAG scheduling system, RAGServe reduces the generation latency by 1.64--2.54×
+                    without sacrificing generation quality.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
               <p id="aurora">
                 <h5>Optimizing Mixture-of-Experts Inference Latency Combining Model Deployment and Communication Scheduling</h5>
                 Jialong Li, Shreyansh Tripathi, Lakshay Rastogi, Yiming Lei, <b>Rui Pan</b>, Yiting Xia <br>
@@ -199,7 +226,7 @@
               <p id="tarzan">
                 <h5>Tarzan: Passively-Learned Real-Time Rate Control for Video Conferencing</h5>
                 Neil Agarwal, <b>Rui Pan</b>, Francis Y. Yan, Ravi Netravali <br>
-                <a href="https://www.usenix.org/conference/nsdi25" target="_blank">USENIX NSDI 2025</a><br>
+                <a href="https://www.usenix.org/conference/nsdi25" target="_blank">USENIX NSDI 2025</a>, Philadelphia, PA<br>
                 <a href="publications/arxiv24_tarzan.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#tarzan-abstract" role="button" aria-expanded="false" aria-controls="tarzan-abstract">Abstract</a>
                 <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
@@ -229,7 +256,7 @@
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
                 <h5>Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving</h5>
                 Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
-                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a><br>
+                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
                 <h5 class="mt-0 mb-1"><img src="images/acm_available_1.1.png" height="40"/><img src="images/acm_functional_1.1.png" height="40"/><img src="images/acm_reproduced_1.1.png" height="40"/></h5>
                 <!--javascript:void(0);-->
                 <a href="publications/sosp24_apparate.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
@@ -259,7 +286,7 @@
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
                 <h5>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</h5>
                 Anand Iyer, Mingyu Guan, Yinwei Dai, <b>Rui Pan</b>, Swapnil Gandhi, Ravi Netravali <br>
-                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a><br>
+                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
                 <!--javascript:void(0);-->
                 <a href="publications/sosp24_e3.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#e3-abstract" role="button" aria-expanded="false" aria-controls="e3-abstract">Abstract</a>
@@ -285,7 +312,7 @@
                 <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
                 <h5>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</h5>
                 Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
-                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a><br>
+                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a>, Boston, MA<br>
                 <!--javascript:void(0);-->
                 <a href="publications/nsdi23_shockwave.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
@@ -316,7 +343,7 @@
                 <!-- <span class="badge badge-secondary">Workshop Paper</span>  -->
                 <h5>Efficient Flow Scheduling in Distributed Deep Learning Training with Echelon Formation</h5>
                 <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia <br>
-                <a href="https://conferences.sigcomm.org/hotnets/2022/" target="_blank">ACM HotNets 2022</a><br>
+                <a href="https://conferences.sigcomm.org/hotnets/2022/" target="_blank">ACM HotNets 2022</a>, Austin, TX<br>
                 <a href="publications/hotnets22_echelonflow.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#echelonflow-abstract" role="button" aria-expanded="false" aria-controls="echelonflow-abstract">Abstract</a>
                 <a href="https://github.com/ruipeterpan/echelonflow_slides/tree/main" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
@@ -470,11 +497,11 @@
           <h2>Interests</h2>
           <ul>
             <li>
-              Sports. I play soccer and table tennis for fun and I am a fan of FC Barcelona.
+              Sports! I play soccer and table tennis for fun and I am a fan of FC Barcelona.
               <!-- I also 🚴 , 🥾 , 🏊‍♂️ , 🎱 , ⛸️ , and wear my Heelys whenever possible. -->
             </li>
             <li>Cooking Chinese dishes!</li>
-            <li>Checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Mountain View. I play a little bit of <a href="https://www.geoguessr.com/" target="_blank">GeoGuessr</a>!</li>
+            <li>Geography and traveling! I love checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Mountain View. I play a little bit of <a href="https://www.geoguessr.com/" target="_blank">GeoGuessr</a> and have been using <a href="https://fogofworld.app/en/" target="_blank">Fog of World</a> since 2015!</li>
             <!-- <li>Checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Santa Clara.</li> -->
             <li>Watching movies & making pop culture references. One of my favorite Youtube channels is <a href="https://www.youtube.com/@CinemaTherapyShow">Cinema Therapy</a>.</li>
             <!-- <li>Collecting postcards. I love postcards, send me one or let me know if you want one!</li> -->
