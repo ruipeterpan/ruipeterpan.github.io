@@ -133,15 +133,17 @@
             <h2 style="margin-right: 10px;">Publications</h2> (*Equal contributions)
           </div>
           <!--use btn-outline-secondary for unclickable, grey buttons-->
-          <h5><b>Preprints🀄️🤞</b></h5>
+          <h5><b>Conferences🤓🎙️</b></h5>
           <ul>
             <li>
               <p id="marconi">
                 <h5>Marconi: Prefix Caching for the Era of Hybrid LLMs</h5>
                 <b>Rui Pan</b>, Zhuang Wang, Zhen Jia, Can Karakus, Luca Zancato, Tri Dao, Yida Wang, Ravi Netravali<br>
-                arXiv 2024<br>
+                <a href="https://mlsys.org/Conferences/2025" target="_blank">MLSys 2025</a>, Santa Clara, CA<br>
                 <a href="publications/arxiv24_marconi.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#marconi-abstract" role="button" aria-expanded="false" aria-controls="marconi-abstract">Abstract</a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Slides</button></a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
                 <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a>
                 <a href="https://www.youtube.com/watch?v=K1b8AhIsSYQ" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">🎵</button></a>
                 <div class="collapse" id="marconi-abstract">
@@ -162,6 +164,182 @@
                 </div>
               </p>
             </li>
+            <li>
+              <p id="mowgli">
+                <h5>Mowgli: A Passive Approach to Learning Rate Control for Real-Time Video</h5>
+                Neil Agarwal, <b>Rui Pan</b>, Francis Y. Yan, Ravi Netravali <br>
+                <a href="https://www.usenix.org/conference/nsdi25" target="_blank">USENIX NSDI 2025</a>, Philadelphia, PA<br>
+                <a href="publications/arxiv24_mowgli.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#mowgli-abstract" role="button" aria-expanded="false" aria-controls="mowgli-abstract">Abstract</a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Slides</button></a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
+                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
+                <div class="collapse" id="mowgli-abstract">
+                  <div class="card card-body">
+                    Rate control algorithms are at the heart of video conferencing platforms, 
+                    determining target bitrates that match dynamic network characteristics for high quality. 
+                    Recent data-driven strategies have shown promise for this challenging task, 
+                    but the performance degradation they introduce during training has been a nonstarter 
+                    for many production services, precluding adoption. 
+                    This paper aims to bolster the practicality of data-driven rate control by presenting 
+                    an alternative avenue for experiential learning: 
+                    leveraging purely existing telemetry logs produced by the incumbent algorithm in production. 
+                    We observe that these logs often contain effective decisions, although often at the wrong times or in the wrong order. 
+                    To realize this approach despite the inherent uncertainty that log-based learning brings 
+                    (i.e., lack of feedback for new decisions), our system, Mowgli, 
+                    combines a variety of robust learning techniques (i.e., conservatively reasoning 
+                    about alternate behavior to minimize risk and using a richer model formulation to account for environmental noise). 
+                    Across diverse networks (emulated and real-world), Mowgli outperforms the widely deployed GCC algorithm, 
+                    increasing average video bitrates by 15-39% while reducing freeze rates by 60-100%.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
+              <p id="apparate">
+                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
+                <h5>Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving<img src="images/acm_available_1.1.png" height="25"/><img src="images/acm_functional_1.1.png" height="25"/><img src="images/acm_reproduced_1.1.png" height="25"/></h5>
+                Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
+                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
+                <!-- <h5 class="mt-0 mb-1"><img src="images/acm_available_1.1.png" height="40"/><img src="images/acm_functional_1.1.png" height="40"/><img src="images/acm_reproduced_1.1.png" height="40"/></h5> -->
+                <!--javascript:void(0);-->
+                <a href="publications/sosp24_apparate.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#apparate-abstract" role="button" aria-expanded="false" aria-controls="apparate-abstract">Abstract</a>
+                <a href="publications/sosp24_apparate_talk.key"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
+                <a href="https://github.com/dywsjtu/apparate" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
+                <div class="collapse" id="apparate-abstract">
+                  <div class="card card-body">
+                    Machine learning (ML) inference platforms are tasked with balancing two competing goals: 
+                    ensuring high throughput given many requests, and delivering low-latency responses to support interactive applications. 
+                    Unfortunately, existing platform knobs (e.g., batch sizes) fail to ease this fundamental tension, 
+                    and instead only enable users to harshly trade off one property for the other. 
+                    This paper explores an alternate strategy to taming throughput-latency tradeoffs by changing the granularity 
+                    at which inference is performed. 
+                    We present Apparate, a system that automatically applies and manages early exits (EEs) in ML models, 
+                    whereby certain inputs can exit with results at intermediate layers. 
+                    To cope with the time-varying overhead and accuracy challenges that EEs bring, 
+                    Apparate repurposes exits to provide continual feedback that powers several novel runtime monitoring and adaptation strategies. 
+                    Apparate lowers median response latencies by 40.5-91.5% and 10.0-24.2% for diverse CV and NLP classification workloads, 
+                    and median time-per-token latencies by 70.4-77.9% for generative scenarios, 
+                    without affecting throughputs or violating tight accuracy constraints.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
+              <p id="e3">
+                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
+                <h5>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</h5>
+                Anand Iyer, Mingyu Guan, Yinwei Dai, <b>Rui Pan</b>, Swapnil Gandhi, Ravi Netravali <br>
+                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
+                <!--javascript:void(0);-->
+                <a href="publications/sosp24_e3.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#e3-abstract" role="button" aria-expanded="false" aria-controls="e3-abstract">Abstract</a>
+                <a href="publications/sosp24_e3_talk.pptx"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
+                <div class="collapse" id="e3-abstract">
+                  <div class="card card-body">
+                    Machine learning inference platforms continue to face high request rates and strict latency constraints. 
+                    Existing solutions largely focus on compressing models to substantially lower compute costs (and time) with mild accuracy degradations. 
+                    This paper explores an alternate (but complementary) technique that trades off accuracy and resource costs on a per-input granularity: 
+                    early exit models, which selectively allow certain inputs to exit a model from an intermediate layer. 
+                    Though intuitive, early exits face fundamental deployment challenges, largely owing to the effects that exiting inputs have on batch size (and resource utilization) 
+                    throughout model execution. We present E3, the first system that makes early exit models practical for realistic inference deployments. 
+                    Our key insight is to split and replicate blocks of layers in models in a manner that maintains a constant batch size throughout execution, 
+                    all the while accounting for resource requirements and communication overheads. Evaluations with NLP and vision models show that E3 can deliver up to 1.74× 
+                    improvement in goodput (for a fixed cost) or 1.78× reduction in cost (for a fixed goodput). 
+                    Additionally, E3's goodput wins generalize to autoregressive LLMs (2.8-3.8×) and compressed models (1.67×).
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
+              <p id="shockwave">
+                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
+                <h5>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</h5>
+                Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
+                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a>, Boston, MA<br>
+                <!--javascript:void(0);-->
+                <a href="publications/nsdi23_shockwave.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
+                <!-- <a href="https://arxiv.org/abs/2210.00093" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">arXiv</button></a> -->
+                <a href="publications/nsdi23_shockwave_talk.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <a href="https://www.youtube.com/watch?v=d0ZdS12y_Tw" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Talk</button></a>
+                <a href="https://github.com/uw-mad-dash/shockwave" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
+                <div class="collapse" id="shockwave-abstract">
+                  <div class="card card-body">
+                    Dynamic adaptation has become an essential technique in accelerating distributed machine learning (ML) training: 
+                    Recent studies have shown that dynamically adjusting model structure (e.g., lottery ticket hypothesis) or hyperparameters (e.g., batch size) 
+                    can significantly accelerate training without sacrificing accuracy. However, existing ML cluster schedulers are not designed to handle dynamic adaptation. 
+                    We show that existing schemes fail to provide fairness and degrade system efficiency when the training throughput changes over time under dynamic adaptation. 
+                    We design Shockwave, a scheduler with future planning that builds on two key ideas. 
+                    First, Shockwave extends classic market theory from static settings to dynamic settings to co-optimize efficiency and fairness. 
+                    Second, Shockwave utilizes stochastic dynamic programming to handle uncertain, dynamic throughput. 
+                    We build a system for Shockwave and validate its performance with both trace-driven simulation and cluster experiments. 
+                    Results show that for traces of ML jobs with dynamic adaptation, Shockwave improves makespan by 1.3× and fairness by 2× when compared with existing fair scheduling schemes.
+                  </div>
+                </div>
+              </p>
+            </li>
+          </ul>
+          <h5><b>Workshops🤓👆</b></h5>
+          <ul>
+            <li>
+              <p id="echelonflow">
+                <!-- <span class="badge badge-secondary">Workshop Paper</span>  -->
+                <h5>Efficient Flow Scheduling in Distributed Deep Learning Training with Echelon Formation</h5>
+                <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia <br>
+                <a href="https://conferences.sigcomm.org/hotnets/2022/" target="_blank">ACM HotNets 2022</a>, Austin, TX<br>
+                <a href="publications/hotnets22_echelonflow.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#echelonflow-abstract" role="button" aria-expanded="false" aria-controls="echelonflow-abstract">Abstract</a>
+                <a href="https://github.com/ruipeterpan/echelonflow_slides/tree/main" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <a href="https://youtu.be/kW_7O3cmpIg?si=cSJPEDtCO8q8vLV9&t=976" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Talk</button></a>
+                <!-- <a href="publications/hotnets22_echelonflow_report.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Technical Report</button></a> -->
+                <div class="collapse" id="echelonflow-abstract">
+                  <div class="card card-body">
+                    This paper discusses why flow scheduling does not apply to distributed deep learning training and presents EchelonFlow, 
+                    the first network abstraction to bridge the gap. EchelonFlow deviates from the common belief that semantically 
+                    related flows should finish at the same time. We reached the key observation, after extensive workflow analysis 
+                    of diverse training paradigms, that distributed training jobs observe strict computation patterns, which may 
+                    consume data at different times. We devise a generic method to model the drastically different computation patterns 
+                    across training paradigms, and formulate EchelonFlow to regulate flow finish times accordingly. Case studies of 
+                    mainstream training paradigms under EchelonFlow demonstrate the expressiveness of the abstraction, and our system 
+                    sketch suggests the feasibility of an EchelonFlow scheduling system.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <!-- <li>
+              <p id="agdh">
+                <h5><span class="badge badge-secondary">Poster</span> <b>AgDH: A System for Gathering and Disseminating Dairy Data</b></h5>
+                <b>Rui Pan</b>, Steven Wangen, Michael Ferris <br>
+                Presented at the <i>3<sup>rd</sup> Annual WID Symposium</i>, 2020 <br>
+                <a href="files/wid-poster.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#wid-poster-abstract" role="button" aria-expanded="false" aria-controls="wid-poster-abstract">Abstract</a>
+                <div class="collapse" id="wid-poster-abstract">
+                  <div class="card card-body">
+                    Dairy farms have been incorporating modern data-tracking services, which generate an enormous amount of 
+                    data of myriad types (e.g., genetic, nutritional, reproductive). The organic nature by which the different 
+                    types of automation systems have arisen and developed has resulted in a highly heterogeneous arrangement 
+                    of different systems from different companies that often have difficulty integrating with one another. 
+                    Additionally, dependency on high-cost hardware systems (e.g., milking machines) makes it difficult for 
+                    milk producers to switch service providers, which can disincentivize adaptation of the existing technologies. 
+                    Modern agricultural analytics relies on the ability to integrate data from all of these data streams. 
+                    To that end, we present the Agricultural Data Hub (AgDH), which revolutionizes dairy data collection 
+                    and interpretation by providing uniformed data for future analysis through an extraction, transformation, 
+                    and loading (ETL) process. This system establishes the relationships between these data, integrates those 
+                    data, and makes them available from a single source, thus making it easier for dairy farmers to make 
+                    management decisions. Later, these uniformed data will be sent to the Dairy Brain analytics services 
+                    for additional analyses, and facilitate the visualization of the raw data and the analysis outcomes 
+                    for easier consumption.
+                  </div>
+                </div>
+              </p>
+            </li> -->
+          </ul>
+          <h5><b>Preprints🀄️🤞</b></h5>
+          <ul>
             <li>
               <p id="ragserve">
                 <h5>RAGServe: Fast Quality-Aware RAG Systems with Configuration Adaptation</h5>
@@ -219,177 +397,6 @@
                 </div>
               </p>
             </li>
-            </ul>
-            <h5><b>Conferences🤓🎙️</b></h5>
-            <ul>
-            <li>
-              <p id="tarzan">
-                <h5>Tarzan: Passively-Learned Real-Time Rate Control for Video Conferencing</h5>
-                Neil Agarwal, <b>Rui Pan</b>, Francis Y. Yan, Ravi Netravali <br>
-                <a href="https://www.usenix.org/conference/nsdi25" target="_blank">USENIX NSDI 2025</a>, Philadelphia, PA<br>
-                <a href="publications/arxiv24_tarzan.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#tarzan-abstract" role="button" aria-expanded="false" aria-controls="tarzan-abstract">Abstract</a>
-                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
-                <div class="collapse" id="tarzan-abstract">
-                  <div class="card card-body">
-                    Rate control algorithms are at the heart of video conferencing platforms, 
-                    determining target bitrates that match dynamic network characteristics for high quality. 
-                    Recent data-driven strategies have shown promise for this challenging task, 
-                    but the performance degradation they introduce during training has been a nonstarter 
-                    for many production services, precluding adoption. 
-                    This paper aims to bolster the practicality of data-driven rate control by presenting 
-                    an alternative avenue for experiential learning: 
-                    leveraging purely existing telemetry logs produced by the incumbent algorithm in production. 
-                    We observe that these logs often contain effective decisions, although often at the wrong times or in the wrong order. 
-                    To realize this approach despite the inherent uncertainty that log-based learning brings 
-                    (i.e., lack of feedback for new decisions), our system, Tarzan, 
-                    combines a variety of robust learning techniques (i.e., conservatively reasoning 
-                    about alternate behavior to minimize risk and using a richer model formulation to account for environmental noise). 
-                    Across diverse networks (emulated and real-world), Tarzan outperforms the widely deployed GCC algorithm, 
-                    increasing average video bitrates by 15-39% while reducing freeze rates by 60-100%.
-                  </div>
-                </div>
-              </p>
-            </li>
-            <li>
-              <p id="apparate">
-                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
-                <h5>Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving</h5>
-                Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
-                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
-                <h5 class="mt-0 mb-1"><img src="images/acm_available_1.1.png" height="40"/><img src="images/acm_functional_1.1.png" height="40"/><img src="images/acm_reproduced_1.1.png" height="40"/></h5>
-                <!--javascript:void(0);-->
-                <a href="publications/sosp24_apparate.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#apparate-abstract" role="button" aria-expanded="false" aria-controls="apparate-abstract">Abstract</a>
-                <a href="https://github.com/dywsjtu/apparate" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
-                <div class="collapse" id="apparate-abstract">
-                  <div class="card card-body">
-                    Machine learning (ML) inference platforms are tasked with balancing two competing goals: 
-                    ensuring high throughput given many requests, and delivering low-latency responses to support interactive applications. 
-                    Unfortunately, existing platform knobs (e.g., batch sizes) fail to ease this fundamental tension, 
-                    and instead only enable users to harshly trade off one property for the other. 
-                    This paper explores an alternate strategy to taming throughput-latency tradeoffs by changing the granularity 
-                    at which inference is performed. 
-                    We present Apparate, a system that automatically applies and manages early exits (EEs) in ML models, 
-                    whereby certain inputs can exit with results at intermediate layers. 
-                    To cope with the time-varying overhead and accuracy challenges that EEs bring, 
-                    Apparate repurposes exits to provide continual feedback that powers several novel runtime monitoring and adaptation strategies. 
-                    Apparate lowers median response latencies by 40.5-91.5% and 10.0-24.2% for diverse CV and NLP classification workloads, 
-                    and median time-per-token latencies by 70.4-77.9% for generative scenarios, 
-                    without affecting throughputs or violating tight accuracy constraints.
-                  </div>
-                </div>
-              </p>
-            </li>
-            <li>
-              <p id="e3">
-                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
-                <h5>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</h5>
-                Anand Iyer, Mingyu Guan, Yinwei Dai, <b>Rui Pan</b>, Swapnil Gandhi, Ravi Netravali <br>
-                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
-                <!--javascript:void(0);-->
-                <a href="publications/sosp24_e3.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#e3-abstract" role="button" aria-expanded="false" aria-controls="e3-abstract">Abstract</a>
-                <!-- <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Slides</button></a> -->
-                <div class="collapse" id="e3-abstract">
-                  <div class="card card-body">
-                    Machine learning inference platforms continue to face high request rates and strict latency constraints. 
-                    Existing solutions largely focus on compressing models to substantially lower compute costs (and time) with mild accuracy degradations. 
-                    This paper explores an alternate (but complementary) technique that trades off accuracy and resource costs on a per-input granularity: 
-                    early exit models, which selectively allow certain inputs to exit a model from an intermediate layer. 
-                    Though intuitive, early exits face fundamental deployment challenges, largely owing to the effects that exiting inputs have on batch size (and resource utilization) 
-                    throughout model execution. We present E3, the first system that makes early exit models practical for realistic inference deployments. 
-                    Our key insight is to split and replicate blocks of layers in models in a manner that maintains a constant batch size throughout execution, 
-                    all the while accounting for resource requirements and communication overheads. Evaluations with NLP and vision models show that E3 can deliver up to 1.74× 
-                    improvement in goodput (for a fixed cost) or 1.78× reduction in cost (for a fixed goodput). 
-                    Additionally, E3's goodput wins generalize to autoregressive LLMs (2.8-3.8×) and compressed models (1.67×).
-                  </div>
-                </div>
-              </p>
-            </li>
-            <li>
-              <p id="shockwave">
-                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
-                <h5>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</h5>
-                Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
-                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a>, Boston, MA<br>
-                <!--javascript:void(0);-->
-                <a href="publications/nsdi23_shockwave.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
-                <!-- <a href="https://arxiv.org/abs/2210.00093" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">arXiv</button></a> -->
-                <a href="publications/nsdi23_shockwave_talk.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
-                <a href="https://www.youtube.com/watch?v=d0ZdS12y_Tw" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Talk</button></a>
-                <a href="https://github.com/uw-mad-dash/shockwave" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
-                <div class="collapse" id="shockwave-abstract">
-                  <div class="card card-body">
-                    Dynamic adaptation has become an essential technique in accelerating distributed machine learning (ML) training: 
-                    Recent studies have shown that dynamically adjusting model structure (e.g., lottery ticket hypothesis) or hyperparameters (e.g., batch size) 
-                    can significantly accelerate training without sacrificing accuracy. However, existing ML cluster schedulers are not designed to handle dynamic adaptation. 
-                    We show that existing schemes fail to provide fairness and degrade system efficiency when the training throughput changes over time under dynamic adaptation. 
-                    We design Shockwave, a scheduler with future planning that builds on two key ideas. 
-                    First, Shockwave extends classic market theory from static settings to dynamic settings to co-optimize efficiency and fairness. 
-                    Second, Shockwave utilizes stochastic dynamic programming to handle uncertain, dynamic throughput. 
-                    We build a system for Shockwave and validate its performance with both trace-driven simulation and cluster experiments. 
-                    Results show that for traces of ML jobs with dynamic adaptation, Shockwave improves makespan by 1.3× and fairness by 2× when compared with existing fair scheduling schemes.
-                  </div>
-                </div>
-              </p>
-            </li>
-            </ul>
-            <h5><b>Workshops🤓👆</b></h5>
-            <ul>
-            <li>
-              <p id="echelonflow">
-                <!-- <span class="badge badge-secondary">Workshop Paper</span>  -->
-                <h5>Efficient Flow Scheduling in Distributed Deep Learning Training with Echelon Formation</h5>
-                <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia <br>
-                <a href="https://conferences.sigcomm.org/hotnets/2022/" target="_blank">ACM HotNets 2022</a>, Austin, TX<br>
-                <a href="publications/hotnets22_echelonflow.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#echelonflow-abstract" role="button" aria-expanded="false" aria-controls="echelonflow-abstract">Abstract</a>
-                <a href="https://github.com/ruipeterpan/echelonflow_slides/tree/main" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
-                <a href="https://youtu.be/kW_7O3cmpIg?si=cSJPEDtCO8q8vLV9&t=976" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Talk</button></a>
-                <a href="publications/hotnets22_echelonflow_report.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Technical Report</button></a>
-                <div class="collapse" id="echelonflow-abstract">
-                  <div class="card card-body">
-                    This paper discusses why flow scheduling does not apply to distributed deep learning training and presents EchelonFlow, 
-                    the first network abstraction to bridge the gap. EchelonFlow deviates from the common belief that semantically 
-                    related flows should finish at the same time. We reached the key observation, after extensive workflow analysis 
-                    of diverse training paradigms, that distributed training jobs observe strict computation patterns, which may 
-                    consume data at different times. We devise a generic method to model the drastically different computation patterns 
-                    across training paradigms, and formulate EchelonFlow to regulate flow finish times accordingly. Case studies of 
-                    mainstream training paradigms under EchelonFlow demonstrate the expressiveness of the abstraction, and our system 
-                    sketch suggests the feasibility of an EchelonFlow scheduling system.
-                  </div>
-                </div>
-              </p>
-            </li>
-            <!-- <li>
-              <p id="agdh">
-                <h5><span class="badge badge-secondary">Poster</span> <b>AgDH: A System for Gathering and Disseminating Dairy Data</b></h5>
-                <b>Rui Pan</b>, Steven Wangen, Michael Ferris <br>
-                Presented at the <i>3<sup>rd</sup> Annual WID Symposium</i>, 2020 <br>
-                <a href="files/wid-poster.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#wid-poster-abstract" role="button" aria-expanded="false" aria-controls="wid-poster-abstract">Abstract</a>
-                <div class="collapse" id="wid-poster-abstract">
-                  <div class="card card-body">
-                    Dairy farms have been incorporating modern data-tracking services, which generate an enormous amount of 
-                    data of myriad types (e.g., genetic, nutritional, reproductive). The organic nature by which the different 
-                    types of automation systems have arisen and developed has resulted in a highly heterogeneous arrangement 
-                    of different systems from different companies that often have difficulty integrating with one another. 
-                    Additionally, dependency on high-cost hardware systems (e.g., milking machines) makes it difficult for 
-                    milk producers to switch service providers, which can disincentivize adaptation of the existing technologies. 
-                    Modern agricultural analytics relies on the ability to integrate data from all of these data streams. 
-                    To that end, we present the Agricultural Data Hub (AgDH), which revolutionizes dairy data collection 
-                    and interpretation by providing uniformed data for future analysis through an extraction, transformation, 
-                    and loading (ETL) process. This system establishes the relationships between these data, integrates those 
-                    data, and makes them available from a single source, thus making it easier for dairy farmers to make 
-                    management decisions. Later, these uniformed data will be sent to the Dairy Brain analytics services 
-                    for additional analyses, and facilitate the visualization of the raw data and the analysis outcomes 
-                    for easier consumption.
-                  </div>
-                </div>
-              </p>
-            </li> -->
           </ul>
           Some other non peer-reviewed write-ups include:
           <ul>
@@ -414,7 +421,7 @@
               <img src="images/princeton_square.jpeg" class="mr-3" alt="Princeton University logo" width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">🐅Princeton University</h5>
-                <p class="badge badge-info badge-dark">Sep 2022 - May 2027</p>
+                <p class="badge badge-info badge-dark">Sep 2022 - May 2027?</p>
                 <p class="badge badge-info badge-dark">Ph.D. in CS</p>
                 <a href="https://www.cs.princeton.edu/~ravian/" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Ravi Netravali</a>
                 <p></p>
@@ -446,9 +453,19 @@
           <h2>Experience</h2>
           <ul class="list-unstyled">
             <li class="media">
+              <img src="images/google.jpg" class="mr-3" alt="Google logo" width="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1"><img src="images/PropellerHat.png" height="25"/>Student Researcher @ Google, SystemsResearch@Google</h5>
+                <p class="badge badge-info badge-dark">Jun 2025 - Aug 2025</p>
+                <p class="badge badge-info badge-dark">Sunnyvale, CA</p>
+                <a href="https://sherlockwu.github.io/" target="_blank" class="badge badge-info badge-dark">Manager: Dr. Kan Wu</a>
+                <p></p>
+              </div>
+            </li>
+            <li class="media">
               <img src="images/aws.jpeg" class="mr-3" alt="AWS logo" width="64">
               <div class="media-body">
-                <h5 class="mt-0 mb-1"><img src="images/bezos.png" height="25"/>Applied Scientist Intern @ Amazon, AWS AI Team</h5>
+                <h5 class="mt-0 mb-1"><img src="images/bezos.png" height="25"/>Applied Scientist Intern @ AWS AI, Machine Learning Systems Team</h5>
                 <p class="badge badge-info badge-dark">May 2024 - Aug 2024</p>
                 <p class="badge badge-info badge-dark">Santa Clara, CA</p>
                 <a href="https://scholar.google.com/citations?user=kHEFQpIAAAAJ&hl=en" target="_blank" class="badge badge-info badge-dark">Manager: Dr. Zhen Jia</a>
@@ -501,7 +518,7 @@
               <!-- I also 🚴 , 🥾 , 🏊‍♂️ , 🎱 , ⛸️ , and wear my Heelys whenever possible. -->
             </li>
             <li>Cooking Chinese dishes!</li>
-            <li>Geography and traveling! I love checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Mountain View. I play a little bit of <a href="https://www.geoguessr.com/" target="_blank">GeoGuessr</a> and have been using <a href="https://fogofworld.app/en/" target="_blank">Fog of World</a> since 2015!</li>
+            <li>Exploring the world through traveling and geoguessing! I love checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Mountain View. I play <a href="https://www.geoguessr.com/" target="_blank">GeoGuessr</a> recreationally and have been using <a href="https://fogofworld.app/en/" target="_blank">Fog of World</a> since 2016!</li>
             <!-- <li>Checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Santa Clara.</li> -->
             <li>Watching movies & making pop culture references. One of my favorite Youtube channels is <a href="https://www.youtube.com/@CinemaTherapyShow">Cinema Therapy</a>.</li>
             <!-- <li>Collecting postcards. I love postcards, send me one or let me know if you want one!</li> -->
@@ -542,7 +559,7 @@
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
           <h2>Contacts</h2>
-          <p>ruipan at cs dot princeton dot edu </p>
+          <p>ruipan at princeton dot edu </p>
           <!-- <a href="mailto:ruipan@princeton.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a> -->
           <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
           <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
