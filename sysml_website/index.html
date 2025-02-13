@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+    <!-- Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/791291c78f.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Site Information -->
+    <title> Rui Pan 潘瑞 </title>
+
+    <style type="text/css">
+      .smlinks {
+        color: black;
+      }
+      .smlinks:hover {
+        color: rgb(7, 107, 255);
+      }
+    </style>
+
+    <!-- Favicon -->
+    <!-- https://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="YguyxAOXZakXrwT46p_SOS-zOnrWxmoydLQ8moo4nn0" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+          $("#search").on("input", function () {
+              let query = $(this).val().toLowerCase();
+              $(".paper-item").each(function () {
+                  let text = $(this).text().toLowerCase();
+                  $(this).closest("li").toggle(text.includes(query));
+              });
+          });
+      });
+  </script>
+
+  </head>
+  <body>
+    
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #f58025">  <!-- f58025 or ff8f00 -->
+        <a class="navbar-brand" href="#about">
+          <img src="../images/princeton.jpg" width="30" height="30" class="d-inline-block align-top" alt="Rui's head">
+          SAIL @ Princeton
+        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" href="#publications">People</a>
+          </li>
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" href="#publications">Projects</a>
+          </li>
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" href="#publications">Publications</a>
+          </li>
+        </ul>
+        <script>
+          //GOOGLE SEARCH: Enter domain of site to search.
+          var domainroot="ruipeterpan.github.io"
+          function Gsitesearch(curobj){ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value } 
+        </script>
+        <!-- <form class="form-inline my-2 my-lg-0" action="http://www.google.com/search" method="get" role="search" onSubmit="Gsitesearch(this)">
+          <input name="q" type="hidden" />
+          <input class="form-control mr-sm-2" name="qfront" type="search" placeholder="Search on this site" aria-label="Search">
+        </form> -->
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid text-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-6">
+            <h2 class="jumbotron-heading">SAIL @ Priceton</h2>
+          </div>
+          <!-- <div class="col-sm-6">
+            <img src='images/barcelona.jpg' alt="Rui's (handsome) headshot" onmouseover="this.src='images/lightsaber.jpg';" onmouseout="this.src='images/barcelona.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
+          </div> -->
+          <!-- <div class="col-sm-4">
+            <div>
+              <h2 class="jumbotron-heading">Rui Pan 潘瑞</h2>
+              <p class="lead text-muted">CS Ph.D. student @ Princeton</p>
+              <a href="files/cv.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
+              <a href="https://blog.ruipan.xyz/" target="_blank"><button type="button" class="btn btn-outline-primary">Blog</button></a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+          <a id="about" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h2>About Us</h2>
+          
+          <p>
+            SysML@Princeton is an interdisciplinary research group focused on developing next-generation AI/ML systems that are efficient, accurate, reliable, scalable, and secure. As a collaboration between both systems and machine learning researchers, our work considers all parts of the compute stack, spanning the design of AI/ML algorithms and pipelines to runtime systems for training/inference to intelligent applications of ML to tackle core systems challenges. We are a part of the broader AI^2 initiative in Princeton’s AI Lab.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 style="margin-right: 10px;">People</h2>
+          <h3 style="margin-right: 10px;">Faculties</h3>
+
+          <!-- Three columns of text below the carousel -->
+          <div class="row">
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+              <h4 class="fw-normal">Ravi Netravali</h4>
+              <!-- <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+              <h4 class="fw-normal">Tri Dao</h4>
+              <!-- <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+              <h4 class="fw-normal">Kai Li</h4>
+              <!-- <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> -->
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+
+          <h3 style="margin-right: 10px;">Students</h3>
+
+          <!-- Three columns of text below the carousel -->
+          <div class="row">
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+              <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../images/bezos.png" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+              <h4 class="fw-normal">Jeff Bezos</h4>
+              <!-- <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+              <h4 class="fw-normal">Tri Dao</h4>
+              <!-- <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-2 d-flex flex-column align-items-center">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+              <h4 class="fw-normal">Rui Pan</h4>
+              <!-- <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> -->
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+
+
+
+
+
+          <h2 style="margin-right: 10px;">Directions</h2>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Systems for Efficient Inference</h5>
+                  <p class="card-text">Early exit!!!! RAHHHHH!</p>
+                </div>
+                <div class="card-footer">
+                    <img class="img-circle rounded-circle" width="30" height="30" src="../images/bezos.png" alt="Rui Pan"/>
+                    <a href="https://ruipan.xyz"><img class="img-circle rounded-circle" width="30" height="30" src="../apple-touch-icon.png" alt="Rui Pan"/></a>
+                    <img class="img-circle rounded-circle" width="30" height="30" src="../images/ulc.png" alt="Rui Pan"/>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+          <a id="publications" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <div style="display: flex; align-items: center;">
+            <h2 style="margin-right: 10px;">Publications</h2> (*Equal contributions)
+          </div>
+          <!--use btn-outline-secondary for unclickable, grey buttons-->
+          <input type="text" id="search" class="form-control mb-3" placeholder="Search by title, author, or keyword...">
+          <h3>2025</h3>
+          <ul>
+            <li class="paper-item">
+              <p id="marconi">
+                <h5>Marconi: Prefix Caching for the Era of Hybrid LLMs</h5>
+                <b>Rui Pan</b>, Zhuang Wang, Zhen Jia, Can Karakus, Luca Zancato, Tri Dao, Yida Wang, Ravi Netravali<br>
+                <a href="https://mlsys.org/Conferences/2025" target="_blank">MLSys 2025</a><br>
+                <p class="badge badge-info badge-secondary">Efficient Inference</p>
+                <p class="badge badge-info badge-secondary">Prefix Caching</p>
+                <br>
+                <a href="publications/arxiv24_marconi.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#marconi-abstract" role="button" aria-expanded="false" aria-controls="marconi-abstract">Abstract</a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a>
+                <div class="collapse" id="marconi-abstract">
+                  <div class="card card-body">
+                    Hybrid models that combine the language modeling capabilities of Attention layers with the efficiency of Recurrent
+                    layers (e.g., State Space Models) have gained traction in practically supporting long contexts in Large Language
+                    Model serving. Yet, the unique properties of these models complicate the usage of complementary efficiency
+                    optimizations such as prefix caching that skip redundant computations across requests. Most notably, their use of
+                    in-place state updates for recurrent layers precludes rolling back cache entries for partial sequence overlaps, and
+                    instead mandates only exact-match cache hits; the effect is a deluge of (large) cache entries per sequence, most
+                    of which yield minimal reuse opportunities. We present Marconi, the first system that supports efficient prefix
+                    caching with Hybrid LLMs. Key to Marconi are its novel admission and eviction policies that more judiciously
+                    assess potential cache entries based not only on recency, but also on (1) forecasts of their reuse likelihood across a
+                    taxonomy of different hit scenarios, and (2) the compute savings that hits deliver relative to memory footprints.
+                    Across diverse workloads and Hybrid models, Marconi achieves up to 34.4× higher token hit rates (71.1% or 617
+                    ms lower TTFT) compared to state-of-the-art prefix caching systems.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li class="paper-item">
+              <p id="mowgli">
+                <h5>Mowgli: A Passive Approach to Learning Rate Control for Real-Time Video</h5>
+                Neil Agarwal, <b>Rui Pan</b>, Francis Y. Yan, Ravi Netravali <br>
+                <a href="https://www.usenix.org/conference/nsdi25" target="_blank">USENIX NSDI 2025</a>, Philadelphia, PA<br>
+                <p class="badge badge-info badge-secondary">ML for Systems</p>
+                <br>
+                <a href="publications/arxiv24_mowgli.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#mowgli-abstract" role="button" aria-expanded="false" aria-controls="mowgli-abstract">Abstract</a>
+                <div class="collapse" id="mowgli-abstract">
+                  <div class="card card-body">
+                    Rate control algorithms are at the heart of video conferencing platforms, 
+                    determining target bitrates that match dynamic network characteristics for high quality. 
+                    Recent data-driven strategies have shown promise for this challenging task, 
+                    but the performance degradation they introduce during training has been a nonstarter 
+                    for many production services, precluding adoption. 
+                    This paper aims to bolster the practicality of data-driven rate control by presenting 
+                    an alternative avenue for experiential learning: 
+                    leveraging purely existing telemetry logs produced by the incumbent algorithm in production. 
+                    We observe that these logs often contain effective decisions, although often at the wrong times or in the wrong order. 
+                    To realize this approach despite the inherent uncertainty that log-based learning brings 
+                    (i.e., lack of feedback for new decisions), our system, Mowgli, 
+                    combines a variety of robust learning techniques (i.e., conservatively reasoning 
+                    about alternate behavior to minimize risk and using a richer model formulation to account for environmental noise). 
+                    Across diverse networks (emulated and real-world), Mowgli outperforms the widely deployed GCC algorithm, 
+                    increasing average video bitrates by 15-39% while reducing freeze rates by 60-100%.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li class="paper-item">
+              <p id="apparate">
+                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
+                <h5>Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving<img src="images/acm_available_1.1.png" height="25"/><img src="images/acm_functional_1.1.png" height="25"/><img src="images/acm_reproduced_1.1.png" height="25"/></h5>
+                Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
+                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
+                <!-- <h5 class="mt-0 mb-1"><img src="images/acm_available_1.1.png" height="40"/><img src="images/acm_functional_1.1.png" height="40"/><img src="images/acm_reproduced_1.1.png" height="40"/></h5> -->
+                <!--javascript:void(0);-->
+                <a href="publications/sosp24_apparate.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#apparate-abstract" role="button" aria-expanded="false" aria-controls="apparate-abstract">Abstract</a>
+                <a href="publications/sosp24_apparate_talk.key"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
+                <a href="https://github.com/dywsjtu/apparate" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
+                <div class="collapse" id="apparate-abstract">
+                  <div class="card card-body">
+                    Machine learning (ML) inference platforms are tasked with balancing two competing goals: 
+                    ensuring high throughput given many requests, and delivering low-latency responses to support interactive applications. 
+                    Unfortunately, existing platform knobs (e.g., batch sizes) fail to ease this fundamental tension, 
+                    and instead only enable users to harshly trade off one property for the other. 
+                    This paper explores an alternate strategy to taming throughput-latency tradeoffs by changing the granularity 
+                    at which inference is performed. 
+                    We present Apparate, a system that automatically applies and manages early exits (EEs) in ML models, 
+                    whereby certain inputs can exit with results at intermediate layers. 
+                    To cope with the time-varying overhead and accuracy challenges that EEs bring, 
+                    Apparate repurposes exits to provide continual feedback that powers several novel runtime monitoring and adaptation strategies. 
+                    Apparate lowers median response latencies by 40.5-91.5% and 10.0-24.2% for diverse CV and NLP classification workloads, 
+                    and median time-per-token latencies by 70.4-77.9% for generative scenarios, 
+                    without affecting throughputs or violating tight accuracy constraints.
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li class="paper-item">
+              <p id="e3">
+                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
+                <h5>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</h5>
+                Anand Iyer, Mingyu Guan, Yinwei Dai, <b>Rui Pan</b>, Swapnil Gandhi, Ravi Netravali <br>
+                <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
+                <!--javascript:void(0);-->
+                <a href="publications/sosp24_e3.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#e3-abstract" role="button" aria-expanded="false" aria-controls="e3-abstract">Abstract</a>
+                <a href="publications/sosp24_e3_talk.pptx"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
+                <div class="collapse" id="e3-abstract">
+                  <div class="card card-body">
+                    Machine learning inference platforms continue to face high request rates and strict latency constraints. 
+                    Existing solutions largely focus on compressing models to substantially lower compute costs (and time) with mild accuracy degradations. 
+                    This paper explores an alternate (but complementary) technique that trades off accuracy and resource costs on a per-input granularity: 
+                    early exit models, which selectively allow certain inputs to exit a model from an intermediate layer. 
+                    Though intuitive, early exits face fundamental deployment challenges, largely owing to the effects that exiting inputs have on batch size (and resource utilization) 
+                    throughout model execution. We present E3, the first system that makes early exit models practical for realistic inference deployments. 
+                    Our key insight is to split and replicate blocks of layers in models in a manner that maintains a constant batch size throughout execution, 
+                    all the while accounting for resource requirements and communication overheads. Evaluations with NLP and vision models show that E3 can deliver up to 1.74× 
+                    improvement in goodput (for a fixed cost) or 1.78× reduction in cost (for a fixed goodput). 
+                    Additionally, E3's goodput wins generalize to autoregressive LLMs (2.8-3.8×) and compressed models (1.67×).
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li class="paper-item">
+              <p id="shockwave">
+                <!-- <span class="badge badge-secondary">Conference Paper</span>  -->
+                <h5>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</h5>
+                Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
+                <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a>, Boston, MA<br>
+                <!--javascript:void(0);-->
+                <a href="publications/nsdi23_shockwave.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#shockwave-abstract" role="button" aria-expanded="false" aria-controls="shockwave-abstract">Abstract</a>
+                <!-- <a href="https://arxiv.org/abs/2210.00093" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">arXiv</button></a> -->
+                <a href="publications/nsdi23_shockwave_talk.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <a href="https://www.youtube.com/watch?v=d0ZdS12y_Tw" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Talk</button></a>
+                <a href="https://github.com/uw-mad-dash/shockwave" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
+                <div class="collapse" id="shockwave-abstract">
+                  <div class="card card-body">
+                    Dynamic adaptation has become an essential technique in accelerating distributed machine learning (ML) training: 
+                    Recent studies have shown that dynamically adjusting model structure (e.g., lottery ticket hypothesis) or hyperparameters (e.g., batch size) 
+                    can significantly accelerate training without sacrificing accuracy. However, existing ML cluster schedulers are not designed to handle dynamic adaptation. 
+                    We show that existing schemes fail to provide fairness and degrade system efficiency when the training throughput changes over time under dynamic adaptation. 
+                    We design Shockwave, a scheduler with future planning that builds on two key ideas. 
+                    First, Shockwave extends classic market theory from static settings to dynamic settings to co-optimize efficiency and fairness. 
+                    Second, Shockwave utilizes stochastic dynamic programming to handle uncertain, dynamic throughput. 
+                    We build a system for Shockwave and validate its performance with both trace-driven simulation and cluster experiments. 
+                    Results show that for traces of ML jobs with dynamic adaptation, Shockwave improves makespan by 1.3× and fairness by 2× when compared with existing fair scheduling schemes.
+                  </div>
+                </div>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>    
+    </div>  
+
+    <!-- Education -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <a id="education" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h2>Education</h2>
+          <ul class="list-unstyled">
+            <li class="media">
+              <img src="images/princeton_square.jpeg" class="mr-3" alt="Princeton University logo" width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">🐅Princeton University</h5>
+                <p class="badge badge-info badge-dark">Sep 2022 - May 2027?</p>
+                <p class="badge badge-info badge-dark">Ph.D. in CS</p>
+                <a href="https://www.cs.princeton.edu/~ravian/" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Ravi Netravali</a>
+                <p></p>
+              </div>
+            </li> 
+            <li class="media">
+              <img src="images/uwmadison.png" class="mr-3" alt="UW Madison logo" width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">🦡University of Wisconsin-Madison</h5>
+                <p class="badge badge-info badge-dark">Sep 2018 - Dec 2021</p>
+                <p class="badge badge-info badge-dark">B.S. in CS & Math</p>
+                <a href="https://shivaram.org/" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Shivaram Venkataraman</a>
+                <p></p>
+              </div>
+            </li> 
+          </ul>  
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Experience -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <a id="experience" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h2>Experience</h2>
+          <ul class="list-unstyled">
+            <li class="media">
+              <img src="images/google.jpg" class="mr-3" alt="Google logo" width="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1"><img src="images/PropellerHat.png" height="25"/>Student Researcher @ Google, SystemsResearch@Google</h5>
+                <p class="badge badge-info badge-dark">Jun 2025 - Aug 2025</p>
+                <p class="badge badge-info badge-dark">Sunnyvale, CA</p>
+                <a href="https://sherlockwu.github.io/" target="_blank" class="badge badge-info badge-dark">Manager: Dr. Kan Wu</a>
+                <p></p>
+              </div>
+            </li>
+            <li class="media">
+              <img src="images/aws.jpeg" class="mr-3" alt="AWS logo" width="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1"><img src="images/bezos.png" height="25"/>Applied Scientist Intern @ AWS AI, Machine Learning Systems Team</h5>
+                <p class="badge badge-info badge-dark">May 2024 - Aug 2024</p>
+                <p class="badge badge-info badge-dark">Santa Clara, CA</p>
+                <a href="https://scholar.google.com/citations?user=kHEFQpIAAAAJ&hl=en" target="_blank" class="badge badge-info badge-dark">Manager: Dr. Zhen Jia</a>
+                <p></p>
+              </div>
+            </li>
+            <li class="media">
+              <img src="images/mpi.jpg" class="mr-3" alt="Max Planck Institute logo" width="64" height="64">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">🇩🇪Research Intern @ Max Planck Institute for Informatics (MPI-INF)</h5>
+                <p class="badge badge-info badge-dark">Feb 2022 - Aug 2022</p>
+                <p class="badge badge-info badge-dark">Saarbrücken, Germany</p>
+                <a href="https://sites.google.com/view/yitingxia/home" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Yiting Xia</a>
+                <p></p>
+              </div>
+            </li>
+          </ul>  
+        </div>
+      </div>
+    </div> -->
+    
+    <!-- Professional Activities -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Professional Activities</h2>
+        </div>
+      </div>
+      <ul>
+        <li>Teaching Assistant: 
+          <ul>
+            <li>Fall 2023: <a href="https://cos316.princeton.systems/">COS 316: Principles of Computer System Design</a>, with <a href="http://www.amitlevy.com/" target="_blank">Prof. Amit Levy</a> and <a href="https://www.cs.princeton.edu/~ravian/" target="_blank">Prof. Ravi Netravali</a></li>
+            <li>Spring 2024: <a href="https://docs.google.com/document/d/1FIDTU_PIOKMcrHIgUmdF2-LdHfzlYObM/edit" target="_blank">COS 598D: Systems and Machine Learning</a>, with <a href="https://www.cs.princeton.edu/~li/" target="_blank">Prof. Kai Li</a></li>
+          </ul>
+        <li>Artifact Evaluation Committee: MLSys '23, OSDI '23, ATC '23</li>
+        <li>Student Volunteer: CMMRS '22, N2Women@SIGCOMM '22</li>
+      </ul>
+    </div> -->
+
+    <!-- Interests -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <a id="interests" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h2>Interests</h2>
+          <ul>
+            <li>
+              Sports! I play soccer and table tennis for fun and I am a fan of FC Barcelona.
+            </li>
+            <li>Cooking Chinese dishes!</li>
+            <li>Exploring the world through traveling and geoguessing! I love checking out new places, either in person or on Google Maps. Cities I have lived in for more than a few months include: Shanghai, Pittsburgh, Madison, Berkeley, Saarbrücken, Princeton, and Mountain View. I play <a href="https://www.geoguessr.com/" target="_blank">GeoGuessr</a> recreationally and have been using <a href="https://fogofworld.app/en/" target="_blank">Fog of World</a> since 2016!</li>
+            <li>Watching movies & making pop culture references. One of my favorite Youtube channels is <a href="https://www.youtube.com/@CinemaTherapyShow">Cinema Therapy</a>.</li>
+            <li>Music. I used to play accordion and alto saxophone because of Chinese parenting.</li>
+            <li>Reading. Some of my recent readings include:</li>
+            <ul>
+              <li>Nonviolent Communication: A Language of Life (Marshall Rosenberg)</li>
+              <li>Eggshell Skull (Bri Lee)</li>
+              <li>In the Camps: China's High-Tech Penal Colony (Darren Byler)</li>
+            </ul>
+            <li>Writing. I have a <a href="https://blog.ruipan.xyz/" target="_blank">personal blog</a> that hosts some paper reading notes and other random blog posts. Some of my most-visited writings include:</li>
+            <ul>
+              <li><a href="https://blog.ruipan.xyz/blog/towards-applying-to-cs-ph.d.-programs" target="_blank">Towards applying to CS Ph.D. programs</a></li>
+              <li><a href="wisc_courses.html" target="_blank">Course Guide @ UW-Madison</a></li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Template -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Visitor Map</h1>
+        </div>
+      </div>
+      <div class="row">
+        <p></p>
+      </div>
+    </div> -->
+
+    <!-- Contacts -->
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+          <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
+          <h2>Contacts</h2>
+          <p>ruipan at princeton dot edu </p>
+          <!-- <a href="mailto:ruipan@princeton.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a> -->
+          <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+          <a href="https://twitter.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+          <a href="https://www.youtube.com/@ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-youtube-square fa-2x"></i></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=RPP-4BEAAAAJ" class="smlinks" target="_blank"><i class="ai ai-google-scholar-square ai-2x"></i></a>
+          <a href="calendar.html" class="smlinks" target="_blank"><i class="fas fa-calendar-alt fa-2x"></i></i></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=000000&w=300&t=n&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=e9ecef&cmo=f58025'></script> -->
+        </div>
+      </div>
+      <p>@ 2025 SAIL@Princeton. Powered by Bootstrap.</p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
