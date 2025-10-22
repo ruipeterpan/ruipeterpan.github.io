@@ -92,7 +92,8 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-sm-6">
-            <img src='images/barcelona.jpg' alt="Rui's headshot" onmouseover="this.src='images/lightsaber.jpg';" onmouseout="this.src='images/barcelona.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
+            <!-- <img src='images/barcelona.jpg' alt="Rui's headshot" onmouseover="this.src='images/lightsaber.jpg';" onmouseout="this.src='images/barcelona.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%"> -->
+            <img src='images/longhair_square.jpg' alt="Rui's headshot" onmouseover="this.src='images/lightsaber.jpg';" onmouseout="this.src='images/longhair_square.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
           </div>
           <div class="col-sm-4">
             <div>
@@ -148,22 +149,24 @@
               </div>
               <div class="collapse" id="specreason-abstract">
                 <div class="card card-body">
-                  Recent advances in inference-time compute have significantly improved performance on complex tasks by 
-                  generating long chains of thought (CoTs) using Large Reasoning Models (LRMs). 
-                  However, this improved accuracy comes at the cost of high inference latency due to 
-                  the length of generated reasoning sequences and the autoregressive nature of decoding. 
-                  Our key insight in tackling these overheads is that LRM inference, and the reasoning that it embeds, 
-                  is highly tolerant of approximations: complex tasks are typically broken down into simpler steps, 
-                  each of which brings utility based on the semantic insight it provides for downstream steps 
-                  rather than the exact tokens it generates. Accordingly, we introduce SpecReason, a system that 
-                  automatically accelerates LRM inference by using a lightweight model to (speculatively) carry out 
-                  simpler intermediate reasoning steps and reserving the costly base model only to assess (and potentially correct) 
-                  the speculated outputs. Importantly, SpecReason's focus on exploiting the semantic flexibility of 
-                  thinking tokens in preserving final-answer accuracy is complementary to prior speculation techniques, 
-                  most notably speculative decoding, which demands token-level equivalence at each step. Across a variety 
-                  of reasoning benchmarks, SpecReason achieves 1.5-2.5× speedup over vanilla LRM inference while 
-                  improving accuracy by 1.0-9.9%. Compared to speculative decoding without SpecReason, 
-                  their combination yields an additional 19.4-44.2% latency reduction. 
+                  Recent advances in inference-time compute have significantly improved performance 
+                  on complex tasks by generating long chains of thought (CoTs) using Large Reasoning Models (LRMs). 
+                  However, this improved accuracy comes at the cost of high inference latency due to the 
+                  length of generated reasoning sequences and the autoregressive nature of decoding. 
+                  Our key insight in tackling these overheads is that LRM inference, and the reasoning 
+                  that it embeds, is highly tolerant of approximations: complex tasks are typically broken 
+                  down into simpler steps, each of which brings utility based on the semantic insight it 
+                  provides for downstream steps rather than the exact tokens it generates. 
+                  Accordingly, we introduce SpecReason, a system that automatically accelerates LRM inference 
+                  by using a lightweight model to (speculatively) carry out simpler intermediate reasoning 
+                  steps and reserving the costly base model only to efficiently assess (and potentially correct) 
+                  the speculated outputs. Importantly, SpecReason's focus on exploiting the semantic 
+                  flexibility of thinking tokens in preserving final-answer accuracy is complementary 
+                  to prior speculation techniques, most notably speculative decoding, which demands 
+                  token-level equivalence at each step. Across a variety of cross-domain reasoning benchmarks, 
+                  SpecReason achieves 1.4-3.0$\times$ speedup over vanilla LRM inference while improving 
+                  accuracy by 0.4-9.0%. Compared to speculative decoding without SpecReason, their 
+                  combination yields an additional 8.8-58.0% latency reduction. 
                   We open-source SpecReason at https://github.com/ruipeterpan/specreason.
                 </div>
               </div>
@@ -173,8 +176,9 @@
               Siddhant Ray, <b>Rui Pan</b>, Zhuohan Gu, Kuntai Du, Shaoting Feng, Ganesh Ananthanarayanan, Ravi Netravali, Junchen Jiang <br>
               <a href="https://sigops.org/s/conferences/sosp/2025/" target="_blank">ACM SOSP 2025</a>, Seoul, Korea<br>
               <div class="mt-2">
-                <a href="publications/arxiv24_metis.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a href="https://dl.acm.org/doi/10.1145/3731569.3764855?cid=99660641570" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#metis-abstract" role="button" aria-expanded="false" aria-controls="metis-abstract">Abstract</a>
+                <a href="publications/sosp25_metis_talk.pptx" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
                 <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
               </div>
               <div class="collapse" id="metis-abstract">
@@ -203,7 +207,8 @@
               <b>Rui Pan</b>, Zhuang Wang, Zhen Jia, Can Karakus, Luca Zancato, Tri Dao, Yida Wang, Ravi Netravali <br>
               <a href="https://mlsys.org/virtual/2025/index.html" target="_blank">MLSys 2025</a>, Santa Clara, CA<br>
               <span style="color: #e9a23b; font-weight: bold;">🏆Outstanding Paper Award, Honorable Mention</span><br>
-              <span style="color: #EA4335; font-weight: bold;">❤️Rui's personal favorite!</span><br>
+              <!-- <span style="color: #EA4335; font-weight: bold;">❤️Rui's personal favorite</span><br> -->
+              <span style="color: #C86534; font-weight: bold;"><img src="images/sglang.png" height="25"/>(Being) Integrated into SGLang!</span><br>
               <div class="mt-2">
                 <a href="https://arxiv.org/pdf/2411.19379" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#marconi-abstract" role="button" aria-expanded="false" aria-controls="marconi-abstract">Abstract</a>
@@ -296,7 +301,7 @@
               Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
               <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
               <div class="mt-2">
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3694715.3695963" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a href="https://dl.acm.org/doi/10.1145/3694715.3695963?cid=99660641570" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#apparate-abstract" role="button" aria-expanded="false" aria-controls="apparate-abstract">Abstract</a>
                 <a href="publications/sosp24_apparate_talk.key" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
                 <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
@@ -327,7 +332,7 @@
               Anand Iyer, Mingyu Guan, Yinwei Dai, <b>Rui Pan</b>, Swapnil Gandhi, Ravi Netravali <br>
               <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
               <div class="mt-2">
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3694715.3695978" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a href=" https://dl.acm.org/doi/10.1145/3694715.3695978?cid=99660641570" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#e3-abstract" role="button" aria-expanded="false" aria-controls="e3-abstract">Abstract</a>
                 <a href="publications/sosp24_e3_talk.pptx"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
                 <a href="javascript:void(0);"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
@@ -415,7 +420,7 @@
               <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia <br>
               <a href="https://conferences.sigcomm.org/hotnets/2022/" target="_blank">ACM HotNets 2022</a>, Austin, TX<br>
               <div class="mt-2">
-                <a href="publications/hotnets22_echelonflow.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a href="https://dl.acm.org/doi/10.1145/3563766.3564096?cid=99660641570" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#echelonflow-abstract" role="button" aria-expanded="false" aria-controls="echelonflow-abstract">Abstract</a>
                 <a href="https://github.com/ruipeterpan/echelonflow_slides/tree/main" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
                 <a href="https://youtu.be/kW_7O3cmpIg?si=cSJPEDtCO8q8vLV9&t=976" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Talk</button></a>
