@@ -93,7 +93,7 @@
         <div class="row align-items-center">
           <div class="col-sm-6">
             <!-- <img src='images/barcelona.jpg' alt="Rui's headshot" onmouseover="this.src='images/lightsaber.jpg';" onmouseout="this.src='images/barcelona.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%"> -->
-            <img src='images/longhair_square.jpg' alt="Rui's headshot" onmouseover="this.src='images/lightsaber.jpg';" onmouseout="this.src='images/longhair_square.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
+            <img src='images/longhair_square.jpg' alt="Rui's headshot" onmouseover="this.src='images/mii.jpeg';" onmouseout="this.src='images/longhair_square.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
           </div>
           <div class="col-sm-4">
             <div>
@@ -117,7 +117,7 @@
           <p>
             I'm a 4th-year CS Ph.D. student at <a href="https://www.cs.princeton.edu/" target="_blank">Princeton University</a>, advised by <a href="https://www.cs.princeton.edu/~ravian/" target="_blank">Prof. Ravi Netravali</a>.
             I am a member of the <a href="https://sysml.cs.princeton.edu/" target="_blank">Princeton Systems for AI Lab (SAIL)</a>.
-            I am broadly interested in the intersection of systems, networks, and machine learning. My recent work has focused on systems for efficient ML/LLM inference.
+            I am broadly interested in the intersection of systems, networks, and machine learning. My recent work has focused on efficient systems and algorithms for ML/LLM inference.
             I got my B.S. in CS and Math from <a href="https://www.cs.wisc.edu/" target="_blank">University of Wisconsin-Madison</a>, where I was fortunate to work with <a href="https://shivaram.org/" target="_blank">Prof. Shivaram Venkataraman</a> on systems (cluster scheduling & resource management) for ML.
             I have also interned at <a href="https://techsysinfra.google/research/" target="_blank">Google</a> and <a href="https://www.amazon.science/author/yida-wang" target="_blank">AWS</a> on systems for efficient LLM inference and at <a href="https://www.mpi-inf.mpg.de/departments/network-and-cloud-systems" target="_blank">MPI-INF</a> on networked systems for ML training. 
           </p>
@@ -135,8 +135,31 @@
             <h2 style="margin-right: 10px;">Publications</h2> (*Equal contributions)
           </div>
           <!--use btn-outline-secondary for unclickable, grey buttons-->
-          <h5>2025</h5>
+          <h4>Selected Publications</h4>
           <ul>
+            <li class="paper-item">
+              <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
+              <!-- <a id="specreason" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a> -->
+              <h5>Fail Fast, Win Big: Rethinking the Drafting Strategy in Speculative Decoding via Diffusion LLMs</h5>
+              <b>Rui Pan</b>, Zhuofu Chen, Hongyi Liu, Arvind Krishnamurthy, Ravi Netravali <br>
+              arXiv 2025<br>
+              <div class="mt-2">
+                <a href="https://arxiv.org/pdf/2512.20573" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#failfast-abstract" role="button" aria-expanded="false" aria-controls="failfast-abstract">Abstract</a>
+                <a href="https://github.com/ruipeterpan/failfast" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
+              </div>
+              <div class="collapse" id="failfast-abstract">
+                <div class="card card-body">
+                  Diffusion Large Language Models (dLLMs) offer fast, parallel token generation, but their standalone use is plagued by an inherent efficiency-quality tradeoff.
+                  We show that, if carefully applied, the attributes of dLLMs can actually be a strength for drafters in speculative decoding with autoregressive (AR) verifiers.
+                  Our core insight is that dLLM's speed from parallel decoding drastically lowers the risk of costly rejections, providing a practical mechanism to effectively realize the (elusive) lengthy drafts that lead to large speedups with speculative decoding.
+                  We present FailFast, a dLLM-based speculative decoding framework that realizes this approach by dynamically adapting its speculation length.
+                  It "fails fast" by spending minimal compute in hard-to-speculate regions to shrink speculation latency and "wins big" by aggressively extending draft lengths in easier regions to reduce verification latency (in many cases, speculating and accepting 70 tokens at a time!).
+                  Without any fine-tuning, FailFast delivers lossless acceleration of AR LLMs and achieves up to 4.9x speedup over vanilla decoding, 1.7x over the best naive dLLM drafter, and 1.4x over EAGLE-3 across diverse models and workloads.
+                  We open-source FailFast at https://github.com/ruipeterpan/failfast.
+                </div>
+              </div>
+            </li>
             <li class="paper-item">
               <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
               <!-- For NeurIPS 2025 :) -->
@@ -168,38 +191,10 @@
                   flexibility of thinking tokens in preserving final-answer accuracy is complementary 
                   to prior speculation techniques, most notably speculative decoding, which demands 
                   token-level equivalence at each step. Across a variety of cross-domain reasoning benchmarks, 
-                  SpecReason achieves 1.4-3.0$\times$ speedup over vanilla LRM inference while improving 
+                  SpecReason achieves 1.4-3.0x speedup over vanilla LRM inference while improving 
                   accuracy by 0.4-9.0%. Compared to speculative decoding without SpecReason, their 
                   combination yields an additional 8.8-58.0% latency reduction. 
                   We open-source SpecReason at https://github.com/ruipeterpan/specreason.
-                </div>
-              </div>
-            </li>
-            <li class="paper-item">
-              <h5>METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation</h5>
-              Siddhant Ray, <b>Rui Pan</b>, Zhuohan Gu, Kuntai Du, Shaoting Feng, Ganesh Ananthanarayanan, Ravi Netravali, Junchen Jiang <br>
-              <a href="https://sigops.org/s/conferences/sosp/2025/" target="_blank">ACM SOSP 2025</a>, Seoul, Korea<br>
-              <div class="mt-2">
-                <a href="https://dl.acm.org/doi/10.1145/3731569.3764855?cid=99660641570" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#metis-abstract" role="button" aria-expanded="false" aria-controls="metis-abstract">Abstract</a>
-                <a href="publications/sosp25_metis_talk.pptx" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
-                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
-              </div>
-              <div class="collapse" id="metis-abstract">
-                <div class="card card-body">
-                  RAG (Retrieval Augmented Generation) allows LLMs (large language models) to 
-                  generate better responses with external knowledge, but using more external 
-                  knowledge often improves generation quality at the expense of response delay. 
-                  Prior work either reduces the response delay (through better scheduling of RAG 
-                  queries) or strives to maximize quality (which involves tuning the RAG workflow), 
-                  but they fall short in optimizing the \emph {tradeoff} between the delay 
-                  and quality of RAG responses. This paper presents METIS, the first RAG system 
-                  that jointly schedules queries and adapts the key RAG configurations of each 
-                  job, such as the number of retrieved text chunks and synthesis methods, 
-                  in order to balance quality optimization and response delay reduction. 
-                  Using 4 popular RAG-QA datasets, we show that compared with the state-of-the-art 
-                  RAG scheduling system, METIS reduces the generation latency by 1.64--2.54×
-                  without sacrificing generation quality.
                 </div>
               </div>
             </li>
@@ -235,6 +230,103 @@
                   taxonomy of different hit scenarios, and (2) the compute savings that hits deliver relative to memory footprints.
                   Across diverse workloads and Hybrid models, Marconi achieves up to 34.4× higher token hit rates (71.1% or 617
                   ms lower TTFT) compared to state-of-the-art prefix caching systems.
+                </div>
+              </div>
+            </li>
+            <li class="paper-item">
+              <h5>
+                Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving
+                <img src="images/acm_available_1.1.png" height="25"/><img src="images/acm_functional_1.1.png" height="25"/><img src="images/acm_reproduced_1.1.png" height="25"/>
+              </h5> 
+              Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
+              <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
+              <div class="mt-2">
+                <a href="https://dl.acm.org/doi/10.1145/3694715.3695963?cid=99660641570" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#apparate-abstract" role="button" aria-expanded="false" aria-controls="apparate-abstract">Abstract</a>
+                <a href="publications/sosp24_apparate_talk.key" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
+                <a href="https://github.com/dywsjtu/apparate" target="_blank">
+                  <button type="button" class="btn btn-outline-primary btn-sm">Code</button>
+                </a>
+              </div>
+              <div class="collapse" id="apparate-abstract">
+                <div class="card card-body">
+                  Machine learning (ML) inference platforms are tasked with balancing two competing goals: 
+                  ensuring high throughput given many requests, and delivering low-latency responses to support interactive applications. 
+                  Unfortunately, existing platform knobs (e.g., batch sizes) fail to ease this fundamental tension, 
+                  and instead only enable users to harshly trade off one property for the other. 
+                  This paper explores an alternate strategy to taming throughput-latency tradeoffs by changing the granularity 
+                  at which inference is performed. 
+                  We present Apparate, a system that automatically applies and manages early exits (EEs) in ML models, 
+                  whereby certain inputs can exit with results at intermediate layers. 
+                  To cope with the time-varying overhead and accuracy challenges that EEs bring, 
+                  Apparate repurposes exits to provide continual feedback that powers several novel runtime monitoring and adaptation strategies. 
+                  Apparate lowers median response latencies by 40.5-91.5% and 10.0-24.2% for diverse CV and NLP classification workloads, 
+                  and median time-per-token latencies by 70.4-77.9% for generative scenarios, 
+                  without affecting throughputs or violating tight accuracy constraints.
+                </div>
+              </div>
+            </li>
+          </ul>
+          <h4>All Publications</h4>
+          <ul>
+            <li class="paper-item">
+              <h5>Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling</h5>
+              Jialong Li, Shreyansh Tripathi, Lakshay Rastogi, Yiming Lei, <b>Rui Pan</b>, Yiting Xia <br>
+              <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10723154" target="_blank">IEEE ToN 2026</a><br>
+              <div class="mt-2">
+                <a href="publications/arxiv24_aurora.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#comet-abstract" role="button" aria-expanded="false" aria-controls="comet-abstract">Abstract</a>
+                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
+              </div>
+              <div class="collapse" id="comet-abstract">
+                <div class="card card-body">
+                  As machine learning models scale in size and complexity, their computational requirements become a significant barrier. 
+                  Mixture-of-Experts (MoE) models alleviate this issue by selectively activating relevant experts. 
+                  Despite this, MoE models are hindered by high communication overhead from all-to-all operations, 
+                  low GPU utilization, and complications from heterogeneous GPU environments.
+                  This paper presents Comet, which optimizes both model deployment and all-to-all communication 
+                  scheduling to address these challenges in MoE inference. 
+                  Comet achieves minimal communication times by strategically ordering token transmissions 
+                  in all-to-all communications. It improves GPU utilization by colocating experts 
+                  from different models on the same device, avoiding the limitations of all-to-all communication. 
+                  We analyze Comet's optimization strategies theoretically across four common GPU cluster settings: 
+                  exclusive vs. colocated models on GPUs, and homogeneous vs. heterogeneous GPUs. 
+                  Comet provides optimal solutions for three cases, and for the remaining NP-hard scenario, 
+                  it offers a polynomial-time sub-optimal solution with only a 1.09× degradation from the optimal, 
+                  as shown in the simulation results. Comet is the first approach to minimize MoE inference time via 
+                  optimal model deployment and communication scheduling across various scenarios. 
+                  Evaluations demonstrate that Comet significantly accelerates inference, 
+                  achieving speedups of up to 2.63× in homogeneous clusters and 2.91× in heterogeneous environments. 
+                  Moreover, Comet enhances GPU utilization by up to 2.38× compared to existing methods.
+                </div>
+              </div>
+            </li>
+            <li class="paper-item">
+              <h5>METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation</h5>
+              Siddhant Ray, <b>Rui Pan</b>, Zhuohan Gu, Kuntai Du, Shaoting Feng, Ganesh Ananthanarayanan, Ravi Netravali, Junchen Jiang <br>
+              <a href="https://sigops.org/s/conferences/sosp/2025/" target="_blank">ACM SOSP 2025</a>, Seoul, Korea<br>
+              <div class="mt-2">
+                <a href="https://dl.acm.org/doi/10.1145/3731569.3764855?cid=99660641570" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#metis-abstract" role="button" aria-expanded="false" aria-controls="metis-abstract">Abstract</a>
+                <a href="publications/sosp25_metis_talk.pptx" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
+                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
+              </div>
+              <div class="collapse" id="metis-abstract">
+                <div class="card card-body">
+                  RAG (Retrieval Augmented Generation) allows LLMs (large language models) to 
+                  generate better responses with external knowledge, but using more external 
+                  knowledge often improves generation quality at the expense of response delay. 
+                  Prior work either reduces the response delay (through better scheduling of RAG 
+                  queries) or strives to maximize quality (which involves tuning the RAG workflow), 
+                  but they fall short in optimizing the \emph {tradeoff} between the delay 
+                  and quality of RAG responses. This paper presents METIS, the first RAG system 
+                  that jointly schedules queries and adapts the key RAG configurations of each 
+                  job, such as the number of retrieved text chunks and synthesis methods, 
+                  in order to balance quality optimization and response delay reduction. 
+                  Using 4 popular RAG-QA datasets, we show that compared with the state-of-the-art 
+                  RAG scheduling system, METIS reduces the generation latency by 1.64--2.54×
+                  without sacrificing generation quality.
                 </div>
               </div>
             </li>
@@ -294,43 +386,6 @@
                 </div>
               </div>
             </li>
-          </ul>
-          <h5>2024</h5>
-          <ul>
-            <li class="paper-item">
-              <h5>
-                Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving
-                <img src="images/acm_available_1.1.png" height="25"/><img src="images/acm_functional_1.1.png" height="25"/><img src="images/acm_reproduced_1.1.png" height="25"/>
-              </h5> 
-              Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
-              <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
-              <div class="mt-2">
-                <a href="https://dl.acm.org/doi/10.1145/3694715.3695963?cid=99660641570" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#apparate-abstract" role="button" aria-expanded="false" aria-controls="apparate-abstract">Abstract</a>
-                <a href="publications/sosp24_apparate_talk.key" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Slides</button></a>
-                <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Talk</button></a>
-                <a href="https://github.com/dywsjtu/apparate" target="_blank">
-                  <button type="button" class="btn btn-outline-primary btn-sm">Code</button>
-                </a>
-              </div>
-              <div class="collapse" id="apparate-abstract">
-                <div class="card card-body">
-                  Machine learning (ML) inference platforms are tasked with balancing two competing goals: 
-                  ensuring high throughput given many requests, and delivering low-latency responses to support interactive applications. 
-                  Unfortunately, existing platform knobs (e.g., batch sizes) fail to ease this fundamental tension, 
-                  and instead only enable users to harshly trade off one property for the other. 
-                  This paper explores an alternate strategy to taming throughput-latency tradeoffs by changing the granularity 
-                  at which inference is performed. 
-                  We present Apparate, a system that automatically applies and manages early exits (EEs) in ML models, 
-                  whereby certain inputs can exit with results at intermediate layers. 
-                  To cope with the time-varying overhead and accuracy challenges that EEs bring, 
-                  Apparate repurposes exits to provide continual feedback that powers several novel runtime monitoring and adaptation strategies. 
-                  Apparate lowers median response latencies by 40.5-91.5% and 10.0-24.2% for diverse CV and NLP classification workloads, 
-                  and median time-per-token latencies by 70.4-77.9% for generative scenarios, 
-                  without affecting throughputs or violating tight accuracy constraints.
-                </div>
-              </div>
-            </li>
             <li class="paper-item">
               <h5>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</h5> 
               Anand Iyer, Mingyu Guan, Yinwei Dai, <b>Rui Pan</b>, Swapnil Gandhi, Ravi Netravali <br>
@@ -356,39 +411,6 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
-              <h5>Optimizing Mixture-of-Experts Inference Latency Combining Model Deployment and Communication Scheduling</h5>
-              Jialong Li, Shreyansh Tripathi, Lakshay Rastogi, Yiming Lei, <b>Rui Pan</b>, Yiting Xia <br>
-              arXiv 2024<br>
-              <div class="mt-2">
-                <a href="publications/arxiv24_aurora.pdf" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#aurora-abstract" role="button" aria-expanded="false" aria-controls="aurora-abstract">Abstract</a>
-                <!-- <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Code</button></a> -->
-              </div>
-              <div class="collapse" id="aurora-abstract">
-                <div class="card card-body">
-                  As machine learning models scale in size and complexity, their computational requirements become a significant barrier. 
-                  Mixture-of-Experts (MoE) models alleviate this issue by selectively activating relevant experts. 
-                  Despite this, MoE models are hindered by high communication overhead from all-to-all operations, 
-                  low GPU utilization due to the synchronous communication constraint, and complications from heterogeneous GPU environments.
-                  This paper presents Aurora, which optimizes both model deployment and all-to-all communication 
-                  scheduling to address these challenges in MoE inference. Aurora achieves minimal communication 
-                  times by strategically ordering token transmissions in all-to-all communications. It improves GPU 
-                  utilization by colocating experts from different models on the same device, avoiding the limitations 
-                  of synchronous all-to-all communication. We analyze Aurora's optimization strategies theoretically 
-                  across four common GPU cluster settings: exclusive vs. colocated models on GPUs, and homogeneous vs. 
-                  heterogeneous GPUs. Aurora provides optimal solutions for three cases, and for the remaining NP-hard scenario, 
-                  it offers a polynomial-time sub-optimal solution with only a 1.07x degradation from the optimal.
-                  Aurora is the first approach to minimize MoE inference time via optimal model deployment and communication 
-                  scheduling across various scenarios. Evaluations demonstrate that Aurora significantly accelerates inference, 
-                  achieving speedups of up to 2.38x in homogeneous clusters and 3.54x in heterogeneous environments. 
-                  Moreover, Aurora enhances GPU utilization by up to 1.5x compared to existing methods.
-                </div>
-              </div>
-            </li>
-          </ul>
-          <h5>2023</h5>
-          <ul>
             <li class="paper-item">
               <h5>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</h5> 
               Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
@@ -416,9 +438,6 @@
                 </div>
               </div>
             </li>
-          </ul>
-          <h5>2022</h5>
-          <ul>
             <li class="paper-item">
               <h5>Efficient Flow Scheduling in Distributed Deep Learning Training with Echelon Formation</h5> 
               <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia <br>
@@ -501,7 +520,7 @@
               <img src="images/google.jpg" class="mr-3" alt="Google logo" width="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1"><img src="images/PropellerHat.png" height="25"/>Student Researcher @ Google, SystemsResearch@Google</h5>
-                <p class="badge badge-info badge-dark">Jun 2025 - Aug 2025</p>
+                <p class="badge badge-info badge-dark">Jun 2025 - Dec 2025</p>
                 <p class="badge badge-info badge-dark">Sunnyvale, CA</p>
                 <a href="https://sites.google.com/cs.washington.edu/arvind" target="_blank" class="badge badge-info badge-dark">Manager: Prof. Arvind Krishnamurthy</a>
                 <p></p>
@@ -511,7 +530,7 @@
               <img src="images/aws.jpeg" class="mr-3" alt="AWS logo" width="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1"><img src="images/bezos.png" height="25"/>Applied Scientist Intern @ AWS AI, Machine Learning Systems Team</h5>
-                <p class="badge badge-info badge-dark">May 2024 - Aug 2024</p>
+                <p class="badge badge-info badge-dark">May 2024 - Dec 2024</p>
                 <p class="badge badge-info badge-dark">Santa Clara, CA</p>
                 <a href="https://scholar.google.com/citations?user=kHEFQpIAAAAJ&hl=en" target="_blank" class="badge badge-info badge-dark">Manager: Dr. Zhen Jia</a>
                 <p></p>
@@ -627,7 +646,7 @@
           <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=000000&w=300&t=n&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=e9ecef&cmo=f58025'></script>
         </div>
       </div>
-      <p>@ 2023 Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just remember to remove the analytics stuff and add a reference back to my site.</p>
+      <p>@ 2026 Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just remember to remove the analytics stuff and add a reference back to my site.</p>
     </div>
 
     <!-- Optional JavaScript -->
