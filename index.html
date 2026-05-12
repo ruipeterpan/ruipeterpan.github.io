@@ -280,15 +280,28 @@
               <!-- <a id="specreason" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a> -->
               <h5>Slipstream: Trajectory-Grounded Compaction Validation for Long-Horizon Agents</h5>
               Zhuofu Chen, <b>Rui Pan</b>, Yinwei Dai, Ravi Netravali <br>
-              arXiv 2025<br>
+              arXiv 2026<br>
               <div class="mt-2">
-                <a href="https://arxiv.org/pdf/2512.20573" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
+                <a href="https://arxiv.org/abs/2605.08580" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#slipstream-abstract" role="button" aria-expanded="false" aria-controls="slipstream-abstract">Abstract</a>
-                <a href="" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
+                <a href="https://github.com/chenzhuofu/slipstream" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">Code</button></a>
               </div>
               <div class="collapse" id="slipstream-abstract">
                 <div class="card card-body">
-                  TODO
+                  To cope with the large contexts that long-horizon LLM agents produce, modern frameworks increasingly rely on compaction 
+                  -- invoking an LLM to rewrite the accumulated trajectory into a shorter summary that the agent resumes from. Today, 
+                  compaction runs synchronously on the critical path of agent execution but this can unpredictably degrade accuracy due 
+                  to a structural validation gap: the compactor must condense context but is fundamentally unaware of precisely what 
+                  information the agent will need later. Further, because post-compaction agent steps are conditioned on the new summary, 
+                  targeted validation criteria do not exist and errors silently propagate through coherent but incorrect behavior. 
+                  Our key insight is that asynchronous compaction efficiently addresses this gap: by running the compactor in parallel 
+                  with continued agent execution on the original context, the candidate summary and the agent's next steps are generated 
+                  independently from the same pre-compaction state, yielding a validation signal independent of the summary itself. 
+                  We build SlipStream, a trajectory-grounded compaction system that uses a judge to validate the candidate 
+                  summary against the agent's continued reasoning, checking that it preserves both the agent's forward intent and 
+                  the key facts and constraints it depends on. Across long-horizon coding (SWE-bench Verified) and web-browsing (BrowseComp) workloads, 
+                  SlipStream improves task accuracy by up to 8.8 percentage points while reducing end-to-end latency by up to 39.7%.
+                  We open source SlipStream at https://github.com/chenzhuofu/slipstream.
                 </div>
               </div>
             </li>
