@@ -17,6 +17,10 @@
     <title> Rui Pan 潘瑞 </title>
 
     <style type="text/css">
+      body {
+        background: linear-gradient(180deg, #fbfcff 0%, #f4f7fb 100%);
+        color: #1f2a37;
+      }
       .smlinks {
         color: black;
       }
@@ -25,6 +29,71 @@
       }
       .paper-item {
         margin-bottom: 10px; /* Adjust this value to increase/decrease the space */
+      }
+      .paper-item > .mt-2 {
+        margin-bottom: 0.8rem !important;
+      }
+      .hero-shell {
+        margin: 1.25rem auto 2rem;
+        max-width: 1140px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(245, 248, 255, 0.95));
+        border: 1px solid rgba(13, 110, 253, 0.10);
+        border-radius: 28px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+        overflow: hidden;
+        padding: 3rem 0;
+      }
+      .section-card {
+        margin: 0 auto 2rem;
+        padding: 1.9rem 1.9rem 1.6rem;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(13, 110, 253, 0.10);
+        border-radius: 24px;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      }
+      .section-card h2,
+      .footer-shell h2 {
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: #10243e;
+      }
+      .section-card h4 {
+        margin-top: 0.9rem;
+        font-weight: 700;
+        color: #334155;
+      }
+      .section-card .badge {
+        border-radius: 999px;
+        font-weight: 600;
+        padding: 0.42rem 0.7rem;
+      }
+      .section-card .badge-dark {
+        background-color: rgba(13, 110, 253, 0.10) !important;
+        color: #0b3d91 !important;
+        border: 1px solid rgba(13, 110, 253, 0.18);
+      }
+      .section-card .badge-info {
+        background-color: rgba(13, 110, 253, 0.10) !important;
+        color: #0b3d91 !important;
+      }
+      .section-card .btn,
+      .hero-shell .btn {
+        border-radius: 999px;
+        font-weight: 600;
+      }
+      .section-card ul {
+        margin-bottom: 0;
+      }
+      .footer-shell {
+        margin: 0 auto;
+        max-width: 1140px;
+        border-radius: 24px 24px 0 0;
+        background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(236, 243, 255, 0.98));
+        box-shadow: 0 -8px 28px rgba(15, 23, 42, 0.08);
+        overflow: hidden;
+      }
+      .footer-shell p:last-child {
+        margin-bottom: 0;
       }
     </style>
 
@@ -88,7 +157,7 @@
     </nav>
 
     <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid text-center">
+    <div class="jumbotron jumbotron-fluid text-center hero-shell">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-sm-6">
@@ -100,6 +169,7 @@
               <h2 class="jumbotron-heading">Rui Pan 潘瑞</h2>
               <p class="lead text-muted">CS Ph.D. student @ Princeton</p>
               <a href="files/cv.pdf" target="_blank"><button type="button" class="btn btn-outline-primary">CV</button></a>
+              <a href="mailto:ruipan@princeton.edu" target="_blank"><button type="button" class="btn btn-outline-primary ml-2">Email</button></a>
               <!-- <a href="https://blog.ruipan.xyz/" target="_blank"><button type="button" class="btn btn-outline-primary">Blog</button></a> -->
             </div>
           </div>
@@ -108,7 +178,7 @@
     </div>
 
     <!-- About -->
-    <div class="container">
+    <div class="container section-card">
       <div class="row">
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
@@ -130,14 +200,14 @@
             and research grants from <a href="https://cloud.google.com/edu/researchers" target="_blank">Google</a>, a16z, Modal, and <a href="https://www.businesswire.com/news/home/20241209358457/en/Lambda-Launches-Grant-for-AI-Researchers-Expands-Research-Program" target="_blank">Lambda</a>.
           </p>
           <div class="alert border-0 d-inline-block mb-4" role="alert" style="background: linear-gradient(135deg, rgba(13, 110, 253, 0.10), rgba(13, 110, 253, 0.03)); color: #0b3d91; border-left: 5px solid #0d6efd !important; box-shadow: 0 10px 24px rgba(13, 110, 253, 0.12); border-radius: 14px; padding: 0.85rem 1rem; font-weight: 600; line-height: 1.5;">
-            I'm looking for full-time industry positions that start in Fall 2026, with a focus on research scientist/engineer roles in AI systems and infrastructure (e.g., LLM inference/post-training systems). If you're interested, please email me at ruipan@princeton.edu!
+            I'm looking for full-time industry positions that start in Fall 2026, with a focus on research scientist/engineer roles in AI systems and infrastructure (e.g., LLM inference/post-training systems). If you think there's a good fit, please feel free to send me an email!
           </div>
         </div>
       </div>
     </div>
 
     <!-- Projects -->
-    <div class="container">
+    <div class="container section-card">
       <div class="row">
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
@@ -540,7 +610,7 @@
     </div>  
 
     <!-- Education -->
-    <div class="container">
+    <div class="container section-card">
       <div class="row">
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
@@ -552,7 +622,7 @@
               <img src="images/princeton_square.jpeg" class="mr-3" alt="Princeton University logo" width="64" height="64">
               <div class="media-body">
                 <h5 class="mt-0 mb-1">🐅Princeton University</h5>
-                <p class="badge badge-info badge-dark">Sep 2022 - May 2027?</p>
+                <p class="badge badge-info badge-dark">Sep 2022 - ~Fall 2026</p>
                 <p class="badge badge-info badge-dark">Ph.D. in CS</p>
                 <a href="https://www.cs.princeton.edu/~ravian/" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Ravi Netravali</a>
                 <p></p>
@@ -576,7 +646,7 @@
     </div>
 
     <!-- Experience -->
-    <div class="container">
+    <div class="container section-card">
       <div class="row">
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
@@ -619,7 +689,7 @@
     </div>
     
     <!-- Professional Activities -->
-    <div class="container">
+    <div class="container section-card">
       <div class="row">
         <div class="col-sm-12">
           <h2>Professional Activities</h2>
@@ -645,7 +715,7 @@
     </div>
 
     <!-- Interests -->
-    <div class="container">
+    <div class="container section-card">
       <div class="row">
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
@@ -663,12 +733,12 @@
             <!-- <li>Collecting postcards. I love postcards, send me one or let me know if you want one!</li> -->
             <li>Music. I used to play accordion and alto saxophone because of Chinese parenting.</li>
             <!-- Check out my <a href="https://open.spotify.com/user/31g3wuoucmudk6m3u5vhlnh2u2xa" target="_blank">Spotify playlists</a>! -->
-            <li>Reading. Some of my recent readings include:</li>
-            <ul>
+            <li>Reading books.</li>
+            <!-- <ul>   Some of my recent readings include:
               <li>Nonviolent Communication: A Language of Life (Marshall Rosenberg)</li>
               <li>Eggshell Skull (Bri Lee)</li>
               <li>In the Camps: China's High-Tech Penal Colony (Darren Byler)</li>
-            </ul>
+            </ul> -->
             <li>Writing. I have a <a href="https://blog.ruipan.xyz/" target="_blank">personal blog</a> that hosts some paper reading notes and other random blog posts. Some of my most-visited writings include:</li>
             <ul>
               <li><a href="https://blog.ruipan.xyz/blog/towards-applying-to-cs-ph.d.-programs" target="_blank">Towards applying to CS Ph.D. programs</a></li>
@@ -692,7 +762,7 @@
     </div> -->
 
     <!-- Contacts -->
-    <div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="jumbotron text-center footer-shell" style="margin-bottom:0">
       <div class="row">
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
