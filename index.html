@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 
     <!-- Font Awesome for social media icons -->
-    <script src="https://kit.fontawesome.com/791291c78f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/791291c78f.js" crossorigin="anonymous" defer></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -28,10 +28,46 @@
         color: rgb(7, 107, 255);
       }
       .paper-item {
-        margin-bottom: 10px; /* Adjust this value to increase/decrease the space */
+        margin-bottom: 0.55rem;
+        padding-bottom: 0.55rem;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        scroll-margin-top: 90px;
+      }
+      .paper-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
       }
       .paper-item > .mt-2 {
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 0.45rem !important;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        align-items: center;
+      }
+      .paper-item .card.card-body {
+        margin-top: 0.45rem;
+        padding: 0.9rem 1rem;
+        background: linear-gradient(180deg, rgba(248, 251, 255, 0.98), rgba(241, 246, 255, 0.98));
+        border: 1px solid rgba(13, 110, 253, 0.12);
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      }
+      .paper-item .card.card-body p:last-child,
+      .paper-item .card.card-body ul:last-child {
+        margin-bottom: 0;
+      }
+      .paper-item.target-highlight {
+        margin-top: -0.7rem;
+        padding-top: 0.7rem;
+        background-color: rgba(255, 248, 196, 0.9);
+        box-shadow: inset 0 0 0 9999px rgba(255, 248, 196, 0.18);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .leading-icon {
+        display: inline-block;
+        margin-right: 0.25rem;
+        vertical-align: middle;
       }
       .hero-shell {
         margin: 1.25rem auto 2rem;
@@ -106,6 +142,70 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <script>
+      (function () {
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+
+        var initialHash = window.location.hash;
+        if (initialHash) {
+          window.__pendingHash = initialHash;
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+
+        var highlightTimer = null;
+
+        function animateHash(hash) {
+          if (!hash) {
+            return;
+          }
+
+          var target = document.querySelector(hash);
+          if (!target) {
+            return;
+          }
+
+          if (highlightTimer) {
+            clearTimeout(highlightTimer);
+            highlightTimer = null;
+          }
+
+          target.classList.add('target-highlight');
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          highlightTimer = window.setTimeout(function () {
+            history.replaceState(null, '', window.location.pathname + window.location.search + hash);
+            highlightTimer = window.setTimeout(function () {
+              target.classList.remove('target-highlight');
+            }, 1600);
+          }, 200);
+        }
+
+        window.addEventListener('DOMContentLoaded', function () {
+          animateHash(window.__pendingHash);
+          window.__pendingHash = null;
+        });
+
+        document.addEventListener('click', function (event) {
+          var link = event.target.closest && event.target.closest('a[href^="#"]');
+          if (!link || link.getAttribute('data-toggle') === 'collapse') {
+            return;
+          }
+
+          var hash = link.getAttribute('href');
+          var target = document.querySelector(hash);
+          if (!target) {
+            return;
+          }
+
+          event.preventDefault();
+          history.pushState(null, '', hash);
+          animateHash(hash);
+        });
+      })();
+    </script>
     
     <!-- Google Search Console verification -->
     <meta name="google-site-verification" content="YguyxAOXZakXrwT46p_SOS-zOnrWxmoydLQ8moo4nn0" />
@@ -162,7 +262,7 @@
         <div class="row align-items-center">
           <div class="col-sm-6">
             <!-- <img src='images/barcelona.jpg' alt="Rui's headshot" onmouseover="this.src='images/lightsaber.jpg';" onmouseout="this.src='images/barcelona.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%"> -->
-            <img src='images/2026_headshot.jpg' alt="Rui's headshot" onmouseover="this.src='images/mii.jpeg';" onmouseout="this.src='images/2026_headshot.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
+            <img src='images/2026_headshot.jpg' alt="Rui's headshot" fetchpriority="high" decoding="async" onmouseover="this.src='images/mii.jpeg';" onmouseout="this.src='images/2026_headshot.jpg';" style="border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:0.5cm;margin-top:0.5cm;" width="50%">
           </div>
           <div class="col-sm-4">
             <div>
@@ -218,7 +318,7 @@
           <!--use btn-outline-secondary for unclickable, grey buttons-->
           <h4>Selected Publications</h4>
           <ul>
-            <li class="paper-item">
+            <li class="paper-item" id="failfast">
               <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
               <!-- <a id="specreason" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a> -->
               <h5>Fail Fast, Win Big: Rethinking the Drafting Strategy in Speculative Decoding via Diffusion LLMs</h5>
@@ -241,7 +341,7 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="specreason">
               <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
               <!-- For NeurIPS 2025 :) -->
               <a id="specreason" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
@@ -279,17 +379,17 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="marconi">
               <h5>
                 Marconi: Prefix Caching for the Era of Hybrid LLMs
-                <img src="images/acm_available_1.1.png" height="25"/><img src="images/acm_functional_1.1.png" height="25"/>
+                <img src="images/acm_available_1.1.png" height="25" loading="lazy" decoding="async"/><img src="images/acm_functional_1.1.png" height="25" loading="lazy" decoding="async"/>
               </h5> 
               <b>Rui Pan</b>, Zhuang Wang, Zhen Jia, Can Karakus, Luca Zancato, Tri Dao, Yida Wang, Ravi Netravali <br>
               <a href="https://mlsys.org/virtual/2025/index.html" target="_blank">MLSys 2025</a>, Santa Clara, CA<br>
               <span style="color: #e9a23b; font-weight: bold;"><a href="https://mlsys.org/virtual/2025/3260" target="_blank" style="color: #e9a23b;">🏆Outstanding Paper Award (Honorable Mention)</a></span><br>
               <!-- <span style="color: #EA4335; font-weight: bold;">❤️Rui's personal favorite</span><br> -->
-              <span style="color: #C86534; font-weight: bold;"><img src="images/sglang.png" height="25"/><a href="https://cookbook.sglang.io/autoregressive/Qwen/Qwen3.5#3-2-configuration-tips" target="_blank" style="color: #C86534; font-weight: bold;">Integrated into SGLang for Qwen3.5 support!</a></span><br>
-              <span style="color: #fdb515; font-weight: bold;"><img src="images/vllm.png" height="25"/><a href="https://github.com/vllm-project/vllm/pull/37898" target="_blank" style="color: #fdb515; font-weight: bold;">Being integrated into vLLM!</a></span><br>
+              <span style="color: #C86534; font-weight: bold;"><img src="images/sglang.png" height="25" loading="lazy" decoding="async"/><a href="https://cookbook.sglang.io/autoregressive/Qwen/Qwen3.5#3-2-configuration-tips" target="_blank" style="color: #C86534; font-weight: bold;">Integrated into SGLang for Qwen3.5 support!</a></span><br>
+              <span style="color: #fdb515; font-weight: bold;"><img src="images/vllm.png" height="25" loading="lazy" decoding="async"/><a href="https://github.com/vllm-project/vllm/pull/37898" target="_blank" style="color: #fdb515; font-weight: bold;">Being integrated into vLLM!</a></span><br>
               <div class="mt-2">
                 <a href="https://arxiv.org/pdf/2411.19379" target="_blank"><button type="button" class="btn btn-outline-primary btn-sm">PDF</button></a>
                 <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#marconi-abstract" role="button" aria-expanded="false" aria-controls="marconi-abstract">Abstract</a>
@@ -315,10 +415,10 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="apparate">
               <h5>
                 Apparate: Rethinking Early Exits to Tame Latency-Throughput Tensions in ML Serving
-                <img src="images/acm_available_1.1.png" height="25"/><img src="images/acm_functional_1.1.png" height="25"/><img src="images/acm_reproduced_1.1.png" height="25"/>
+                <img src="images/acm_available_1.1.png" height="25" loading="lazy" decoding="async"/><img src="images/acm_functional_1.1.png" height="25" loading="lazy" decoding="async"/><img src="images/acm_reproduced_1.1.png" height="25" loading="lazy" decoding="async"/>
               </h5> 
               Yinwei Dai*, <b>Rui Pan*</b>, Anand Iyer, Kai Li, Ravi Netravali <br>
               <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
@@ -352,7 +452,7 @@
           </ul>
           <h4>All Publications</h4>
           <ul>
-            <li class="paper-item">
+            <li class="paper-item" id="slipstream">
               <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
               <!-- <a id="specreason" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a> -->
               <h5>Slipstream: Trajectory-Grounded Compaction Validation for Long-Horizon Agents</h5>
@@ -382,15 +482,15 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="dga-vlm">
               <h5>Detection-Guided Attention Steering for Vision Language Models</h5>
               Alan Zhang, <b>Rui Pan</b>, Mike Wong, Ravi Netravali <br>
               <a href="https://scale-icml-2026.github.io/" target="_blank">SCALE</a> and <a href="https://qanta-org.github.io/competition/2026/icml/" target="_blank">EMM-QA</a> @ <a href="https://icml.cc/Conferences/2026" target="_blank">ICML 2026</a>, Seoul, South Korea <br>
               <div class="mt-2">
                 <a href="javascript:void(0);" target="_blank"><button type="button" class="btn btn-outline-secondary btn-sm">PDF</button></a>
-                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#hle-abstract" role="button" aria-expanded="false" aria-controls="hle-abstract">Abstract</a>
+                <a class="btn btn-outline-primary btn-sm" data-toggle="collapse" href="#steering-abstract" role="button" aria-expanded="false" aria-controls="steering-abstract">Abstract</a>
               </div>
-              <div class="collapse" id="hle-abstract">
+              <div class="collapse" id="steering-abstract">
                 <div class="card card-body">
                   Modern Vision Language Models (VLMs) have demonstrated remarkable versatility in a wide range of applications, 
                   including multimodal reasoning, captioning, and analysis. However, VLMs still struggle with the fundamental 
@@ -407,7 +507,7 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="hle">
               <h5>A benchmark of expert-level academic questions to assess AI capabilities</h5>
               Center for AI Safety, Scale AI, HLE Contributors Consortium <br>
               <a href="https://www.nature.com/nature/volumes/649/issues/8099" target="_blank">Nature 2026</a><br>
@@ -431,7 +531,7 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="comet">
               <h5>Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling</h5>
               Jialong Li, Shreyansh Tripathi, Lakshay Rastogi, Yiming Lei, <b>Rui Pan</b>, Yiting Xia <br>
               <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10723154" target="_blank">IEEE ToN 2026</a><br>
@@ -463,7 +563,7 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="metis">
               <h5>METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation</h5>
               Siddhant Ray, <b>Rui Pan</b>, Zhuohan Gu, Kuntai Du, Shaoting Feng, Ganesh Ananthanarayanan, Ravi Netravali, Junchen Jiang <br>
               <a href="https://sigops.org/s/conferences/sosp/2025/" target="_blank">ACM SOSP 2025</a>, Seoul, South Korea<br>
@@ -491,7 +591,7 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="mowgli">
               <h5>Mowgli: Passively Learned Rate Control for Real-Time Video</h5> 
               Neil Agarwal, <b>Rui Pan</b>, Francis Y. Yan, Ravi Netravali <br>
               <a href="https://www.usenix.org/conference/nsdi25" target="_blank">USENIX NSDI 2025</a>, Philadelphia, PA<br>
@@ -523,7 +623,7 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="e3">
               <h5>Improving DNN Inference Throughput Using Practical, Per-Input Compute Adaptation</h5> 
               Anand Iyer, Mingyu Guan, Yinwei Dai, <b>Rui Pan</b>, Swapnil Gandhi, Ravi Netravali <br>
               <a href="https://sigops.org/s/conferences/sosp/2024/" target="_blank">ACM SOSP 2024</a>, Austin, TX<br>
@@ -548,7 +648,7 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="shockwave">
               <h5>Shockwave: Fair and Efficient Cluster Scheduling for Dynamic Adaptation in Machine Learning</h5> 
               Pengfei Zheng, <b>Rui Pan</b>, Tarannum Khan, Shivaram Venkataraman, Aditya Akella <br>
               <a href="https://www.usenix.org/conference/nsdi23" target="_blank">USENIX NSDI 2023</a>, Boston, MA<br>
@@ -575,7 +675,7 @@
                 </div>
               </div>
             </li>
-            <li class="paper-item">
+            <li class="paper-item" id="echelonflow">
               <h5>Efficient Flow Scheduling in Distributed Deep Learning Training with Echelon Formation</h5> 
               <b>Rui Pan</b>*, Yiming Lei*, Jialong Li, Zhiqiang Xie, Binhang Yuan, Yiting Xia <br>
               <a href="https://conferences.sigcomm.org/hotnets/2022/" target="_blank">ACM HotNets 2022</a>, Austin, TX<br>
@@ -619,9 +719,9 @@
           <ul class="list-unstyled">
             <!-- Princeton -->
             <li class="media">
-              <img src="images/princeton_square.jpeg" class="mr-3" alt="Princeton University logo" width="64" height="64">
+              <img src="images/princeton_square.jpeg" class="mr-3" alt="Princeton University logo" width="64" height="64" loading="lazy" decoding="async">
               <div class="media-body">
-                <h5 class="mt-0 mb-1">🐅Princeton University</h5>
+                <h5 class="mt-0 mb-1"><span class="leading-icon">🐅</span>Princeton University</h5>
                 <p class="badge badge-info badge-dark">Sep 2022 - ~Fall 2026</p>
                 <p class="badge badge-info badge-dark">Ph.D. in CS</p>
                 <a href="https://www.cs.princeton.edu/~ravian/" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Ravi Netravali</a>
@@ -630,9 +730,9 @@
             </li> 
             <!-- UW-Madison -->
             <li class="media">
-              <img src="images/uwmadison.png" class="mr-3" alt="UW Madison logo" width="64" height="64">
+              <img src="images/uwmadison.png" class="mr-3" alt="UW Madison logo" width="64" height="64" loading="lazy" decoding="async">
               <div class="media-body">
-                <h5 class="mt-0 mb-1">🦡University of Wisconsin-Madison</h5>
+                <h5 class="mt-0 mb-1"><span class="leading-icon">🦡</span>University of Wisconsin-Madison</h5>
                 <p class="badge badge-info badge-dark">Sep 2018 - Dec 2021</p>
                 <p class="badge badge-info badge-dark">B.S. in CS & Math</p>
                 <!-- <p class="badge badge-info">GPA: 3.96</p> -->
@@ -654,9 +754,9 @@
           <h2>Experience</h2>
           <ul class="list-unstyled">
             <li class="media">
-              <img src="images/google.jpg" class="mr-3" alt="Google logo" width="64">
+              <img src="images/google.jpg" class="mr-3" alt="Google logo" width="64" loading="lazy" decoding="async">
               <div class="media-body">
-                <h5 class="mt-0 mb-1"><img src="images/PropellerHat.png" height="25"/>Student Researcher @ Google, SystemsResearch@Google</h5>
+                <h5 class="mt-0 mb-1"><img class="leading-icon" src="images/PropellerHat.png" height="25" alt="Propeller hat" loading="lazy" decoding="async"/>Student Researcher @ Google, SystemsResearch@Google</h5>
                 <p class="badge badge-info badge-dark">Jun 2025 - Dec 2025</p>
                 <p class="badge badge-info badge-dark">Sunnyvale, CA</p>
                 <a href="https://sites.google.com/cs.washington.edu/arvind" target="_blank" class="badge badge-info badge-dark">Manager: Prof. Arvind Krishnamurthy</a>
@@ -664,9 +764,9 @@
               </div>
             </li>
             <li class="media">
-              <img src="images/aws.jpeg" class="mr-3" alt="AWS logo" width="64">
+              <img src="images/aws.jpeg" class="mr-3" alt="AWS logo" width="64" loading="lazy" decoding="async">
               <div class="media-body">
-                <h5 class="mt-0 mb-1"><img src="images/bezos.png" height="25"/>Applied Scientist Intern @ AWS AI, Machine Learning Systems Team</h5>
+                <h5 class="mt-0 mb-1"><span class="leading-icon" style="font-size: 1.1em;">🍌</span>Applied Scientist Intern @ AWS AI, Machine Learning Systems Team</h5>
                 <p class="badge badge-info badge-dark">May 2024 - Dec 2024</p>
                 <p class="badge badge-info badge-dark">Santa Clara, CA</p>
                 <a href="https://scholar.google.com/citations?user=kHEFQpIAAAAJ&hl=en" target="_blank" class="badge badge-info badge-dark">Manager: Dr. Zhen Jia</a>
@@ -674,9 +774,9 @@
               </div>
             </li>
             <li class="media">
-              <img src="images/mpi.jpg" class="mr-3" alt="Max Planck Institute logo" width="64" height="64">
+              <img src="images/mpi.jpg" class="mr-3" alt="Max Planck Institute logo" width="64" height="64" loading="lazy" decoding="async">
               <div class="media-body">
-                <h5 class="mt-0 mb-1">🇩🇪Research Intern @ Max Planck Institute for Informatics (MPI-INF)</h5>
+                <h5 class="mt-0 mb-1"><span class="leading-icon">🇩🇪</span>Research Intern @ Max Planck Institute for Informatics (MPI-INF)</h5>
                 <p class="badge badge-info badge-dark">Feb 2022 - Aug 2022</p>
                 <p class="badge badge-info badge-dark">Saarbrücken, Germany</p>
                 <a href="https://sites.google.com/view/yitingxia/home" target="_blank" class="badge badge-info badge-dark">Advisor: Prof. Yiting Xia</a>
@@ -780,7 +880,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=000000&w=300&t=n&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=e9ecef&cmo=f58025'></script>
+          <div id="clustrmaps-host"></div>
         </div>
       </div>
       <p>@ 2026 Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just remember to remove the analytics stuff and add a reference back to my site.</p>
@@ -788,6 +888,15 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      window.addEventListener('load', function () {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.id = 'clustrmaps';
+        script.src = '//cdn.clustrmaps.com/map_v2.js?cl=000000&w=300&t=n&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=e9ecef&cmo=f58025';
+        document.getElementById('clustrmaps-host').appendChild(script);
+      });
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
