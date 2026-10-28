@@ -17,6 +17,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
     <!-- Font Awesome for social media icons -->
     <script src="https://kit.fontawesome.com/791291c78f.js" crossorigin="anonymous"></script>
@@ -35,11 +36,100 @@
     <meta name="theme-color" content="#ffffff">
 
     <style type="text/css">
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav-link {
+        color: #ffffff !important;
+      }
       .smlinks {
             color: black;
         }
       .smlinks:hover {
           color: rgb(7, 107, 255);
+      }
+
+      /* ===== Plum theme overrides (same IDs as index.html). Delete a numbered block to revert that change. ===== */
+      :root {
+        --plum-900: #2A0A1C;
+        --plum-800: #4D0F31;
+        --plum-600: #7A2153;
+        --plum-500: #9B3A6E;
+        --plum-tint: rgba(77, 15, 49, 0.07);
+        --plum-border: rgba(77, 15, 49, 0.16);
+      }
+
+      /* C1: hyperlinks */
+      a {
+        color: var(--plum-500);
+      }
+      a:hover {
+        color: var(--plum-800);
+        text-decoration: none;
+      }
+
+      /* C3: primary buttons and table pagination */
+      .btn-outline-primary {
+        color: var(--plum-800);
+        border-width: 1.5px;
+        border-color: rgba(77, 15, 49, 0.35);
+      }
+      .btn-outline-primary:hover,
+      .btn-outline-primary:not(:disabled):not(.disabled):active {
+        color: #fff;
+        background-color: var(--plum-800);
+        border-color: var(--plum-800);
+      }
+      .page-link {
+        color: var(--plum-800);
+      }
+      .page-link:hover {
+        color: var(--plum-800);
+        background-color: var(--plum-tint);
+      }
+      .page-item.active .page-link,
+      .dropdown-item.active,
+      .dropdown-item:active {
+        color: #fff;
+        background-color: var(--plum-800);
+        border-color: var(--plum-800);
+      }
+
+      /* C5: focus rings */
+      .btn:focus,
+      .btn.focus,
+      .btn:not(:disabled):not(.disabled):active:focus,
+      .page-link:focus,
+      .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(122, 33, 83, 0.25);
+        border-color: var(--plum-500);
+      }
+
+      /* C8: jumbotrons (intro + contacts). Solid so the visitor map's background (co=f7f1f4) blends in seamlessly. */
+      .jumbotron {
+        background-color: #f7f1f4;
+      }
+      .footer-shell {
+        margin: 0 auto;
+        max-width: 1140px;
+        border-radius: 24px 24px 0 0;
+        box-shadow: 0 -8px 28px rgba(15, 23, 42, 0.08);
+      }
+      .footer-shell p:last-child {
+        margin-bottom: 0;
+      }
+      .footer-shell h2 {
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+
+      /* C9: headings */
+      h1,
+      .footer-shell h2 {
+        color: var(--plum-900);
+      }
+
+      /* C10: footer social icon hover */
+      .smlinks:hover {
+        color: var(--plum-600);
       }
     </style>
 
@@ -48,7 +138,8 @@
   <body>
 
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #f58025">  <!-- f58025 or ff8f00 -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #f58025"> --> <!-- f58025 or ff8f00 -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom" style="background-color: #4D0F31">
       <a class="navbar-brand" href="index.html">
         <img src="apple-touch-icon.png" width="30" height="30" class="d-inline-block align-top" alt="Rui's head">
         Rui Pan
@@ -861,29 +952,30 @@
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 
     <!-- Contacts -->
-    <div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="jumbotron text-center footer-shell" style="margin-bottom:0">
       <div class="row">
         <div class="col-sm-12">
           <!-- Fake anchor, otherwise the fixed navbar on the top would cover the title -->
           <a id="contacts" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
-          <h1>🤙Contacts</h1>
-          <p>ruipan at cs dot princeton dot edu </p>
+          <h2>Contacts</h2>
+          <p>ruipan at princeton dot edu </p>
           <!-- <a href="mailto:ruipan@princeton.edu" class="smlinks"><i class="fas fa-envelope-square fa-2x"></i></a> -->
           <a href="https://www.linkedin.com/in/ruipeterpan/"  class="smlinks" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
           <a href="https://github.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
           <a href="https://twitter.com/ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
           <a href="https://www.youtube.com/@ruipeterpan" class="smlinks" target="_blank"><i class="fab fa-youtube-square fa-2x"></i></a>
           <a href="https://scholar.google.com/citations?hl=en&user=RPP-4BEAAAAJ" class="smlinks" target="_blank"><i class="ai ai-google-scholar-square ai-2x"></i></a>
-          <a href="calendar.html" class="smlinks" target="_blank"><i class="fas fa-calendar-alt fa-2x"></i></i></i></a>
+          <!-- <a href="calendar.html" class="smlinks" target="_blank"><i class="fas fa-calendar-alt fa-2x"></i></i></i></a> -->
         </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
           <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=000000&w=300&t=n&d=F2TBlxWbs3r0SJixlLgyMRNaIqkp9peGGOY8alVvCD0&co=e9ecef&cmo=f58025'></script> -->
-          <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=300&t=tt&d=Rupz2IR7rlzxNNW0PtZ2pjLumQZGCNG6uOglgwf5vr0&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+          <!-- <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=300&t=tt&d=Rupz2IR7rlzxNNW0PtZ2pjLumQZGCNG6uOglgwf5vr0&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script> -->
+          <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=8c5f78&w=300&t=tt&d=Rupz2IR7rlzxNNW0PtZ2pjLumQZGCNG6uOglgwf5vr0&co=f7f1f4&cmo=2a0a1c&cmn=e9a23b&ct=4d0f31'></script>
         </div>
       </div>
-      <p>@ 2023 Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just remember to remove the analytics stuff.</p>
+      <p>@ 2026 Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just remember to remove the analytics stuff and add a reference back to my site.</p>
     </div>
 
 

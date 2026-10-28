@@ -21,6 +21,10 @@
         background: linear-gradient(180deg, #fbfcff 0%, #f4f7fb 100%);
         color: #1f2a37;
       }
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav-link {
+        color: #ffffff !important;
+      }
       .smlinks {
         color: black;
       }
@@ -130,6 +134,116 @@
       .footer-shell p:last-child {
         margin-bottom: 0;
       }
+
+      /* ===== Plum theme overrides. Delete a numbered block to revert that change. ===== */
+      :root {
+        --plum-900: #2A0A1C;
+        --plum-800: #4D0F31;
+        --plum-600: #7A2153;
+        --plum-500: #9B3A6E;
+        --plum-tint: rgba(77, 15, 49, 0.07);
+        --plum-tint-strong: rgba(77, 15, 49, 0.12);
+        --plum-border: rgba(77, 15, 49, 0.16);
+      }
+
+      /* C1: hyperlinks */
+      a {
+        color: var(--plum-500);
+      }
+      a:hover {
+        color: var(--plum-800);
+        text-decoration: none;
+      }
+
+      /* C2: date / location / advisor badges */
+      .section-card .badge-dark,
+      .section-card .badge-info {
+        background-color: var(--plum-tint) !important;
+        color: var(--plum-800) !important;
+        border: 1px solid var(--plum-border);
+      }
+      .section-card a.badge:hover {
+        background-color: var(--plum-tint-strong) !important;
+        text-decoration: none;
+      }
+
+      /* C3: primary outline buttons (CV, Email, PDF, Code, Slides, Talk) */
+      .btn-outline-primary {
+        color: var(--plum-800);
+        border-width: 1.5px;
+        border-color: rgba(77, 15, 49, 0.35);
+        background-color: transparent;
+      }
+      .btn-outline-primary:hover,
+      .btn-outline-primary:active,
+      .btn-outline-primary:not(:disabled):not(.disabled):active {
+        color: #fff;
+        background-color: var(--plum-800);
+        border-color: var(--plum-800);
+      }
+
+      /* C4: grey placeholder buttons (unavailable Talk / Slides / PDF) */
+      .btn-outline-secondary,
+      .btn-outline-secondary:hover,
+      .btn-outline-secondary:not(:disabled):not(.disabled):active {
+        color: #9a8f95;
+        background-color: transparent;
+        border-color: rgba(42, 10, 28, 0.14);
+        cursor: default;
+      }
+
+      /* C5: focus rings */
+      .btn:focus,
+      .btn.focus,
+      .btn:not(:disabled):not(.disabled):active:focus,
+      .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(122, 33, 83, 0.25);
+        border-color: var(--plum-500);
+      }
+
+      /* C6: card borders (hero + section cards) */
+      .hero-shell,
+      .section-card {
+        border-color: var(--plum-border);
+      }
+      .hero-shell {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(250, 245, 248, 0.95));
+      }
+
+      /* C7: expanded abstract boxes */
+      .paper-item .card.card-body {
+        background: linear-gradient(180deg, rgba(252, 249, 251, 0.98), rgba(248, 242, 246, 0.98));
+        border-color: var(--plum-border);
+      }
+
+      /* C11: abstract expand jump. The button row's margin-bottom already provides the gap. */
+      .paper-item .card.card-body {
+        margin-top: 0;
+      }
+
+      /* C8: page background + footer (cool blue-white to warm neutral) */
+      body {
+        background: linear-gradient(180deg, #fcfbfb 0%, #f6f2f4 100%);
+        color: #2b2328;
+      }
+      /* Solid so the visitor map's background (co=f7f1f4) blends in seamlessly. */
+      .footer-shell {
+        background: #f7f1f4;
+      }
+
+      /* C9: headings (navy to near-black plum) */
+      .section-card h2,
+      .footer-shell h2 {
+        color: var(--plum-900);
+      }
+      .section-card h4 {
+        color: #4a3d44;
+      }
+
+      /* C10: footer social icon hover */
+      .smlinks:hover {
+        color: var(--plum-600);
+      }
     </style>
 
     <!-- Favicon -->
@@ -213,8 +327,9 @@
 
   <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #f58025">  <!--  Princeton orange: f58025 or ff8f00.  -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #f58025"> --> <!--  Princeton orange: f58025 or ff8f00.  -->
     <!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom" style="background-color: #80609f">  Muted mid-tone amethyst with dark navbar text. -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom" style="background-color: #4D0F31">
       <a class="navbar-brand" href="#about">
         <img src="apple-touch-icon.png" width="30" height="30" class="d-inline-block align-top" alt="Rui's head">
         Rui Pan
@@ -765,7 +880,7 @@
               <div class="media-body">
                 <h5 class="mt-0 mb-1"><span class="leading-icon" style="font-size: 1.1em;">🎆</span>Member of Technical Staff, Research Engineer @ Fireworks AI</h5>
                 <p class="badge badge-info badge-dark">Oct 2026 - Present</p>
-                <p class="badge badge-info badge-dark">San Mateo, CA</p>
+                <!-- <p class="badge badge-info badge-dark">San Mateo, CA</p> -->
                 <!-- <a href="https://sites.google.com/cs.washington.edu/arvind" target="_blank" class="badge badge-info badge-dark">Manager: Prof. Arvind Krishnamurthy</a> -->
                 <p></p>
               </div>
@@ -899,7 +1014,8 @@
         <div class="col-sm-12">
           <!-- <div id="clustrmaps-host"></div> -->
             <!-- <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?cl=000000&w=300&t=n&d=Rupz2IR7rlzxNNW0PtZ2pjLumQZGCNG6uOglgwf5vr0&co=e9ecef&cmo=f58025"></script> -->
-            <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=300&t=tt&d=Rupz2IR7rlzxNNW0PtZ2pjLumQZGCNG6uOglgwf5vr0&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+            <!-- <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=300&t=tt&d=Rupz2IR7rlzxNNW0PtZ2pjLumQZGCNG6uOglgwf5vr0&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script> -->
+            <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=8c5f78&w=300&t=tt&d=Rupz2IR7rlzxNNW0PtZ2pjLumQZGCNG6uOglgwf5vr0&co=f7f1f4&cmo=2a0a1c&cmn=e9a23b&ct=4d0f31'></script>
         </div>
       </div>
       <p>@ 2026 Rui Pan. Powered by Bootstrap. Feel free to fork this website's source code, just remember to remove the analytics stuff and add a reference back to my site.</p>
